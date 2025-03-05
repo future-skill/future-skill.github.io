@@ -1,0 +1,20 @@
+# Start by ignoring everything
+*
+
+# Include .git stuff
+!README.md
+!.gitignore
+
+# Include pip dependencies
+!requirements.txt
+
+# Include MkDocs config
+!mkdocs.yml
+
+# Include documents
+!docs
+!docs/*.md
+!docs/legacy
+!docs/legacy/*.md
+!docs/assets
+!docs/assets/*.png

@@ -1,0 +1,26 @@
+site_name: FutureSkill Wiki
+site_url: https://wiki.futureskill.com/
+theme:
+  name: material
+  features:
+    - search.suggest
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.top
+    - toc.integrate
+markdown_extensions:
+  - attr_list
+  - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - search:
+      enabled: true
