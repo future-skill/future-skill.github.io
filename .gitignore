@@ -18,3 +18,4 @@
 !docs/legacy/*.md
 !docs/assets
 !docs/assets/*.png
+!docs/assets/*.gif

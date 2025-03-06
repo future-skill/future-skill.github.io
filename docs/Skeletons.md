@@ -197,12 +197,25 @@ Here is a list of class members and what they are used for:
         Use the `log` and `debug` methods to print messages in the corresponding player's console.
     : `alive`
         : A flag indicating if the solution is still running or has crashed/timed out.
+: `parallel`
+    : An object that acts as a proxy `solution` for making parallel `solution` calls.
+    `parallel` will be explained further in [Making parallel `solution` calls](Skeletons.md#making-parallel-solution-calls).
 
 `session`  
 : Used for interact mode, see [Interact mode](Skeletons.md#interact-mode).
 
 `settings`  
 : Used for interact mode, see [Interact mode](Skeletons.md#interact-mode).
+
+
+#### Making parallel `solution` calls
+
+To call solutions in parallel the `context.parallel` object should be used instead of the `solution` objects.
+
+The results of a parallel call is a dictionary with `solution` indices as kets and the `solution` results as value.
+There is no need to catch `SolutionException` when making parallel calls.
+Only `solutions` that lived before making the call are included in the dictionary.
+The solution result is either the return value from the player's code, or a `SolutionException` if the player's code crashed, therefore it is necessary to make an `isinstance` check on the result if the return value is used.
 
 
 #### Interact mode
@@ -374,7 +387,9 @@ This text can contain html formatting, including images.
 
 ### Features
 
-The main feature of this skeleton is the GUI setup with a main view and various optional features.
+The `StageChallenge` class has the same features as the `BasicChallenge` in addition to some new features.
+
+The main additional feature of this skeleton is the GUI setup with a main view and various optional features.
 Many features are related to interact mode, and are covered in their own subsection.
 
 Additional features include:
@@ -626,7 +641,7 @@ Like the stage skeleton, there are plenty of features specifically for interact 
 
 ### Features
 
-This skeleton adds a number of GUI features on top of the stage UI from the stage skeleton, as well as some core features for creating games.
+This skeleton adds a number of GUI features on top of the stage UI from the `StageChallenge` skeleton, as well as some core features for creating games.
 Most features are detailed in their own subsection.
 
 

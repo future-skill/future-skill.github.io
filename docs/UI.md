@@ -320,13 +320,14 @@ General attributes/methods:
 
 ???+ example "Creating an `Image`"
     ```
-    Image("TODO", w=30, h=30, opacity=0.75)
+    Image("my_image.png", w=30, h=30, opacity=0.75)
     ```
 
 
 #### `Sprite`
 
 Displays an animated image.
+See [Create Sprite Sheet](Create_Sprite_Sheet.md) to learn about creating a sprite sheet.
 
 General attributes/methods:
 [`common`](UI.md#common),
@@ -336,7 +337,7 @@ General attributes/methods:
 [`keyboard`](UI.md#keyboard)
 
 `image` - `str` S  
-: The name of the image to show
+: The name of the sprite sheet to show
 
 `color` - `str`  
 : A color to use for tinting the image
@@ -352,7 +353,7 @@ General attributes/methods:
 
 ???+ example "Creating a `Sprite`"
     ```
-    Sprite("TODO", w=30, h=30)
+    Sprite("sprite_sheet.png", w=30, h=30)
     ```
 
 
@@ -1138,10 +1139,12 @@ You can also access the `x` and `y` elements of the coordinates as members, e.g.
 
 Many attributes are animated when modified, such as gradually turning transparent when setting `opacity` to `0`.
 But it is possible to control this in more detail using the animation features of the UI library.
+!!! note
+    To get animation to work, go to the Graphics tab in [Freecode Creator](Freecode_creator.md) and check "Uses Canvas" and "Has Canvas Animation".
 
 You can specify the values of many attributes with more precise timing using the `.time(time)` method.
 It returns a virtual copy of the element which represents the element at that time.
-The time should be a number from `0.0` to `1.0`.
+The time should be a number from `0.0` to `1.0` which corresponds to a fraction of the time step, where `0.0` is at the start, `0.5` is at the middle, and `1.0` is at the end of the time step.
 
 ???+ example "Creating a shaking animation"
     ```
@@ -1157,7 +1160,31 @@ The time should be a number from `0.0` to `1.0`.
     ```
 
 You might realize that you do not want an attribute to be animated, in which case you can use `.instant` which is the same as `.time(0)`.
+If you want it to happen later in the time step you can first add the old value with a time value, and then the new value with a slightly higher time value e.g. `.time(0.499)` and then the new value with `time(0.5)`.
 This will ensure that the value change occurs immediately without any intermediate values.
+
+???+ example "Making boxes suddenly transparent"
+    ```
+    # setup_canvas / setup_view
+    self.box_0 = Rectangle()
+    self.box_1 = Rectangle()
+    self.box_2 = Rectangle()
+
+    # update_canvas / update_view
+    self.box_0.instant().opacity = 0.5
+    
+    self.box_1.time(0).opacity = 0.5
+
+    self.box_2.time(0.499).opacity = 1.0
+    self.box_2.time(0.5).opacity = 0.5
+    ```
+
+
+### Step animation
+
+It is possible to go to the next time step manually, this can be very useful when making more elaborate animations.
+You do this by calling `canvas.split_step()`.
+All graphical operations performed after `canvas.split_step()` will occur in a new step.
 
 
 ## Effects
