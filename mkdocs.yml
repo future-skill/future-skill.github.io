@@ -1,14 +1,20 @@
-site_name: FutureSkill Wiki
+site_name: Future Skill wiki
 site_url: https://future-skill.github.io/
 theme:
   name: material
+  logo: assets/fs_small_logo.png
+  favicon: assets/fs_small_logo.png
   features:
     - search.suggest
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.instant.preview
+    - navigation.path
     - navigation.top
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
     - toc.integrate
 markdown_extensions:
   - attr_list
@@ -24,3 +30,11 @@ markdown_extensions:
 plugins:
   - search:
       enabled: true
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/future-skill/future-skill.github.io
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/future-skill/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/futureskillsweden/
