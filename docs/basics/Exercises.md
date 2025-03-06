@@ -13,7 +13,7 @@ Exercises that have the *Official* tag are either created or endorsed by Future 
 
 ## Flow of solving an Exercise
 
-![Apple picker with number references](assets/Apple_Picker_with_number_references.png){ loading=lazy }
+![Apple picker with number references](../assets/Apple_Picker_with_number_references.png){ loading=lazy }
 
 1. When entering an Exercise you will be presented with level 1, and if the graphical canvas is used you will see it in the bottom left-hand corner with Level 1 visible.
 If it is your first time using the Editor a tutorial dialoge window will pop up by the Description tab top left - you will notice it has a "Next tip" button.
@@ -53,4 +53,4 @@ You should see a toast window appear in the bottom right of the page highlightin
 On Future skill it is possible to create your own Exercises!
 This is done with the Freecode creator that you can access from the create option.
 
-Read more about the Freecode creator [here](Freecode_creator.md).
+Read more about the Freecode creator [here](../create_an_exercise/Freecode_creator.md).

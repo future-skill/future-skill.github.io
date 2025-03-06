@@ -15,4 +15,4 @@ While programmers are free to choose which language to write their solution code
 
 ## Create your own implementations
 
-The Editor is very similar to the Freecode Creator which you can read more about here: [Freecode creator](Freecode_creator.md)
+The Editor is very similar to the Freecode Creator which you can read more about here: [Freecode creator](../create_an_exercise/Freecode_creator.md)

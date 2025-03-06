@@ -7,7 +7,7 @@ search:
 ---
 
 !!! note
-    This has mostly been replaced with [GameChallenge](../Skeletons.md#gamechallenge).
+    This has mostly been replaced with [GameChallenge](../create_an_exercise/Skeletons.md#gamechallenge).
 
 ## \[DRAFT\]
 

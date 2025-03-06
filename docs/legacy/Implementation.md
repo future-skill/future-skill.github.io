@@ -9,11 +9,11 @@ This article goes through most of the information that one needs to write an imp
 It contains sections about API details, sections about best practices, and some example code tests and challenges to get a complete picture.
 It does not cover the challenge editor and its options, neither does it cover the canvas API.
 
-Read more general information about the freecode creator here: [Freecode creator](../Freecode_creator.md)
+Read more general information about the freecode creator here: [Freecode creator](../create_an_exercise/Freecode_creator.md)
 
 Read more information about the graphical canvas here: [Freecode graphics](Freecode_graphics.md)
 
-Read more information about the different challenge here: [Skeletons](../Skeletons.md)
+Read more information about the different challenge here: [Skeletons](../create_an_exercise/Skeletons.md)
 
 
 ## The Challenge class

@@ -1,5 +1,5 @@
 ---
-title: Main Page
+title: Home
 contributors:
   - Admin
   - Henrik Rostedt
@@ -8,19 +8,19 @@ contributors:
 
 ## Future Skill wiki
 
-- [Coding Community](Coding_Community.md)
-    - [Exercises](Exercises.md)
-    - [Challenges](Challenges.md)
-    - [Tournaments](Tournaments.md)
-    - [Freecodes](Freecodes.md)
+- [Coding Community](basics/Coding_Community.md)
+    - [Exercises](basics/Exercises.md)
+    - [Challenges](basics/Challenges.md)
+    - [Tournaments](basics/Tournaments.md)
+    - [Freecodes](basics/Freecodes.md)
 
-- [Create your own Freecodes](Freecode_creator.md)
-    - [Skeletons](Skeletons.md)
-    - [The new Freecode graphics system](UI.md)
-    - [How to create a flow](Flow.md)
-    - [The game world library](World.md)
-    - [A simple data presentation library](Data.md)
+- [Create your own Freecodes](create_an_exercise/Freecode_creator.md)
+    - [Skeletons](create_an_exercise/Skeletons.md)
+    - [The new Freecode graphics system](create_an_exercise/UI.md)
+    - [How to create a flow](create_an_exercise/Flow.md)
+    - [The game world library](create_an_exercise/World.md)
+    - [A simple data presentation library](create_an_exercise/Data.md)
 
 - Legacy code
-    - [Old graphics](legacy/Freecode_graphics.md) - replaced with [UI](UI.md)
-    - [Old implementation](legacy/Implementation.md) - replaced with [Skeletons](Skeletons.md)
+    - [Old graphics](legacy/Freecode_graphics.md) - replaced with [UI](create_an_exercise/UI.md)
+    - [Old implementation](legacy/Implementation.md) - replaced with [Skeletons](create_an_exercise/Skeletons.md)
