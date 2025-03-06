@@ -7,9 +7,9 @@ contributors:
   - Ludvig
 ---
 
-On Future skill it is possible to create your own [Challenges](Challenges.md), [Exercises](Exercises.md), and [Freecodes](Freecodes.md), this is done with the Freecode creator that you can access from the create option when you are signed in.
+On Future skill it is possible to create your own [Challenges](../basics/Challenges.md), [Exercises](../basics/Exercises.md), and [Freecodes](../basics/Freecodes.md), this is done with the Freecode creator that you can access from the create option when you are signed in.
 
-The Creator is very similar to the Freecode Editor which you can read more about here: [Freecode editor](Freecode_editor.md)
+The Creator is very similar to the Freecode Editor which you can read more about here: [Freecode editor](../basics/Freecode_editor.md)
 
 
 ## The Implementation tab
@@ -28,7 +28,7 @@ This solution is also the default solution used in contests when there are no ot
 
 
 ## The API Tab
-![API tab](assets/Api-tab.png){ loading=lazy }
+![API tab](../assets/Api-tab.png){ loading=lazy }
 
 
 ### Add Implementation API
@@ -72,7 +72,7 @@ This can be good to use if you have added and removed Solution APIs and want to 
 All method names must be space-separated list of words containing lowercase letters and can't start with a number.
 Specific language formatting is applied automatically.
 Default return values for different return types in solution methods: 
-![Create API methods](assets/Create-api-methods.png){ loading=lazy }
+![Create API methods](../assets/Create-api-methods.png){ loading=lazy }
 ```
 Int: -2
 
@@ -144,7 +144,7 @@ A mismatch between the total number of levels and the number of levels in the im
 
 These options are only visible when the type of Freecode is set to Challenge.
 
-Is Tournament: For an explanation of the difference between Challenge and tournament see: [Coding Community](Coding_Community.md)
+Is Tournament: For an explanation of the difference between Challenge and tournament see: [Coding Community](../basics/Coding_Community.md)
 
 Number of players: if isTournament this setting will determine the number of solution that will compete against each other in every run.
 
@@ -217,7 +217,7 @@ In this tab it is possible to upload a custom background image that will be used
 
 ## Descriptions
 
-![Description](assets/2_-_Description.png){ loading=lazy }
+![Description](../assets/2_-_Description.png){ loading=lazy }
 
 
 ### Summary

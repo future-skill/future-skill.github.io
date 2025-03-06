@@ -14,6 +14,10 @@
 # Include documents
 !docs
 !docs/*.md
+!docs/basics
+!docs/basics/*.md
+!docs/create_an_exercise
+!docs/create_an_exercise/*.md
 !docs/legacy
 !docs/legacy/*.md
 !docs/assets

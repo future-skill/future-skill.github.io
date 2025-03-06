@@ -25,4 +25,4 @@ Read more about Tournaments [here](Tournaments.md).
 On Future Skill it is possible to create your own Challenges!
 This is done with the Freecode creator that you can access from the create option.
 
-Read more about the Freecode creator [here](Freecode_creator.md).
+Read more about the Freecode creator [here](../create_an_exercise/Freecode_creator.md).

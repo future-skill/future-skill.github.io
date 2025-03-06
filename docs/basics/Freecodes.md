@@ -16,4 +16,4 @@ The sky is the limit!
 On Future skill it is possible to create your own Freecodes!
 This is done with the freecode creator that you can access from the create option.
 
-Read more about the Freecode creator here: [Freecode creator](Freecode_creator.md)
+Read more about the Freecode creator here: [Freecode creator](../create_an_exercise/Freecode_creator.md)

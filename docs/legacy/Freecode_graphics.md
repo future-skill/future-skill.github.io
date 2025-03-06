@@ -7,7 +7,7 @@ contributors:
 ---
 
 !!! note
-    This page uses an older graphics engine, refer to [UI](../UI.md) for the latest version.
+    This page uses an older graphics engine, refer to [UI](../create_an_exercise/UI.md) for the latest version.
     This page still explains e.g. animations that are not yet explained elsewhere.
 
 ## Enable graphics and animations
@@ -179,7 +179,7 @@ The image argument should be the name of the image as it is written in the graph
 ### Sprite sheet
 
 The sprite sheets requires that the defined image is the name of a compatible sprite sheet.
-Check out the [Create Sprite Sheet](../Create_Sprite_Sheet.md) page to create your own sprite sheets compatible with the Future Skill platform.
+Check out the [Create Sprite Sheet](../create_an_exercise/Create_Sprite_Sheet.md) page to create your own sprite sheets compatible with the Future Skill platform.
 
 ```
 new_spritesheet(width, height, image, animation='default', frame_index_start=None, frame_index_end=None, x=0, y=0, scale_x=1, scale_y=1, opacity=1, rotation=0, z_index=0, color='white', pivot_x=0, pivot_y=0)
