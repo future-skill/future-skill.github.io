@@ -6,10 +6,10 @@ theme:
   favicon: assets/fs_small_logo.png
   features:
     - search.suggest
+    - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    - navigation.instant.preview
     - navigation.path
     - navigation.top
     - navigation.tracking
@@ -38,3 +38,28 @@ extra:
       link: https://www.linkedin.com/company/future-skill/
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/futureskillsweden/
+nav:
+  - Home:
+    - index.md
+  - Basics:
+    - basics/Freecode_editor.md
+    - basics/Coding_Community.md
+    - basics/How_to_get_experience_points.md
+    - basics/Canvas_element.md
+    - Types of code challenges:
+      - basics/Exercises.md
+      - basics/Challenges.md
+      - basics/Tournaments.md
+      - basics/Freecodes.md
+  - Create an exercise:
+    - create_an_exercise/Freecode_creator.md
+    - create_an_exercise/Skeletons.md
+    - create_an_exercise/UI.md
+    - create_an_exercise/World.md
+    - create_an_exercise/Data.md
+    - create_an_exercise/Flow.md
+    - create_an_exercise/Create_Sprite_Sheet.md
+  - Legacy:
+    - legacy/Freecode_graphics.md
+    - legacy/Implementation.md
+    - legacy/Gameboard.md
