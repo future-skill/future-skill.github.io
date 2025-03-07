@@ -101,10 +101,13 @@ General attributes/methods:
 `corner_radius` - `float | None` S  
 : Add rounded corners to the rectangle
 
-???+ example "Creating a `Rectangle`"
+???+ example "Creating three `Rectangle` objects"
     ```
-    Rectangle(w=10, h=5, x=10, y=10, color="green", corner_radius=1)
+    a = Rectangle(w=4, h=2, x=3, y=3, color="#FF6347")
+    b = Rectangle(w=2, h=2, x=2, y=2, color="red", rotation=60)
+    c = Rectangle(w=2, h=2, x=3, y=3, color="green", rotation=-20, stroke=0.2, opacity=0.3)
     ```
+    ![Three rectangles](../assets/Three_rectangles.png){loading=lazy}
 
 
 #### `Circle`
@@ -132,10 +135,13 @@ General attributes/methods:
 `fixed_radius` - `bool`  
 : Prevents automatic resizing of the circle
 
-???+ example "Creating a `Circle`"
+???+ example "Creating three `Circle` objects"
     ```
-    Circle(r=20, color="blue", stroke=2)
+    a = Circle(r=1, color="red")
+    b = Circle(r=1, color="blue", x=2, y=1)
+    c = Circle(r=0.8, color="green", x=1, y=1, stroke=0.1)
     ```
+    ![Three circles](../assets/Three_circles.png){loading=lazy}
 
 
 #### `Polygon`
@@ -158,15 +164,18 @@ General attributes/methods:
 `bounds` - `tuple[tuple[float, float], tuple[float, float]]` S  
 : The bounds of the polygon used to determine size and pivot, calculated if omitted
 
-???+ example "Creating a `Polygon`"
+???+ example "Creating three `Polygon` objects"
     ```
-    Polygon([(0, -5), (5, 5), (-5, 5)], color="red")
+    a = Polygon([(0, 0), (5, 0), (2, 1)], color="red", x=3, y=1, z_index = 1)
+    b = Polygon([(0, 0), (0, 2), (0.5, 2), (1, 1), (2, 2), (1, 0)], color="blue", x=1, y=1, stroke=0.3, z_index=3)
+    c = Polygon([(0, 0), (-2, 2), (2, 2), (3, 0)], color="green", x=4, y=3, opacity=0.5, rotation=170, z_index=2)
     ```
+    ![Three polygons](../assets/Three_polygons.png){loading=lazy}
 
 
 #### `ComplexShape`
 
-Used to make a shape with straight or Bezier curves.
+Used to make a shape with straight or Bézier curves.
 Consider using images if you need very complex shapes or a large number of points.
 
 General attributes/methods:
@@ -182,8 +191,8 @@ General attributes/methods:
 : A list of segments (list of points) to use to draw the shape, required and positional
 : Each segment must consist of one to three points (first must be one point):
 : - Single point means a straight line to that point
-: - Two points is a quadratic B zier curve with a control point (first) and an end point (second)
-: - Three points is a cubic B zier curve with two control points and an end point (last)
+: - Two points is a quadratic Bézier curve with a control point (first) and an end point (second)
+: - Three points is a cubic Bézier curve with two control points and an end point (last)
 
 `bounds` - `tuple[tuple[float, float], tuple[float, float]]` S  
 : The bounds of the shape used to determine size and pivot, calculated if omitted
@@ -318,10 +327,13 @@ General attributes/methods:
 `color` - `str`  
 : A color to use for tinting the image
 
-???+ example "Creating an `Image`"
+???+ example "Creating three `Image` objects"
     ```
-    Image("my_image.png", w=30, h=30, opacity=0.75)
+    a = Image("striped_cat.png", w=4, h=4)
+    b = Image("striped_cat.png", w=4, h=4, x=4, y=1.5)
+    c = Image("striped_cat.png", w=8, h=4, x=4, y=2, rotation=20, color="red". opacity=0.3, z_index=-1, scale_x=-1)
     ```
+    ![Three images](../assets/Three_bitmaps.png){loading=lazy}
 
 
 #### `Sprite`
@@ -351,10 +363,13 @@ General attributes/methods:
 `end_frame`/`end` - `int | None` S  
 : An animation frame to end on
 
-???+ example "Creating a `Sprite`"
+???+ example "Creating three `Sprite` objects"
     ```
-    Sprite("sprite_sheet.png", w=30, h=30)
+    a = Sprite("weird_sheet.png", w=2, h=2, x=1, y=1)
+    b = Sprite("weird_sheet.png", w=2, h=2, x=3, y=1, start=2, end=0, scale_x=-1)
+    c = Sprite("weird_sheet.png", w=1.5, h=2, x=5, y=1, animation="just_display_guy")
     ```
+    ![Three sprites](../assets/Three_spritesheets.png){loading=lazy}
 
 
 ### Containers
@@ -1185,6 +1200,52 @@ This will ensure that the value change occurs immediately without any intermedia
 It is possible to go to the next time step manually, this can be very useful when making more elaborate animations.
 You do this by calling `canvas.split_step()`.
 All graphical operations performed after `canvas.split_step()` will occur in a new step.
+
+
+### Example: Falling rectangle
+We want to have a rectangle that tips over and lands on one side.
+The rectangle should be 2 units wide, 8 units high, and have its pivot offset from the center to its lower right corner.
+We will also offset it 6 units to the right and 9 units down to make it easier to see.
+If we do all this it should be placed like in the image below:
+![Our rectangle](../assets/Falling_rectangle_coordinates.png){loading=lazy}
+!!! note
+    The coordinate (0, 0) is in the upper left corner, x grows to the right, and y grows downwards.
+!!! note
+    The grey dots show all points that have integer coordinates, i.e. (1, 1), (2, 1), and so on.
+
+???+ example "Code for defining our rectangle"
+    ```
+    self.falling_rect = Rectangle(w=2, h=8, x=6, y=9, color="red", pivot_x=1, pivot_y=4)
+    ```
+
+We don't want the rectangle to suddenly hit the ground.
+To make the fall look somewhat natural we will divide it up like this:
+
+* The rectangle will stand still for one time step
+* The rectangle will rotate 45 degrees the first 70% of the second time step
+* The rectangle will rotate 45 degrees more during the remaining 30% of the second time step
+
+![Rectangle time chart](../assets/Animation_of_falling_rectangle_explanation_figure.png){loading=lazy}
+
+???+ example "Code for defining our rectangle's fall"
+    ```
+    # No animation in the first step
+    self._context.canvas.split_step()
+    # In the first 70% of the step the rectangle falls 45 degrees
+    self.falling_rect.time(0.7).rotation = -45
+    # In the remaining 30% the rectangle falls the rest of the way
+    self.falling_rect.time(1.0).rotation = -90
+    ```
+
+The end result will look like this:
+
+![Falling rectangle](../assets/Falling_rectangle.gif){loading=lazy}
+
+Freecode that implements this animation: [Freecode](https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706)
+!!! note
+    You need to be logged in to see the freecode
+!!! warning
+    The freecode uses the old graphics style found in [Freecode graphics](../legacy/Freecode_graphics.md)
 
 
 ## Effects

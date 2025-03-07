@@ -146,11 +146,11 @@ Origin is to the left of the text by default but can be changed with the text_al
 By default text_align is "left", other possible values are "right", and "center".
 
 ???+ example "Adding three texts"
-```
-a) canvas.new_text('default left alignment', 0.8, 'blue', x=7, y=1)
-b) canvas.new_text('alignment also moves origin', 0.8, 'black', x=7, y=2, text_align='center')
-c) canvas.new_text('right alignment', 0.8, 'red', x=7, y=3, text_align='right')
-```
+    ```
+    a) canvas.new_text('default left alignment', 0.8, 'blue', x=7, y=1)
+    b) canvas.new_text('alignment also moves origin', 0.8, 'black', x=7, y=2, text_align='center')
+    c) canvas.new_text('right alignment', 0.8, 'red', x=7, y=3, text_align='right')
+    ```
 
 ![Three texts](../assets/Three_texts.png)
 
