@@ -4,9 +4,10 @@ contributors:
   - Admin
   - Henrik Rostedt
   - Ludvig
+hide:
+    - navigation
+    - toc
 ---
-
-## Future Skill wiki
 
 - [Coding Community](basics/Coding_Community.md)
     - [Exercises](basics/Exercises.md)
