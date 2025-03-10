@@ -20,6 +20,12 @@
 !docs/create_an_exercise/*.md
 !docs/legacy
 !docs/legacy/*.md
+
+# Include images and gifs
 !docs/assets
 !docs/assets/*.png
 !docs/assets/*.gif
+
+# Include custom styling
+!docs/stylesheets
+!docs/stylesheets/*.css
