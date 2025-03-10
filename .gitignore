@@ -29,3 +29,6 @@
 # Include custom styling
 !docs/stylesheets
 !docs/stylesheets/*.css
+
+# Include CNAME to ensure the custom domain is used
+!docs/CNAME
