@@ -48,8 +48,11 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 plugins:
-  - search:
-      enabled: true
+  - search
+  - privacy
+  - social:
+      cards_layout_options:
+        color: "#295c88"
 extra:
   social:
     - icon: fontawesome/brands/github

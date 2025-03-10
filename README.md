@@ -7,3 +7,6 @@ In a nutshell, each wiki page is a markdown document with some additional functi
 
 All python dependencies can be found in `requirements.txt`.
 You can install them easily with `pip3 install -r requirements.txt`, and then run a preview server for the wiki with the command `mkdocs serve`.
+
+Additionally you will need to install Cairos Graphics, see instructions [here](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/).
+Alternatively you can (temporarily) disable the `social` plugin in `mkdocs.yml` while working locally, just remember to re-enable it afterwards.
