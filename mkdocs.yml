@@ -52,7 +52,7 @@ plugins:
   - privacy
   - social:
       cards_layout_options:
-        color: "#295c88"
+        background_color: "#295c88"
 extra:
   social:
     - icon: fontawesome/brands/github
