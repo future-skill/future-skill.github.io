@@ -1,5 +1,7 @@
 site_name: Future Skill wiki
 site_url: https://newwiki.futureskill.com/
+extra_css:
+  - stylesheets/theme.css
 theme:
   name: material
   logo: assets/fs_small_logo_white.png
