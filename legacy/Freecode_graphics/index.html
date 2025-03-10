@@ -1,0 +1,1618 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://newwiki.futureskill.com/legacy/Freecode_graphics/">
+      
+      
+        <link rel="prev" href="../../create_an_exercise/Create_Sprite_Sheet/">
+      
+      
+        <link rel="next" href="../Implementation/">
+      
+      
+      <link rel="icon" href="../../assets/fs_small_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Freecode graphics - Future Skill wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Freecode graphics - Future Skill wiki" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://newwiki.futureskill.com/assets/images/social/legacy/Freecode_graphics.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://newwiki.futureskill.com/legacy/Freecode_graphics/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Freecode graphics - Future Skill wiki" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://newwiki.futureskill.com/assets/images/social/legacy/Freecode_graphics.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enable-graphics-and-animations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Future Skill wiki" class="md-header__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Future Skill wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Freecode graphics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/Freecode_editor/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../create_an_exercise/Freecode_creator/" class="md-tabs__link">
+          
+  
+  Create an exercise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Future Skill wiki" class="md-nav__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    Future Skill wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecode_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Coding_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/How_to_get_experience_points/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get experience points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Canvas_element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Types of code challenges
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Types of code challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Tournaments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tournaments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create an exercise
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create an exercise
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Freecode_creator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Skeletons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Create_Sprite_Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Sprite Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enable-graphics-and-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable graphics and animations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-canvas-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the canvas object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-graphical-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating graphical objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating graphical objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rectangle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#polygon-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygon Lines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitmap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprite-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprite sheet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animating-graphical-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animating graphical objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Composite objects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-an-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of an animation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-on-graphical-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods on graphical objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods on graphical objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manually-add-animation-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually add animation step
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gameboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gameboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Freecode graphics</h1>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page uses an older graphics engine, refer to <a href="../../create_an_exercise/UI/">UI</a> for the latest version.
+This page still explains e.g. animations that are not yet explained elsewhere.</p>
+</div>
+<h2 id="enable-graphics-and-animations">Enable graphics and animations</h2>
+<p>In the Freecode creator there is a page with settings for graphics, in this tab you have to enable "Uses canvas" in order to enable the canvas where graphics are displayed.
+In order to use animations you also have to check "has Canvas animation".
+Without the second option the canvas will only display 1 static update when running the code.</p>
+<h2 id="accessing-the-canvas-object">Accessing the canvas object</h2>
+<p>The canvas object which is used to create graphical objects is part of the context.
+To create a simple red circle placed <code>5</code> units into the canvas, sized <code>2</code> canvas units, one can use
+<div class="highlight"><pre><span></span><code>self._context.canvas.new_circle(2, &#39;red&#39;, x=5, y=5)
+</code></pre></div>
+To avoid writing "self._context." every time one can temporarily store the canvas as a separate variable.
+<div class="highlight"><pre><span></span><code>canvas = self._context.canvas
+canvas.new_circle(2, &#39;red&#39;, x=5, y=5)
+</code></pre></div></p>
+<h2 id="creating-graphical-objects">Creating graphical objects</h2>
+<p>There are 6 main types of elements that can be used in the canvas; <code>rectangle</code>, <code>circle</code>, <code>polygon</code>, <code>text</code>, <code>bitmap</code>, and <code>spritesheet</code>.
+All of the elements are created by accessing their respective method in the canvas object.
+All color properties are set using CSS compatible names, such as <code>"#FF6347"</code> or <code>"red"</code>.
+All rotation values are set using degrees.
+Rotating halfway through a full rotation is 180 degrees.
+The <code>z_index</code> is used to determine which object should overlap which.
+A higher <code>z_index</code> means the object will be drawn on top of objects with a lower value if they overlap.
+All positional arguments are either relative to the upper left corner of the canvas, or relative to origin of its own position.
+If <code>x</code> and <code>y</code> are not set they will both be <code>0</code> by default.
+If the <code>edge</code> argument is available and used the object will be an outline of the object with no fill color.</p>
+<h3 id="rectangle"><code>Rectangle</code></h3>
+<p><div class="highlight"><pre><span></span><code>new_rectangle(width, height, color, x=0, y=0, scale_x=1, scale_y=1, opacity=1, rotation=0, z_index=0, edge=None, pivot_x=0, pivot_y=0)
+</code></pre></div>
+Creates and returns a graphical object of the type rectangle.
+Rectangles are defined by their width, height, and color.
+Their origin is in the middle of the shape and needs to be offset by half the width and height if you want to artificially move it to one of the corners.</p>
+<details class="example" open="open">
+<summary>Adding three rectangles</summary>
+<div class="highlight"><pre><span></span><code>a) canvas.new_rectangle(4, 2, &#39;#FF6347&#39;, x=3, y=3)
+b) canvas.new_rectangle(2, 2, &#39;red&#39;, x=2, y=2, rotation=60)
+c) canvas.new_rectangle(2, 2, &#39;green&#39;, x=3, y=3, rotation=-20, edge=0.2, opacity=0.3)
+</code></pre></div>
+</details>
+<p><img alt="Three rectangles" loading="lazy" src="../../assets/Three_rectangles.png" /></p>
+<h3 id="circle"><code>Circle</code></h3>
+<div class="highlight"><pre><span></span><code>new_circle(radius, color, x=0, y=0, scale_x=1, scale_y=1, opacity=1, rotation=0, z_index=0, edge=None, pivot_x=0, pivot_y=0)
+</code></pre></div>
+<p>Creates and returns a graphical object of the type circle.
+Circles are defined by their radius and their color.
+Their origin is in the middle of the shape and needs to be offset by the radius if you want to artificially move it to one of the corners.</p>
+<details class="example" open="open">
+<summary>Adding three circles</summary>
+<div class="highlight"><pre><span></span><code>a) canvas.new_circle(1, &#39;red&#39;)
+b) canvas.new_circle(1, &#39;blue&#39;, x=2, y=1)
+c) canvas.new_circle(0.8, &#39;green&#39;, x=1, y=1, edge=0.1)
+</code></pre></div>
+</details>
+<p><img alt="Three circels" loading="lazy" src="../../assets/Three_circles.png" /></p>
+<h3 id="polygon"><code>Polygon</code></h3>
+<div class="highlight"><pre><span></span><code>new_polygon(points, color, x=0, y=0, scale_x=1, scale_y=1, opacity=1, rotation=0, z_index=0, edge=None, pivot_x=0, pivot_y=0)
+</code></pre></div>
+<p>Creates and returns a graphical object of the type polygon.
+Polygons are abstract shapes defined by a list of coordinates and a color.
+The list contains pairs of x and y coordinates but without any special separation, e.g. <code>[x1, y1, x2, y2, x3, y3]</code>.</p>
+<details class="example" open="open">
+<summary>Adding three polygons</summary>
+<div class="highlight"><pre><span></span><code>a) canvas.new_polygon([0, 0, 5, 0, 2, 1], &#39;red&#39;, x=3, y=1, z_index=1)
+b) canvas.new_polygon([0, 0, 0, 2, 0.5, 2, 1, 1, 2, 2, 1, 0], &#39;blue&#39;, x=1, y=1, edge=0.3, z_index=3)
+c) canvas.new_polygon([0, 0, -2, 2, 2, 2, 3, 0], &#39;green&#39;, x=4, y=3, opacity=0.5, rotation=170, z_index=2)
+</code></pre></div>
+</details>
+<p><img alt="Three polygons" loading="lazy" src="../../assets/Three_polygons.png" /></p>
+<h4 id="polygon-lines"><code>Polygon</code> Lines</h4>
+<p>To create a line, draw a polygon with just two points and edge set to the desired width of the line.</p>
+<details class="example" open="open">
+<summary>Adding more polygons</summary>
+<div class="highlight"><pre><span></span><code># Will make a filled triangle
+canvas.new_polygon(points=[1,1, 2,2, 1,2], color=&#39;black&#39;)
+
+# Will make an empty triangle
+canvas.new_polygon(points=[1,3, 2,4, 1,4], color=&#39;black&#39;, edge=0.1)
+
+# Will make a line with edge as thickness
+canvas.new_polygon(points=[2,1, 3,2], color=&#39;red&#39;, edge=0.1)
+
+# Will make a curved line
+canvas.new_polygon(points=[3,1, 4,1, 4,2, 4,1], color=&#39;blue&#39;, edge=0.1)
+
+# Will make a curved line offset by x/y
+canvas.new_polygon(points=[0,0, 1,1, 1,0, 2,1, 1,0, 1,1], color=&#39;green&#39;, edge=0.1, x=2, y=3)
+
+# Make a tuple list, extend it with backtrack, convert to polygon points and create the polygon
+tuple_list=[(0,0), (0,1), (1,0), (0,-1), (-1,0), (-1,1), (0,2), (2,0), (1,-1)]
+tuple_list.extend(tuple_list[len(tuple_list)-2:0:-1])
+point_list = [num for tup in tuple_list for num in tup]
+canvas.new_polygon(points=point_list, color=&#39;magenta&#39;, edge=0.1, x=6, y=2)
+</code></pre></div>
+</details>
+<p><img alt="Polygon lines" loading="lazy" src="../../assets/Polygon_lines.png" /></p>
+<h3 id="text"><code>Text</code></h3>
+<div class="highlight"><pre><span></span><code>new_text(text, size, color, x=0, y=0, text_align=&#39;left&#39;, scale_x=1,
+         scale_y=1, opacity=1, rotation=0, z_index=0, pivot_x=0, pivot_y=0)
+</code></pre></div>
+<p>Creates and returns a graphical object of the type text.
+Text is defined by the text, size, and color.
+Origin is to the left of the text by default but can be changed with the text_align argument.
+By default text_align is "left", other possible values are "right", and "center".</p>
+<details class="example" open="open">
+<summary>Adding three texts</summary>
+<div class="highlight"><pre><span></span><code>a) canvas.new_text(&#39;default left alignment&#39;, 0.8, &#39;blue&#39;, x=7, y=1)
+b) canvas.new_text(&#39;alignment also moves origin&#39;, 0.8, &#39;black&#39;, x=7, y=2, text_align=&#39;center&#39;)
+c) canvas.new_text(&#39;right alignment&#39;, 0.8, &#39;red&#39;, x=7, y=3, text_align=&#39;right&#39;)
+</code></pre></div>
+</details>
+<p><img alt="Three texts" src="../../assets/Three_texts.png" /></p>
+<h3 id="bitmap">Bitmap</h3>
+<div class="highlight"><pre><span></span><code>new_bitmap(width, height, image, x=0, y=0, scale_x=1, scale_y=1,
+           opacity=1, rotation=0, z_index=0, color=&#39;white&#39;, pivot_x=0, pivot_y=0)
+</code></pre></div>
+<p>Creates and returns a graphical object of the type bitmap.
+Width and height defines the size of the image, and will stretch the image if the original dimensions are not the same.
+The image argument should be the name of the image as it is written in the graphics tab.</p>
+<details class="example" open="open">
+<summary>Adding three bitmaps</summary>
+<div class="highlight"><pre><span></span><code>a) canvas.new_bitmap(4, 4, &#39;striped_cat.png&#39;)
+b) canvas.new_bitmap(4, 4, &#39;striped_cat.png&#39;, x=4, y=1.5)
+c) canvas.new_bitmap(8, 4, &#39;striped_cat.png&#39;, x=4, y=2, rotation=20, color=&#39;red&#39;, opacity=0.3, z_index=-1, scale_x=-1)
+</code></pre></div>
+</details>
+<p><img alt="Three bitmaps" loading="lazy" src="../../assets/Three_bitmaps.png" /></p>
+<h3 id="sprite-sheet">Sprite sheet</h3>
+<p>The sprite sheets requires that the defined image is the name of a compatible sprite sheet.
+Check out the <a href="../../create_an_exercise/Create_Sprite_Sheet/">Create Sprite Sheet</a> page to create your own sprite sheets compatible with the Future Skill platform.</p>
+<div class="highlight"><pre><span></span><code>new_spritesheet(width, height, image, animation=&#39;default&#39;, frame_index_start=None, frame_index_end=None, x=0, y=0, scale_x=1, scale_y=1, opacity=1, rotation=0, z_index=0, color=&#39;white&#39;, pivot_x=0, pivot_y=0)
+</code></pre></div>
+<p>Creates and returns a graphical object of the type sprite sheet, intended to be used for animations.
+Width and height defines the size of the object to be drawn, if the dimensions are not the same in the sprite sheet then the image will be stretched.
+Each individual image in an animation should be the same size or they will stretch weirdly.
+The image argument should be the name of the sheet as it is written in the graphics tab.
+The sprite sheet in the graphics tab should have an image atlas defined alongside of it, the atlas should contain information about where each individual image is placed in the sheet and what animations can be done with the sheet.
+If no specific animation has been selected in the sprite_sheet ceation then the implementation will assume that there is an animation named "default" that it will use.
+When adding a sprite sheet and its atlas it is possible to automatically generate the default animation which will play all the frames in the sheet.
+It is also possible to personally define other animations in the same sheet and they can be utilized by setting the animation argument when creating the new_spritesheet in the code.
+Each animation is defined as a list of frame names, by using the frame_index_start and frame_index_end arguments in the implementation it is possible to only run part of an animation, or to reverse the animation. </p>
+<details class="example" open="open">
+<summary>Adding three sprite sheets</summary>
+<div class="highlight"><pre><span></span><code>a) canvas.new_spritesheet(2, 2, &#39;weird_sheet.png&#39;, x=1, y=1)
+b) canvas.new_spritesheet(2, 2, &#39;weird_sheet.png&#39;, x=3, y=1, frame_index_start=2, frame_index_end=0, scale_x=-1)
+c) canvas.new_spritesheet(1.5, 2, &#39;weird_sheet.png&#39;, x=5, y=1, animation=&#39;just_display_guy&#39;)
+</code></pre></div>
+</details>
+<p><img alt="Three spritesheets" src="../../assets/Three_spritesheets.png" /></p>
+<p>The "weird_sheet.png" used in the example only contains 3 very different images so it will be easy to see the difference in a static context, normally you want to use variations of the same image in each sheet in order to get nice animations.</p>
+<h3 id="animating-graphical-objects">Animating graphical objects</h3>
+<p>Once a graphical object has been created there are various methods that can be used to manipulate them over time to create an animation.
+All graphical objects have all methods listed below, but they might not work for all types.
+For example rotating a circle, or setting a text on something that is not a "Text" will yield no noticeable change.</p>
+<p>The time argument is always a percentage ranging from 0.0 to 1.0 (where 1.0 is equal to 100% or the end of the step), and represents when during a step the update will occur.
+Most animations will render in a continuous manner, for example going from opacity 0 at 0% of a step to opacity 1 at 100% of a step will make the opacity change gradually over the step.
+If you want to make an object suddenly change opacity at a specific time, then you need to set it to the current opacity just before making the change, e.g. opacity 0 at 0.49 and opacity 1 at 0.5.</p>
+<h3 id="composite-objects">Composite objects</h3>
+<p>The following example shows both how a parent object can be set when creating a graphical object and how the parent can be changed later using set_parent.</p>
+<details class="example" open="open">
+<summary>Changing parent</summary>
+<div class="highlight"><pre><span></span><code>canvas = self._context.canvas
+self.squares = [canvas.new_rectangle(1,1, &#39;white&#39;, x=2+i*2, y=2) for i in range(5)]
+self.circle = canvas.new_circle(0.5, &#39;green&#39;, x=.5, y=.5, parent=self.squares[0])
+self.circle.set_parent(self.squares[0])
+text = canvas.new_text(&quot;wiiee&quot;, 0.4, &#39;lightgreen&#39;, x = 0, y=0, text_align=&#39;center&#39;)
+text.set_parent(self.circle)
+</code></pre></div>
+</details>
+<p>Most operations in the section <a href="./#methods-on-graphical-objects">Methods on graphical objects</a> below will then apply to both parent and child object.</p>
+<h2 id="example-of-an-animation">Example of an animation</h2>
+<p>Our example animation uses a red rectangle standing on the ground (a black rectangle).
+It is played out over two steps; in the first step the red rectangle is static and in the second step it falls to the ground (with higher speed towards the end of the second step).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To get an animation to work, go to the Graphics tab in Freecode Creator and check "Uses Canvas" and "Has Canvas Animation".</p>
+</div>
+<p>Freecode which implements this animation: <a href="https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706">Freecode</a> (can only be seen if logged in)</p>
+<p><img alt="Falling rectangle" loading="lazy" src="../../assets/Falling_rectangle.gif" /></p>
+<p>Image 1: The above animated gif shows our example animation as it looks in the Freecode canvas on our page.</p>
+<p><img alt="Falling rectangle coordinates" loading="lazy" src="../../assets/Falling_rectangle_coordinates.png" /></p>
+<p>Image 2: Note that the y axis starts from the top (y=0) and has increasing values of y the further down in the canvas we are, whereas x=0 is to the very left.
+In this case the canvas is 20 units wide and 10 units high, so x can vary from 0 to 20 and y from 0 to 10.</p>
+<p><img alt="Animation fo falling rectangle explanation" loading="lazy" src="../../assets/Animation_of_falling_rectangle_explanation_figure.png" /></p>
+<p>Image 3: In the above picture there is a timeline showing our example animation over two steps.</p>
+<p><strong>Explanation</strong> (A, B , C etc. are shown in Image 3 above)</p>
+<ul>
+<li>A) We have created the rectangle and it is so far static and the bottom right corner is at x=6 and y=9.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Image 2 above the x and y values can be seen, the grey dots represent integer values of x and y.</p>
+</div>
+<p>The line in the Implementation of the Freecode is:</p>
+<div class="highlight"><pre><span></span><code>self.falling_rect = canvas.new_rectangle(2, 8, &#39;red&#39;, x=6, y=9, pivot_x=1, pivot_y=4)
+</code></pre></div>
+<p>Normally a rectangle is positioned using the center point (so we would use x=5, y=5).
+However, in this case we use (pivot_x=1, pivot_y=4) which offsets the anchor point (pivot) by +1 on the x axis and +4 on the y axis.
+This means (since the rectangle is 2 wide and 8 high) that we now position the rectangle using the bottom right corner, which is placed at (x=6, y=9).</p>
+<ul>
+<li>
+<p>B) The first step we don't carry out any animation, so the red rectangle is still static.</p>
+</li>
+<li>
+<p>C) In the second step (1) we carry out a 45 degree rotation at time point (sub-step time) 0.7 and since the canvas will <a href="https://en.wikipedia.org/wiki/Inbetweening">tween</a> the rectangle from time 0.0 to 0.7 it will have a 22.5 degree rotation at time 0.35.</p>
+</li>
+<li>
+<p>D) At time 0.7 the rectangle will have a 45 degree rotation, around the anchor point at (x=6, y=9).</p>
+</li>
+</ul>
+<p>The line in the code is:</p>
+<div class="highlight"><pre><span></span><code>self.falling_rect.rotate(45, 0.7)
+</code></pre></div>
+<ul>
+<li>
+<p>E) Again, a tween gives the rotation 67.5 degrees at time 0.85 as a result of the two rotation commands.</p>
+</li>
+<li>
+<p>F) A final rotation at time 1.0 completes the full rotation of 90 degrees, and the red rectangle lies flat on the ground.</p>
+</li>
+</ul>
+<p>The line in the code is:</p>
+<div class="highlight"><pre><span></span><code>self.falling_rect.rotate(45, 1.0)
+</code></pre></div>
+<h2 id="methods-on-graphical-objects">Methods on graphical objects</h2>
+<dl>
+<dt><code>get_name()</code></dt>
+<dd>Returns the name of the object. The name will be generated as a unique identifier.</dd>
+<dt><code>set_x(x, time=None)</code></dt>
+<dd>Sets the x coordinate of the graphical object (relative to the upper left corner).</dd>
+<dt><code>get_x()</code></dt>
+<dd>Returns the x coordinate of the graphical object (relative to the upper left corner).</dd>
+<dt><code>set_y(y, time=None)</code></dt>
+<dd>Sets the y coordinate of the graphical object (relative to the upper left corner).</dd>
+<dt><code>get_y()</code></dt>
+<dd>Returns the y coordinate of the graphical object (relative to the upper left corner).</dd>
+<dt><code>set_position(x, y, time=None)</code></dt>
+<dd>Sets the x and y coordinate of the graphical object (relative to the upper left corner).</dd>
+<dt><code>get_position()</code></dt>
+<dd>Returns the x and y coordinate of the graphical object (relative to the upper left corner).</dd>
+<dt><code>move(x=0, y=0, time=None)</code></dt>
+<dd>Changes the x and y coordinate of the graphical object by the specified amount, relative to the objects previous coordinates.
+For a smooth movement animation you first need to use move(0, 0, 0.0) followed by move(1, 0, 1.0), or it will just set the new position.</dd>
+<dt><code>set_z_index(z, time=None)</code></dt>
+<dd>Sets the z index of the graphical object (higher z index objects are on top of lower ones).</dd>
+<dt><code>get_z_index()</code></dt>
+<dd>Returns the z index of the graphical object (higher z index objects are on top of lower ones).</dd>
+<dt><code>set_scale_x(scale_x, time=None)</code></dt>
+<dd>Sets the x scale of the graphical object (1 being default and 2 being twice the width).
+Useful for changing a pictures x orientation without setting a negative width.</dd>
+<dt><code>get_scale_x()</code></dt>
+<dd>Returns the x scale of the graphical object (1 being default and 2 being twice the width).</dd>
+<dt><code>set_scale_y(scale_y, time=None)</code></dt>
+<dd>Sets the y scale of the graphical object (1 being default and 2 being twice the height).
+Useful for changing a pictures y orientation without setting a negative height.</dd>
+<dt><code>get_scale_y()</code></dt>
+<dd>Returns the y scale of the graphical object (1 being default and 2 being twice the height).</dd>
+<dt><code>set_scale(scale, time=None)</code></dt>
+<dd>Sets the scale of the graphical object, both x and y (1 being default and 2 being twice the width and height).</dd>
+<dt><code>get_scale()</code></dt>
+<dd>Returns the x and y scale of the graphical object (1 being default and 2 being twice the width and height).</dd>
+<dt><code>set_color(color, time=None)</code></dt>
+<dd>Sets the color of the graphical object (CSS compatible colors, e.g. #FF4D4D or red).</dd>
+<dt><code>set_opacity(opacity, time=None)</code></dt>
+<dd>Sets the opacity of the graphical object (0 being completely transparent and 1 being opaque).</dd>
+<dt><code>get_opacity()</code></dt>
+<dd>Returns the opacity of the graphical object (0 being transparent and 1 being opaque).</dd>
+<dt><code>set_rotation(rotation, time=None)</code></dt>
+<dd>Sets the rotation of the graphical object (in degrees).</dd>
+<dt><code>get_rotation()</code></dt>
+<dd>Returns the rotation of the graphical object (in degrees).</dd>
+<dt><code>rotate(rotation, time=None)</code></dt>
+<dd>Rotates the graphical object by the specified amount, relative to the objects previous rotation (in degrees).</dd>
+<dt><code>set_parent(</code><graphical_object><code>)</code></dt>
+<dd>Set the parent graphical object of this graphical objects.
+Most operations in this list will then apply to both parent and child object.</dd>
+<dt><code>set_pivot(x=0, y=0, time=None)</code></dt>
+<dd>Set the point around which an object should rotate relative to the regular origin.</dd>
+<dt><code>get_pivot()</code></dt>
+<dd>Return the point around which an object should rotate relative to the regular origin.</dd>
+<dt><code>set_text(text, time=None)</code></dt>
+<dd>Sets the text of the graphical object (only available on text objects).</dd>
+<dt><code>get_text()</code></dt>
+<dd>Returns the text of the graphical object (only available on text objects).</dd>
+<dt><code>destroy()</code></dt>
+<dd>Destroys the graphical object and removes it from the canvas (irreversible).
+If you try to update an object after it has been destroyed your implementation might crash.</dd>
+</dl>
+<h3 id="manually-add-animation-step">Manually add animation step</h3>
+<p>It is possible to manually add animation steps without going through the natural step cycle.
+This can be useful if you want to perform an extra step such as drawing a final score or perform some elaborate animation. <code>canvas.finish_step()</code> (or, an alias is <code>canvas.split_step()</code>)</p>
+<p>All graphical operations performed after finish_step will occur in a new step.</p>
+<p>The example Freecode from above uses <code>canvas.finish_step()</code> on row 93: <a href="https://app.futureskill.com/freecode-test-editor/602e752d1667cc6d98aee706">Freecode</a> (can only be seen if logged in).</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/future-skill/future-skill.github.io" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/future-skill/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/futureskillsweden/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
