@@ -1,5 +1,8 @@
 site_name: Future Skill wiki
 site_url: https://newwiki.futureskill.com/
+repo_url: https://github.com/future-skill/future-skill.github.io
+repo_name: future-skill.github.io
+site_description: "Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com"
 extra_css:
   - stylesheets/theme.css
 theme:
@@ -55,8 +58,6 @@ plugins:
         background_color: "#295c88"
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/future-skill/future-skill.github.io
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/future-skill/
     - icon: fontawesome/brands/facebook
