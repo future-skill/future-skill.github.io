@@ -82,6 +82,7 @@ nav:
     - create_an_exercise/Data.md
     - create_an_exercise/Flow.md
     - create_an_exercise/Create_Sprite_Sheet.md
+    - create_an_exercise/Images.md
   - Legacy:
     - legacy/Freecode_graphics.md
     - legacy/Implementation.md

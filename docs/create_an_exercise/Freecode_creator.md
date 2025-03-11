@@ -108,8 +108,10 @@ Here you can upload images to be used as graphical elements in the canvas.
 The possible usages are individual bitmaps or as sprite sheets.
 
 Images should typically be PNG image files with transparent backgrounds for the best result.
+There are many built in images that can be accessed without any need to upload them, see [Built in images](Images.md) for a full list.
 
 Sprite sheets needs a separate image atlas that define where each image in the sheet is placed, this atlas has to be in json format compatible with pixi.js.
+You can read more about this on the [Create Prite Sheet](Create_Sprite_Sheet.md) page.
 
 
 ### Background Color
