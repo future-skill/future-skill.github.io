@@ -235,11 +235,11 @@ This description should contain details about what to do, how it can be done, an
 You can use special tags to manage what text is displayed.
 To write text which only is visible when Level 1 is selected in an exercise, write:
 ???+ example "Using level tags"
-```
-[level1]
-This text is for level 1
-[/level1]
-```
+    ```
+    [level1]
+    This text is for level 1
+    [/level1]
+    ```
 You can also use `[level2]`, `[level3]` and so forth.
 
 To write text only visible when certain languages are selected you can change the value in the tags to one of c, c_sharp, cpp, go, java, javascript, php, python, ruby, scala, typescript, rust, kotlin.
