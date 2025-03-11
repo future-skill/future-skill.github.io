@@ -33,55 +33,55 @@ There are various tools for formatting and styling cells based on position and/o
 
 The following attributes are available for all tables and can be specified in the constructor:
 
-`transpose - bool`
+`transpose` - `bool`
 : Show rows as columns and vice versa, useful as rows and columns are not functionally identical.
 
-`default_data_formatter - Callable[[int, int, Any], str | BaseElement]`
+`default_data_formatter` - `Callable[[int, int, Any], str | BaseElement]`
 : Used to format all non-header/footer cells that have not already been formatted
 
-`column_data_formatters - dict[int, Callable[[int,_int,_Any],_str|BaseElement]] | None`
+`column_data_formatters` - `dict[int, Callable[[int,_int,_Any],_str|BaseElement]] | None`
 : Used to format all non-header/footer cells of the indicated columns, other columns are formatted using the default formatter
 
-`default_data_highlighter - Callable[[int, int, Any], CellStyle | None]`
+`default_data_highlighter` - `Callable[[int, int, Any], CellStyle | None]`
 : Used to apply highlight styles to all non-header/footer cells that have not already been highlighted
 
-`column_data_highlighters - dict[int, Callable[[int,_int,_Any],_CellStyle|None]] | None`
+`column_data_highlighters` - `dict[int, Callable[[int,_int,_Any],_CellStyle|None]] | None`
 : Used to apply highlight styles to all non-header/footer cells of the indicated columns, other columns are styled using the default highlighter
 
-`default_cell_style - CellStyle`
+`default_cell_style` - `CellStyle`
 : Used as base style for non-header/footer cells
 
-`default_header_cell_style - CellStyle`
+`default_header_cell_style` - `CellStyle`
 : Used as base style for header/footer cells
 
-`default_cell_highlighter - Callable[[int, int, AbstractTable], CellStyle]`
+`default_cell_highlighter` - `Callable[[int, int, AbstractTable], CellStyle]`
 : Used to apply base styles for cells, can be used to add patterns to the table, default uses the the default styles
 
-`cell_styles - dict[tuple[int, int], CellStyle] | None`
+`cell_styles` - `dict[tuple[int, int], CellStyle] | None`
 : Overrides the highlight styles for specific cells
 
-`cell_padding - float`
+`cell_padding` - `float`
 : How much padding to add within each cell
 
-`default_row_align - "top" | "bottom" | "center"`
+`default_row_align` - `"top" | "bottom" | "center"`
 : How to align the cell content of all rows unless otherwise specified
 
-`default_column_align - "left" | "right" | "center"`
+`default_column_align` - `"left" | "right" | "center"`
 : How to align the cell content of all columns unless otherwise specified
 
-`row_alignments - list["top" | "bottom" | "center" | None]`
+`row_alignments` - `list["top" | "bottom" | "center" | None]`
 : Set row alignment for specific rows
 
-`column_alignments - list["left" | "right" | "center" | None]`
+`column_alignments` - `list["left" | "right" | "center" | None]`
 : Set column alignment for specific columns
 
-`row_proportions - list[float]`
+`row_proportions` - `list[float]`
 : Set row proportions, 0 means divide remaining evenly
 
-`column_proportions - list[float]`
+`column_proportions` - `list[float]`
 : Set column proportions, 0 means divide remaining evenly
 
-`grid_line_size - float | None`
+`grid_line_size` - `float | None`
 : The thickness of the grid lines, `None` disables the lines completely
 
 
@@ -118,28 +118,28 @@ The following methods are available for all tables:
 
 The following calculated properties are available for all tables:
 
-`row_count - int`
+`row_count` - `int`
 : Total number of table rows, including headers and footers
 
-`column_count - int`
+`column_count` - `int`
 : Total number of table columns, including headers and footers
 
-`header_row_count - int`
+`header_row_count` - `int`
 : Total number of header rows
 
-`header_column_count - int`
+`header_column_count` - `int`
 : Total number of header columns
 
-`footer_row_count - int`
+`footer_row_count` - `int`
 : Total number of footer rows
 
-`footer_column_count - int`
+`footer_column_count` - `int`
 : Total number of footer columns
 
 The `AbstractTable` class is the base class for table data managers.
 
 
-## DataTable
+## `DataTable`
 
 The `DataTable` class is used to create tables by manually entering data.
 
