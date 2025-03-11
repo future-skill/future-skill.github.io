@@ -335,6 +335,10 @@ General attributes/methods:
     ```
     ![Three images](../assets/Three_bitmaps.png){loading=lazy}
 
+!!! note
+    There are many images provided by the framework that can be accessed simply by using their names as the `image` string.
+    You can find them all in [Built in images](Images.md).
+
 
 #### `Sprite`
 

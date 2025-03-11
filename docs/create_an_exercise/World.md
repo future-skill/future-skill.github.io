@@ -178,25 +178,25 @@ You can remove a tile using `world.remove_tile(coordinate)`.
 
 ### Prefab tiles
 
-| Constant           | Name          | Code | Notes    |
-|--------------------|---------------|------|----------|
-| Tile.BLOCKED       | blocked       | b    | blocking |
-| Tile.CARPET        | carpet        | c    |          |
-| Tile.CARPET_BLUE   | carpet_blue   | k    |          |
-| Tile.CARPET_BLUE_2 | carpet_blue_2 | K    |          |
-| Tile.CARPET_GREY   | carpet_grey   | C    |          |
-| Tile.GRASS         | grass         | g    |          |
-| Tile.GRASS_2       | grass_2       | G    |          |
-| Tile.GRAVEL        | gravel        | r    |          |
-| Tile.MUD           | mud           | m    |          |
-| Tile.PARQUET       | parquet       | p    |          |
-| Tile.PARQUET_2     | parquet_2     | P    |          |
-| Tile.TILES         | tiles         | t    |          |
-| Tile.TILES_2       | tiles_2       | T    |          |
-| Tile.WATER         | water         | w    | blocking |
-| Tile.WATER_2       | water_2       | W    | blocking |
-| Tile.SPACE_BLUE    | space_blue    | s    |          |
-| Tile.SPACE_GREEN   | space_green   | S    |          |
+| Constant           | Name          | Code | Notes    | Top down | Isometric |
+|--------------------|---------------|------|----------|----------|-----------|
+| Tile.BLOCKED       | blocked       | b    | blocking | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_blocked.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_blocked.webp){loading=lazy} |
+| Tile.CARPET        | carpet        | c    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_beige_carpet.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_beige_carpet.webp){loading=lazy} |
+| Tile.CARPET_BLUE   | carpet_blue   | k    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_dark_blue_carpet.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_dark_blue_carpet.webp){loading=lazy} |
+| Tile.CARPET_BLUE_2 | carpet_blue_2 | K    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_light_blue_carpet.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_light_blue_carpet.webp){loading=lazy} |
+| Tile.CARPET_GREY   | carpet_grey   | C    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_grey_carpet.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_grey_carpet.webp){loading=lazy} |
+| Tile.GRASS         | grass         | g    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_grass.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_grass.webp){loading=lazy} |
+| Tile.GRASS_2       | grass_2       | G    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_grass_2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_grass_2.webp){loading=lazy} |
+| Tile.GRAVEL        | gravel        | r    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_gravel.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_gravel.webp){loading=lazy} |
+| Tile.MUD           | mud           | m    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_ground.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_ground.webp){loading=lazy} |
+| Tile.PARQUET       | parquet       | p    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_dark_parquet.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_dark_parquet.webp){loading=lazy} |
+| Tile.PARQUET_2     | parquet_2     | P    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_light_parquet.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_light_parquet.webp){loading=lazy} |
+| Tile.TILES         | tiles         | t    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_stone_tiles.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_stone_tiles.webp){loading=lazy} |
+| Tile.TILES_2       | tiles_2       | T    |          | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_bathroom_tiles.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_bathroom_tiles.webp){loading=lazy} |
+| Tile.WATER         | water         | w    | blocking | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_calm_water.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_calm_water.webp){loading=lazy} |
+| Tile.WATER_2       | water_2       | W    | blocking | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_water.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_water.webp){loading=lazy} |
+| Tile.SPACE_BLUE    | space_blue    | s    |          | N/A | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_space_blue.webp){loading=lazy} |
+| Tile.SPACE_GREEN   | space_green   | S    |          | N/A | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_space_green.webp){loading=lazy} |
 
 
 ### Tile map
@@ -302,15 +302,15 @@ You can remove a wall using `world.remove_wall(coordinate_pair)`.
 
 ### Prefab walls
 
-| Constant          | Name         |
-|-------------------|--------------|
-| Wall.BRICK        | brick        |
-| Wall.BRICK_FENCE  | brick_fence  |
-| Wall.HEDGE        | hedge        |
-| Wall.HEDGE_2      | hedge_2      |
-| Wall.PICKET_FENCE | picket_fence |
-| Wall.PLAIN        | plain        |
-| Wall.STONE        | stone        |
+| Constant          | Name         | Top down | Isometric |
+|-------------------|--------------|----------|-----------|
+| Wall.BRICK        | brick        | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_brick_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_brick_left.webp){loading=lazy} |
+| Wall.BRICK_FENCE  | brick_fence  | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_brick_fence_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_brick_fence_left.webp){loading=lazy} |
+| Wall.HEDGE        | hedge        | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_hedge_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_hedge_left.webp){loading=lazy} |
+| Wall.HEDGE_2      | hedge_2      | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_hedge_2_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_hedge_2_left.webp){loading=lazy} |
+| Wall.PICKET_FENCE | picket_fence | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_picket_fence_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_picket_fence_left.webp){loading=lazy} |
+| Wall.PLAIN        | plain        | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_white_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_white_left.webp){loading=lazy} |
+| Wall.STONE        | stone        | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_stone_face.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_stone_left.webp){loading=lazy} |
 
 
 ### Block corners
@@ -524,13 +524,13 @@ If you want to perform multiple movements or actions, you have to use `canvas.sp
 Like with props, there is a dedicated method to create a character `setup.create_character(name, color)`. 
 Available characters and colors are listed in the following tables:
 
-| Constant          | Name    | Description |
-|-------------------|---------|-------------|
-| Character.ADA     | ada     | a girl      |
-| Character.DOUGLAS | douglas | a dog       |
-| Character.KATNISS | katniss | a cat       |
-| Character.RUST    | rust    | a boy       |
-| Character.SKILLY  | skilly  | a robot     |
+| Constant          | Name    | Description | Top down | Isometric |
+|-------------------|---------|-------------|----------|-----------|
+| Character.ADA     | ada     | a girl      | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_ada_black_idling.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_ada_black_idling.webp){loading=lazy} |
+| Character.DOUGLAS | douglas | a dog       | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_douglas_black_idling.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_douglas_black_idling.webp){loading=lazy} |
+| Character.KATNISS | katniss | a cat       | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_katniss_black_idling.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_katniss_black_idling.webp){loading=lazy} |
+| Character.RUST    | rust    | a boy       | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_rust_black_idling.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_rust_black_idling.webp){loading=lazy} |
+| Character.SKILLY  | skilly  | a robot     | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_skilly_black_idling.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_skilly_black_idling.webp){loading=lazy} |
 
 | Constant              | Name   |
 |-----------------------|--------|
@@ -580,25 +580,25 @@ It is up to you to decide how to use them.
 Props are created using `setup.create_prop(name)` which also accepts various `Actor` and `Image` attributes.
 The available prefab props are listed in the following table:
 
-| Constant              | Name        | Notes     |
-|-----------------------|-------------|-----------|
-| Container.BARREL      | barrel      | container |
-| Container.BARREL_SIDE | barrel_side | container |
-| Container.CHEST       | chest       | container |
-| Container.CHEST_BAND  | chest_band  | container |
-| Container.CRATE       | crate       | container |
-| Container.CRATE_TALL  | crate_tall  | container |
-| Item.COIN             | coin        | item      |
-| Item.HEART            | heart       | item      |
-| Item.KEY              | key         | item      |
-| Item.STAR             | star        | item      |
-| Prop.BUSH             | bush        |           |
-| Prop.FLOWER           | flower      |           |
-| Prop.FLOWER_2         | flower_2    |           |
-| Prop.STONE            | stone       |           |
-| Prop.STONE_2          | stone_2     |           |
-| Prop.TREE             | tree        |           |
-| Prop.TREE_STONES      | tree_stones |           |
+| Constant              | Name        | Notes     | Top down | Isometric |
+|-----------------------|-------------|-----------|----------|-----------|
+| Container.BARREL      | barrel      | container | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_barrel1.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_barrel1.webp){loading=lazy} |
+| Container.BARREL_SIDE | barrel_side | container | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_barrel2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_barrel2.webp){loading=lazy} |
+| Container.CHEST       | chest       | container | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_chest1.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_chest1.webp){loading=lazy} |
+| Container.CHEST_BAND  | chest_band  | container | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_chest2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_chest2.webp){loading=lazy} |
+| Container.CRATE       | crate       | container | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_crate1.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_crate1.webp){loading=lazy} |
+| Container.CRATE_TALL  | crate_tall  | container | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_crate2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_crate2.webp){loading=lazy} |
+| Item.COIN             | coin        | item      | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_coin.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_coin.webp){loading=lazy} |
+| Item.HEART            | heart       | item      | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_heart.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_heart.webp){loading=lazy} |
+| Item.KEY              | key         | item      | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_key.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_key.webp){loading=lazy} |
+| Item.STAR             | star        | item      | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_star.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_star.webp){loading=lazy} |
+| Prop.BUSH             | bush        |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_bush1.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_bush1.webp){loading=lazy} |
+| Prop.FLOWER           | flower      |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower1.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower1.webp){loading=lazy} |
+| Prop.FLOWER_2         | flower_2    |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower2.webp){loading=lazy} |
+| Prop.STONE            | stone       |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone.webp){loading=lazy} |
+| Prop.STONE_2          | stone_2     |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone_2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone_2.webp){loading=lazy} |
+| Prop.TREE             | tree        |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree1.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree1.webp){loading=lazy} |
+| Prop.TREE_STONES      | tree_stones |           | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree2.webp){loading=lazy} | ![](https://sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree2.webp){loading=lazy} |
 
 Smaller props such as flowers and stones can preferably be added as cosmetic scenary to world, with an offset from the center.
 Here is an example where a couple of stones and flowers are added:
