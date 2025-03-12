@@ -4,6 +4,8 @@ contributors:
   - Henrik Rostedt
   - Henrik
   - Ludvig
+width:
+  standard: 250px
 ---
 
 This article goes through how to use the World library to create a topdown or isometric world.
@@ -149,6 +151,9 @@ Alternatively the `tiles` argument can be a string as described in [tile map](Wo
       ```
       world = setup.create_world(tiles="gg\nr")
       ```
+Both the examples above result in a world that looks like this:
+
+![](../assets/Small_tile_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 Second way is to use the `World` methods:
 
@@ -216,6 +221,7 @@ Leading and trailing whitespace is ignored, which allows indenting the tile maps
         r
     """
     ```
+    ![](../assets/Small_tile_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 ???+ example "Tile string using gaps"
     ```
@@ -230,6 +236,7 @@ Leading and trailing whitespace is ignored, which allows indenting the tile maps
     mrrg
         mrgg\n.rg"""
     ```
+    ![](../assets/Big_tile_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 ### Interactable tiles
@@ -280,6 +287,7 @@ This takes the form of a dictionary with coordinate pairs as keys and walls as v
         ((0, 0), (0, 1)): "stone",
     })
     ```
+    ![](../assets/Walls_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 Second way is to use the `World` method:
 
@@ -603,7 +611,7 @@ The available prefab props are listed in the following table:
 Smaller props such as flowers and stones can preferably be added as cosmetic scenary to world, with an offset from the center.
 Here is an example where a couple of stones and flowers are added:
 
-???+ example "Add a couple of stones anf flowers to the world"
+???+ example "Add a couple of stones and flowers to the world"
     ```
     scenary = [
         ("stone", (0, 0), (-0.3, 0)),
@@ -613,6 +621,7 @@ Here is an example where a couple of stones and flowers are added:
     for name, coord, offset in scenary:
         world.add_actor(coord, setup.create_prop(name, offset=offset))
     ```
+    ![](../assets/Props_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 Bigger props should generally be used without an offset to avoid intersecting walls and characters.
 You would generally also want to give the bigger props a tag that can be used to block movement.
