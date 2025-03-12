@@ -63,7 +63,6 @@ A quiz is a question/answer section that the user can interact with and get eith
 | `option` | An incorrect answer to the quiz |
 | `feedback-correct` | The text that is shown to the user if it answers correctly |
 | `feedback-incorrect` | The text that is shown to the user if it answers incorrectly |
-|  |  |
 
 #### Tags
 
