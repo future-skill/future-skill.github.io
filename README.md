@@ -48,4 +48,3 @@ If something is indented it is a child of whatever is the closest thing above it
 
 ## Change the URL
 If you want to change the URL you will need to set the `site_url` value in the `mkdocs.yml` file to the new URL, replace the URL in the `CNAME` file with the new URL, and update the DNS service.
-You might also need to update the `Custom domain` value on GitHub under `Settings > Pages`.
