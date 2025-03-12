@@ -13,12 +13,13 @@ The library can currently only be used to make tables, but other types of data v
 
 The classes provided in this module are not UI elements, but they have a render method that can be used to create an initial element or update the created element.
 
-For example:
-```
-table = DataTable()
-table[:, :] = [["Name",_"Count"],_["Jane",_9],_["Joe",_7|"Name", "Count"], ["Jane", 9], ["Joe", 7]]
-table.render(parent=self.canvas, size=self.canvas.size, position=self.canvas.size / 2)
-```
+???+ example "`DataTable` example"
+    ```
+    table = DataTable()
+    table[:, :] = [["Name","Count"], ["Jane", 9], ["Joe", 7]]
+    table.render(parent=self.canvas, size=self.canvas.size, position=self.canvas.size / 2)
+    ```
+    ![](../assets/DataTable_example.png)
 
 Each type of data manager has an abstract base class which provides the common functionality.
 
@@ -145,20 +146,15 @@ The `DataTable` class is used to create tables by manually entering data.
 
 This is done through indexing:
 
-```
-table = DataTable(header_row_count=1)
-table[1, 1] = 5  # Set value for a single table cell
-table[0, :] = ["Name", "Count"]  # Set values for multiple cells (first row)
-table[1:, :] = [["Jane",_9],_["Joe",_7|"Jane", 9], ["Joe", 7]]  # Set values for multiple rows and columns
-# table will now contain:
-# |------|-------|
-# | Name | Count |
-# |------|-------|
-# | Jane |   9   |
-# |------|-------|
-# | Joe  |   7   |
-# |------|-------|
-```
+???+ example "Indexing `DataTable`"
+    ```
+    table = DataTable(header_row_count=1)
+    table[1, 1] = 5  # Set value for a single table cell
+    table[0, :] = ["Name", "Count"]  # Set values for multiple cells (first row)
+    table[1:, :] = [["Jane", 9], ["Joe", 7]]  # Set values for multiple rows and columns
+    table.render(parent=self.canvas, size=self.canvas.size, position=self.canvas.size / 2)
+    ```
+    ![](../assets/DataTable_example_2.png)
 
 The same indexing syntax can be used to extract data from the table.
 
