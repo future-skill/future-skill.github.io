@@ -482,9 +482,7 @@ Like the stage skeleton, there are plenty of features specifically for interact 
             return GameInfo(
                 title="My game",
                 summary="My game summary",
-                description="My game description.
-
-    Which can use <em>html formatting</em>!",
+                description="My game description. Which can use <em>html formatting</em>!",
             )
         
         def setup_players(self):
