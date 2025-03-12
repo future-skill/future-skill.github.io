@@ -263,6 +263,10 @@ The callback function to this listener is given to the `WorldSetup.create_world`
     Depending on how the tile was instantiated `info["name"]` can either be a string or a `Tile(StrEnum)`.
     If the tiles are generated using a `TileMap` the name in `TileInfo` will be a `Tile(StrEnum)`, but if instantiated using `World.add_tile({"name": "tile_name"})` the name in `TileInfo` till be the string `"tile_name"`.
 
+!!! error
+    Interactable tiles do not work well in the isometric view.
+    You can use `ImageActor` to circumvent this issue, see [Using `ImageActor` to make interactable tiles](World.md#using-imageactor-to-make-interactable-tiles) for more info.
+
 
 ## Walls
 
@@ -860,12 +864,78 @@ Containers follow the same naming as props, except that the base image should be
 An image suffixed with `_closed` will be used for the default state and an image suffixed with `_opened` will be used for the opened state.
 
 
-### ItemEntry
+### `ItemEntry`
 
-Same fields as `PropEntry`.
+Same fields as [`PropEntry`](World.md#propentry).
 
 Items follow the same naming as props. An image suffixed with `_spawn` will be used for the reveal animation.
 
+### `ImageActor`
+
+While `ImageActor` is not a custom prefab, it can sometimes be used as one.
+As the name implies it is an [`Actor`](World.md#actors), that takes the name of an uploaded or [built in image](Images.md) or sprite with the corresponding parameter name `image` or `sprite`.
+
+Additionally it has the following optional parameters:
+
+`size` - `tuple[float, float]` (default `(1, 1)`)
+: The size of the `ImageActor`, in world units.
+
+`animation` - `str` (default `"default"`)
+: The name of the animation to be used for the sprite, if applicable.
+
+`image_offset` - `tuple[float, float]` (default `(0, 0)`)
+: Offset from the center of the image/sprite to the center of the `ImageActor`'s footprint.
+
+`flipped` - `bool` (default `False`)
+: Determines if the image/sprite should be flipped.
+
+
+#### Using `ImageActor` to make interactable tiles
+
+You can use `ImageActor` to make a button that can be placed on a tile in the `World`.
+This is useful if you want to highlight the tiles that a player can interact with in interact mode, or if you are using the isometric view where [interactable tile](World.md#interactable-tiles) do not work.
+This example will use `ButtonActor`, which is a child of `ImageActor`, see code below.
+
+???+ example "Code for our `ButtonActor`"
+    ```
+    class ButtonActor(ImageActor):
+        def __init__(self, callback, coords):
+            ImageActor.__init__(self, image = "Button.png")
+            self.callback = callback
+            self.coords = coords
+            self.default_opacity = 0.5
+        
+        def _render_new(self, resolution: int) -> BaseElement:
+            button_size = 1
+            args = {
+                "size": mulv((button_size, button_size), resolution),
+                "on_click": lambda _: self.callback(self.coords)
+            }
+            self.image = Image("Button.png", **args)
+            self.image.opacity = self.default_opacity
+            return self.image
+        
+        def show(self, do_show):
+            self.image.opacity = self.default_opacity if do_show else 0
+    ```
+
+To get this example to work you will also need to upload an image to act as the button.
+This image does not need to be visible for the `ButtonActor` to work, you can set `self.default_opacity = 0`, but you need a picture.
+It is recommended that the image is as tight as possible, and a bit smaller than a tile, to ensure that there is as little overlap between the buttons as possible.
+
+The next step is to add `ButtonActor`s to all tiles that you want the player to interact with.
+
+???+ example "Adding `ButtonActor` to some tiles"
+    ```
+    for x in range(3):
+        for y in range(3):
+            coord = (x, y)
+            button_interact = lambda c: print(f"Interacted with tile on {c}!")
+            button = ButtonActor(button_interact, coord)
+            self.world.add_actor(coord, button)
+    ```
+
+That is all you need to do to use an `ImageActor` to make interactable tiles!
 
 ## Templates
 
