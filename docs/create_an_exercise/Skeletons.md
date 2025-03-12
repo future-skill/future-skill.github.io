@@ -317,7 +317,7 @@ It acts as the base for other GUI focused skeletons, so it is likely you will wa
     ```
 
 
-### Required methods {#stagechallenge-required-methods}
+### Required methods { #stagechallenge-required-methods }
 
 `setup_level(self, level)`  
 : See [`BasicChallenge` - Required methods](Skeletons.md#required-methods).
