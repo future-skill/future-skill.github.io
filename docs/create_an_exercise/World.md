@@ -735,7 +735,7 @@ The following subsections detail what parameters exist and what they do, as well
     Images must be provided in WebP, which should be supported by most modern image editors.
 
 
-### TileEntry
+### `TileEntry`
 
 `name` - `str`  
 : The name to be used to refer to this prefab.
@@ -764,7 +764,7 @@ Tile images are named `<perspective>_tile_<name>.webp`.
     ```
 
 
-### WallEntry
+### `WallEntry`
 
 `name` - `str`  
 : The name to be used to refer to this prefab.
@@ -791,7 +791,7 @@ Directions for topdown are `face` and `side`, and directions for isometric are `
     ```
 
 
-### CharacterEntry
+### `CharacterEntry`
 
 `name` - `str`  
 : The name to be used to refer to this prefab.
@@ -815,7 +815,7 @@ Required and must be unique within the prefab category (will otherwise override 
 There are too many images used for characters to list out the names here.
 
 
-### PropEntry
+### `PropEntry`
 
 `name` - `str`  
 : The name to be used to refer to this prefab.
@@ -848,9 +848,9 @@ Prop images are named `<perspective>_prop_<name>.webp`.
     The perspective must match if a particular perspective was forced.
 
 
-### ContainerEntry
+### `ContainerEntry`
 
-Same fields as `PropEntry`, with the following additions:
+Same fields as [`PropEntry`](World.md#propentry), with the following additions:
 
 `item_offset` - `tuple[float, float] | dict[str, tuple[float, float]]` (default `(0, 0)`)  
 : Offset from the center of the footprint of the container to the center of the footprint of the showcased item.
