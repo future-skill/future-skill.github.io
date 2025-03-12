@@ -901,11 +901,9 @@ class Challenge(GameChallenge):
         # We don't use the turn system, this change is just cosmetic
         self.auto_finish_turn = True
         return GameInfo(
-            title="My game",
-            summary="Follow the path",
-            description="My game description.
-
-Which can use <em>html formatting</em>!",
+            title="",
+            summary="",
+            description="",
         )
     
     def setup_players(self):
@@ -917,11 +915,13 @@ Which can use <em>html formatting</em>!",
             name="Your solution",
             image="TODO",
         )]
-
-    # Keep track of points using a statistic
-    def setup_statistics(self):
-        return [StatisticInfo("points", suffix="points", type=int, default=10)]
-
+    
+    def setup_info_panel(self):
+        return None
+    
+    def setup_tabs(self):
+        return None
+    
     # Disable the auto-finish turn setting
     def setup_settings(self):
         return []
@@ -1026,6 +1026,7 @@ Which can use <em>html formatting</em>!",
         except SolutionException:
             # Code put here will run if the solution crashed
             pass
+        self.finished = True
 
     def update_view(self):
         """
@@ -1057,5 +1058,5 @@ Which can use <em>html formatting</em>!",
             self.finished = True
             self.info_prompt = "You made it to the end of the path!"
         # We can update the scores here
-        self.scores[0] = self.players[0].points)
+        self.scores[0] = self.players[0].points
 ```
