@@ -95,6 +95,8 @@ For implementation methods you get raise NotImplementedError('"APImethod" not im
 This tab contains settings for how the implementation should use the canvas and manages the default landing page background and thumbnail.
 Some settings might disable other settings, if canvas is disabled there will be no other canvas settings available.
 
+![](../assets/Graphics_tab.png){loading=lazy}
+
 
 ### Canvas Animation
 
@@ -139,7 +141,9 @@ This image will be used as both background and thumbnail for the implementation.
 
 ## Settings Tab
 
-A mismatch between the total number of levels and the number of levels in the implementation _configurations variable will lead to an error.
+A mismatch between the total number of levels and the number of levels in the implementation _configurations variable can lead to an error.
+
+![](../assets/Settings_tab.png){loading=lazy}
 
 
 ### Tournament
@@ -151,28 +155,34 @@ Is Tournament: For an explanation of the difference between Challenge and tourna
 Number of players: if isTournament this setting will determine the number of solution that will compete against each other in every run.
 
 
-### Test case levels
+### Level Settings
 
-Public levels: These are the levels that the members can see when taking your Freecode.
+**Number of public levels:**
+: These are the levels that the members can see when taking your Freecode.
 
-Exercise: For exercises there are only public levels, however only 1 is available at the time. This means the member must complete one levels before being able to continue to the next one.
-There is no hidden scoring here.
+**Number of hidden levels:**
+: This is only used for the "Code test" and "Challenge" type of Freecode.
+  These levels are hidden and can't be seen by the member.
+  These are the levels that are used for the scoring of the Freecode.
+  So normally extra edge cases are used in these levels to see that the members solution can handle all the edges that you are a part of the Freecode.
 
-Code test and challenges: The public levels are what is visible to the member when taking the Freecode.
-These are the levels that they can try their solutions against and see if they pass.
-These levels are not used in scoring the Freecode.
-That is handled in the hidden and performance levels.
+**Exercise:**
+: For exercises there are only public levels, however only 1 is available at the time.
+  This means the member must complete one levels before being able to continue to the next one.
+  There is no hidden scoring here.
 
-Hidden levels: This is only used for the "Code test" and "Challenge" type of Freecode.
-These levels are hidden and can't be seen by the member.
-These are the levels that are used for the scoring of the Freecode.
-So normally extra edge cases are used in these levels to see that the members solution can handle all the edges that you are a part of the Freecode.
+**Code test and challenges:**
+: The public levels are what is visible to the member when taking the Freecode.
+  These are the levels that they can try their solutions against and see if they pass.
+  These levels are not used in scoring the Freecode.
+  That is handled in the hidden and performance levels.
 
-Performance levels: This is only used for the Code test type of Freecode.
-On top of the normal correctness check of the solution an additional check of how much times was used is added.
-You as the author must specify this time limit in milliseconds for each of the programming languages available on Future Skill.
-For performance levels using much larger input data is recommended.
-The time limit if set per language.
+**Performance levels:**
+: This is only used for the Code test type of Freecode.
+  On top of the normal correctness check of the solution an additional check of how much times was used is added.
+  You as the author must specify this time limit in milliseconds for each of the programming languages available on Future Skill.
+  For performance levels using much larger input data is recommended.
+  The time limit if set per language.
 
 
 ### Good performance scores
@@ -180,21 +190,22 @@ The time limit if set per language.
 Only available for code tests with Performance levels.
 
 
-### Executor
+### Community
 
-Executor: The executor version used - normally this will not affect your work in the Freecode Creator but it's provided for informational purposes.
-Different versions provide different functionality but may require changes on the implementation.
-This is locked and can only be changed by super-admins.
+**Public Implementation:**
+: When this is checked your Freecode will be available to other community members to copy and use as a starting point for their own Freecodes.
+  Only checking this will not allow them to see your solution.
+  So it cant be used for cheating.
 
+**Public Solution:**
+: When you make your solution available members will be able to see and copy your solution.
+  So this can lead to "cheating", especially in the case of Exercises.
 
-### Freecode
+**Use official tag:**
+: When this is checked your Freecode will have the official tag.
 
-Allow others to copy your Freecode: When this is checked your Freecode will be available to other community members to copy and use as a starting point for their own Freecodes.
-Only checking this will not allow them to see your solution.
-So it cant be used for cheating.
-
-Make solution publicly available: When you make your solution available members will be able to see and copy your solution.
-So this can lead to "cheating", especially in the case of Exercises.
+**Is Flow:**
+: When this is checked your Freecode will have a flow, see more on the [Flow](Flow.md) page.
 
 
 ### Versioning
@@ -212,19 +223,12 @@ You can also see the API methods available to the user with the languages specif
 The solution methods are the method signatures the user taking the Freecode will see and are the same methods that are in the skeletons above.
 The Challenge methods are the signatures for the API tab the member will see and use when taking the Freecode.
 
-Landing page tab
-
-In this tab it is possible to upload a custom background image that will be used on the published challenges landing page.
+![](../assets/Preview_tab.png)
 
 
 ## Descriptions
 
-![Description](../assets/2_-_Description.png){ loading=lazy }
-
-
-### Summary
-
-This is the public description used externally to entice participants and to give a brief overview of what the challenge or exercise contains and/or should teach/test.
+![Description](../assets/Description_tab.png){ loading=lazy }
 
 
 ### Description
@@ -289,10 +293,23 @@ If there is no match or default text the from text will be replaced with an empt
     [/translate]
     ```
 
-### Run Code
 
-"Run Code" will let you run your solution like you are a member taking the Freecode.
+### Summary
+
+This is the public description used externally to entice participants and to give a brief overview of what the challenge or exercise contains and/or should teach/test.
+
+### Flow
+
+This is where you edit the flow, see [Flow](Flow.md) for more information.
+
+## Run Code
+
+![](../assets/Run_code.png){loading=lazy}
+
+The "Run Code" button will let you run your solution like you are a member taking the Freecode.
 You will see the output in the canvas and console just like if you were taking the Freecode as a member.
+If you check the "Save On Run" checkbox you will also save every time you run the code.
+
 If you are creating a challenge or Code test you will see the text "run hidden levels" next to the "Run Code" button.
 If you check this you will also see the result for the hidden levels.
 This option is not available to members taking the Freecode.
