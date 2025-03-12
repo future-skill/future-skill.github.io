@@ -10,6 +10,8 @@ The Editor consists of four main sections as seen in the image below.
 On the top left side is a description of the current activity, and below it there is usually some graphical output using a canvas element.
 On the top right side is the solution section where the programmer writes their solution code, and below it there is a console and score section where the output from running the solution code is shown.
 
+![](../assets/Freecode_editor.png){loading=lazy}
+
 The Editor supports a number of programming languages.
 While programmers are free to choose which language to write their solution code in, it is encouraged to try different ones. In fact, solving a task in multiple languages is usually rewarded with achievements and experience points.
 
