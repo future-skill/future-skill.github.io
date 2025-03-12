@@ -56,6 +56,21 @@ plugins:
   - social:
       cards_layout_options:
         background_color: "#295c88"
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: auto
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      background: "#295c88"
+      shadow: true
+      manual: false
+  - macros
 extra:
   social:
     - icon: fontawesome/brands/linkedin
