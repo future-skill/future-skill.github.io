@@ -4,6 +4,8 @@ contributors:
   - Henrik Rostedt
   - Admin
   - Henrik
+width:
+  standard: 250px
 ---
 
 This article goes through how to use the Freecode canvas and the UI library.
@@ -29,7 +31,11 @@ If you use [`StageChallenge`](Skeletons.md#stagechallenge) or [`GameChallenge`](
     ```
 
 !!! note
-    You neither specify parent nor position in `setup_view`, this is done for you.
+    You specify neither parent nor position in `setup_view`, this is done for you.
+
+Either way you will get a canvas containing only a green square.
+
+![](../assets/Setup_element_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 ## Overview
@@ -70,8 +76,9 @@ All these elements can be imported from the `lib.ui` package, along with any of 
     ```
     from lib.ui import Rectangle, Text
 
-    my_rect = Rectangle(children=[Text("Hello")])
+    my_rect = Rectangle(children=[Text("Hello", color="white", font_size=30)])
     ```
+    ![](../assets/Child_element_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 Remember to add the element to the import list, or you will get an error.
 
@@ -103,11 +110,19 @@ General attributes/methods:
 
 ???+ example "Creating three `Rectangle` objects"
     ```
-    a = Rectangle(w=4, h=2, x=3, y=3, color="#FF6347")
-    b = Rectangle(w=2, h=2, x=2, y=2, color="red", rotation=60)
-    c = Rectangle(w=2, h=2, x=3, y=3, color="green", rotation=-20, stroke=0.2, opacity=0.3)
+    self.my_rectangle = Rectangle(color="white", children = [
+        
+        # Wide rectangle
+        Rectangle(w=4, h=2, x=0, y=0, color="#FF6347"),
+        
+        # Rotated square
+        Rectangle(w=2, h=2, x=-1, y=-1, color="red", rotation=60),
+        
+        # Hollow square
+        Rectangle(w=2, h=2, x=0, y=0, color="green", rotation=-20, stroke=0.2, opacity=0.3)
+    ])
     ```
-    ![Three rectangles](../assets/Three_rectangles.png){loading=lazy}
+    ![](../assets/Three_rectangles.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `Circle`
@@ -137,11 +152,19 @@ General attributes/methods:
 
 ???+ example "Creating three `Circle` objects"
     ```
-    a = Circle(r=1, color="red")
-    b = Circle(r=1, color="blue", x=2, y=1)
-    c = Circle(r=0.8, color="green", x=1, y=1, stroke=0.1)
+    self.my_rectangle = Rectangle(color="white", children = [
+        
+        # Red circle
+        Circle(r=1, color="red", x=-1),
+        
+        # Blue circle
+        Circle(r=1, color="blue", x=1, y=1),
+        
+        # Green ring
+        Circle(r=0.8, color="green", x=0, y=1, stroke=0.1)
+    ])
     ```
-    ![Three circles](../assets/Three_circles.png){loading=lazy}
+    ![](../assets/Three_circles.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `Polygon`
@@ -166,11 +189,18 @@ General attributes/methods:
 
 ???+ example "Creating three `Polygon` objects"
     ```
-    a = Polygon([(0, 0), (5, 0), (2, 1)], color="red", x=3, y=1, z_index = 1)
-    b = Polygon([(0, 0), (0, 2), (0.5, 2), (1, 1), (2, 2), (1, 0)], color="blue", x=1, y=1, stroke=0.3, z_index=3)
-    c = Polygon([(0, 0), (-2, 2), (2, 2), (3, 0)], color="green", x=4, y=3, opacity=0.5, rotation=170, z_index=2)
+    self.my_rectangle = Rectangle(color="white", children = [
+        # Red triangle
+        Polygon([(0, 0), (5, 0), (2, 1)], color="red", x=0.4, y=0, z_index = 1),
+        
+        # Blue line
+        Polygon([(0, 0), (0, 2), (0.5, 2), (1, 1), (2, 2), (1, 0)], color="blue", x=-1.5, y=0, stroke=0.3, z_index=3),
+        
+        # Green quadrilateral
+        Polygon([(0, 0), (-2, 2), (2, 2), (3, 0)], color="green", x=0, y=0, opacity=0.5, rotation=170, z_index=2)
+    ])
     ```
-    ![Three polygons](../assets/Three_polygons.png){loading=lazy}
+    ![](../assets/Three_polygons.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `ComplexShape`
@@ -202,8 +232,11 @@ General attributes/methods:
 
 ???+ example "Creating a `ComplexShape`"
     ```
-    ComplexShape([[(0,_0)],_[(5,_5),_(0,_10)],_[(10,_10)],_[(5,_5),_(15,_5),_(10,_0)|(0, 0)], [(5, 5), (0, 10)], [(10, 10)], [(5, 5), (15, 5), (10, 0)]], color="green")
+    self.my_rectangle = Rectangle(color="white", children = [
+        ComplexShape([[(0, 0)], [(5, 5), (0, 10)], [(10, 10)], [(5, 5), (15, 5), (10, 0)], [(0, 0)], [(5, 5), (0, 10)], [(10, 10)], [(5, 5), (15, 5), (10, 0)]], color="green")
+    ])
     ```
+    ![](../assets/ComplexShape_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 ### Text
@@ -237,8 +270,11 @@ General attributes/methods:
 
 ???+ example "Creating a `Text`"
     ```
-    Text("Hello World!", font_size=10, color="yellow")
+    self.my_rectangle = Rectangle(color="white", children = [
+        Text("Hello\nWorld!", font_size=5, color="orange")
+    ])
     ```
+    ![](../assets/Text_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `DynamicText`
@@ -270,7 +306,9 @@ General attributes/methods:
 
 ???+ example "Creating a `DynamicText`"
     ```
-    DynamicText("Hello World!", font_size=10, color="yellow", w=40, h=10)
+    self.my_rectangle = Rectangle(color="white", children = [
+        DynamicText("Hello\nWorld!", font_size=5, color="orange", w=10)
+    ])
     ```
 
 
@@ -301,8 +339,11 @@ General attributes/methods:
 
 ???+ example "Creating an `HtmlArea`"
     ```
-    HtmlArea("Hello <b>World</b>!", font_size=5, w=50, h=20, disable_scroll=True, disable_auto_font_scale=True)
+    self.my_rectangle = Rectangle(color="white", children = [
+        HtmlArea("Hello <b>World</b>!", font_size=4, w=15, h=15, disable_scroll=True, disable_auto_font_scale=True)
+    ])
     ```
+    ![](../assets/HtmlArea_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 ### Graphics
@@ -329,11 +370,18 @@ General attributes/methods:
 
 ???+ example "Creating three `Image` objects"
     ```
-    a = Image("striped_cat.png", w=4, h=4)
-    b = Image("striped_cat.png", w=4, h=4, x=4, y=1.5)
-    c = Image("striped_cat.png", w=8, h=4, x=4, y=2, rotation=20, color="red". opacity=0.3, z_index=-1, scale_x=-1)
+    self.my_rectangle = Rectangle(color="white", children = [
+        # Left cat
+        Image("std_katniss_standing.webp", w=4, h=3),
+        
+        # Slightly squished cat
+        Image("std_katniss_standing.webp", w=4, h=2, x=4, y=1.5),
+        
+        # Red background cat
+        Image("std_katniss_standing.webp", w=8, h=4, x=2, y=2, rotation=20, color="red", opacity=0.3, z_index=-1, scale_x=-1)
+    ])
     ```
-    ![Three images](../assets/Three_bitmaps.png){loading=lazy}
+    ![](../assets/Three_bitmaps.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 !!! note
     There are many images provided by the framework that can be accessed simply by using their names as the `image` string.
@@ -373,7 +421,7 @@ General attributes/methods:
     b = Sprite("weird_sheet.png", w=2, h=2, x=3, y=1, start=2, end=0, scale_x=-1)
     c = Sprite("weird_sheet.png", w=1.5, h=2, x=5, y=1, animation="just_display_guy")
     ```
-    ![Three sprites](../assets/Three_spritesheets.png){loading=lazy}
+    ![](../assets/Three_spritesheets.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 ### Containers
@@ -446,6 +494,7 @@ All positional arguments are added as children.
     ```
     Horizontal(Rectangle(color="yellow"), Rectangle(color="magenta"), Rectangle(color="cyan"))
     ```
+    ![](../assets/Horizontal_example.png){loading=lazy}
 
 
 #### `Vertical`
@@ -465,6 +514,7 @@ All positional arguments are added as children.
     ```
     Vertical(*[Text(str(i)) for i in range(5)], spacing=5)
     ```
+    ![](../assets/Vertical_example.png){loading=lazy}
 
 
 #### `Grid`
@@ -496,6 +546,7 @@ All positional arguments are added as children.
     ```
     Grid(*[Text(str(i)) for i in range(20)], columns=5, w=30, h=30, spacing=5)
     ```
+    ![](../assets/Grid_example.png){loading=lazy}
 
 
 ### Controls
@@ -639,6 +690,7 @@ General attributes/methods:
     ```
     Panel(w=50, h=50, content=Circle(color="blue"), title="My Panel")
     ```
+    ![](../assets/Panel_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `Toolbar`
@@ -673,6 +725,7 @@ General attributes/methods:
         center_children=[Text("TOOLBAR")],
     )
     ```
+    ![](../assets/Toolbar_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `Popup`
@@ -771,11 +824,12 @@ General attributes/methods:
     def callback(event):
         event.source.color = "orange"
 
-    board = Board(size=80)
+    board = Board(size=64)
     for r in range(board.rows):
         for c in range(board.columns):
             board[r, c] = Circle(scale=0.9, color="green", on_click=callback)
     ```
+    ![](../assets/Board_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `Stage`
@@ -1211,7 +1265,7 @@ We want to have a rectangle that tips over and lands on one side.
 The rectangle should be 2 units wide, 8 units high, and have its pivot offset from the center to its lower right corner.
 We will also offset it 6 units to the right and 9 units down to make it easier to see.
 If we do all this it should be placed like in the image below:
-![Our rectangle](../assets/Falling_rectangle_coordinates.png){loading=lazy}
+![](../assets/Falling_rectangle_coordinates.png){loading=lazy, width={{ page.meta.width.standard }}}
 !!! note
     The coordinate (0, 0) is in the upper left corner, x grows to the right, and y grows downwards.
 !!! note
@@ -1229,7 +1283,7 @@ To make the fall look somewhat natural we will divide it up like this:
 * The rectangle will rotate 45 degrees the first 70% of the second time step
 * The rectangle will rotate 45 degrees more during the remaining 30% of the second time step
 
-![Rectangle time chart](../assets/Animation_of_falling_rectangle_explanation_figure.png){loading=lazy}
+![](../assets/Animation_of_falling_rectangle_explanation_figure.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 ???+ example "Code for defining our rectangle's fall"
     ```
@@ -1243,7 +1297,7 @@ To make the fall look somewhat natural we will divide it up like this:
 
 The end result will look like this:
 
-![Falling rectangle](../assets/Falling_rectangle.gif){loading=lazy}
+![](../assets/Falling_rectangle.gif){loading=lazy, width={{ page.meta.width.standard }}}
 
 Freecode that implements this animation: [Freecode](https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706)
 !!! note
