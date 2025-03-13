@@ -727,7 +727,7 @@ There is no way to add new values to the enums, so you will have to only use the
 
 For each prefab type, the manager has a corresponding `.register_`<type>`s(entry_1, entry_2, ...)` method (e.g. `.register_items(...)`).
 It can be used to register one or more prefab entries.
-The entries are instances of the corresponding <Type>`Entry` classes for the prefab types (e.g. `ItemEntry`).
+The entries are instances of the corresponding `<Type>Entry` classes for the prefab types (e.g. `ItemEntry`).
 
 !!! note
     If you register any prop variant (such as container or item) a corresponding prop entry will automatically be created for you.
@@ -762,9 +762,11 @@ Animations requires an additional sprite sheet json file.
 : Whether the tile should be considered blocked for movement.
 
 Tile images are named `<perspective>_tile_<name>.webp`.
-???+ example "The name of a top down grass tile"
-    ```
-    td_tile_grass.webp
+???+ example "Add a custom top down grass tile"
+    Upload an image called `td_tile_grass.webp` to the [Freecode creator](Freecode_creator.md#the-graphics-tab), then add the tile like this:
+    ``` py
+    DEFAULT_PREFAB_MANAGER.register_tiles(TileEntry(name="grass"))
+    self.world.add_tile((0, 0), {"name": "grass"})
     ```
 
 
@@ -789,9 +791,11 @@ Animations requires an additional sprite sheet json file.
 
 Wall images are named `<perspective>_wall_<name>_<direction>.webp`.
 Directions for topdown are `face` and `side`, and directions for isometric are `left` and `right`.
-???+ example "The name of an isometric stone wall with the left direction"
-    ```
-    iso_wall_stone_left.webp
+???+ example "Add a custom isometric stone wall"
+    Upload two images called `iso_wall_stone_left.webp` and `iso_wall_stone_right.webp` to the [Freecode creator](Freecode_creator.md#the-graphics-tab), then add the wall like this:
+    ``` py
+    DEFAULT_PREFAB_MANAGER.register_walls(WallEntry(name="stone"))
+    self.world.add_wall(((0, 0), (0, 1)), {"name": "stone"})
     ```
 
 
@@ -816,7 +820,19 @@ Required and must be unique within the prefab category (will otherwise override 
 `face_offset` - `tuple[float, float]` (default `(0, 0)`)  
 : Offset from the center of the image to the center of the character face.
 
-There are too many images used for characters to list out the names here.
+Character sprite sheets are named `<perspective>_<name>_<color>_<action>.webp`.
+See [Create Sprite Sheet](Create_Sprite_Sheet.md) for instructions for creating sprite sheets.
+
+Color options are: `black`, `blue`, `orange`, `red`, `white`, and `yellow`.
+
+Action options are: `gesture`, `gesture_away`, `idling`, `idling_away`, `picking`, `walking`, and `walking_away`.
+???+ example "Add a custom topdown character called Kim associated with the color blue"
+    Upload all the necessary sprite sheets on the pattern `td_kim_blue_<action>.webp` to the [Freecode creator](Freecode_creator.md#the-graphics-tab), then add the character like this:
+    ``` py
+    DEFAULT_PREFAB_MANAGER.register_characters(CharacterEntry(name="kim", colors={"blue"}))
+    kim = self.setup.create_character("kim", "blue")
+    self.world.add_actor((0, 0), kim)
+    ```
 
 
 ### `PropEntry`
@@ -844,9 +860,11 @@ Animations requires an additional sprite sheet json file.
 : If set, override with the given perspective when determining the image name.
 
 Prop images are named `<perspective>_prop_<name>.webp`.
-???+ example "The name of an isometric bush prop"
-    ```
-    iso_prop_bush.webp
+???+ example "Add a custom isometric coffee prop"
+    Upload an image called `iso_prop_coffee.webp` to the [Freecode creator](Freecode_creator.md#the-graphics-tab), then add the prop like this:
+    ``` py
+    DEFAULT_PREFAB_MANAGER.register_props(PropEntry(name="coffee"))
+    self.world.add_prop((0, 0), {"name": "coffee"})
     ```
 !!! note
     The perspective must match if a particular perspective was forced.
