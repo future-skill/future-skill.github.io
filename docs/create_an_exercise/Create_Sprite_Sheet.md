@@ -48,7 +48,7 @@ Normally there will be many more in order to create a smooth animation.
 ## Atlas example
 
 ???+ example "The image atlas for the 3 image example above"
-    ```
+    ``` json
     {
       "meta": {
         "image": "res_25_skilly_idle_v1.png",
@@ -94,7 +94,7 @@ To add additional animations from the same sheet just add another list element i
 
 The 3 image example above resulted in the following image atlas after the image was uploaded to Futureskill and a default animation was generated:
 ???+ example "The image atlas with generated default animation for the 3 image example above"
-    ```
+    ``` json
     {
       "meta": {
         "image": "res_25_skilly_idle_v1.png",

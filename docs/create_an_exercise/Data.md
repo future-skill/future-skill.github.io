@@ -14,7 +14,7 @@ The library can currently only be used to make tables, but other types of data v
 The classes provided in this module are not UI elements, but they have a render method that can be used to create an initial element or update the created element.
 
 ???+ example "`DataTable` example"
-    ```
+    ``` py
     table = DataTable()
     table[:, :] = [["Name","Count"], ["Jane", 9], ["Joe", 7]]
     table.render(parent=self.canvas, size=self.canvas.size, position=self.canvas.size / 2)
@@ -147,7 +147,7 @@ The `DataTable` class is used to create tables by manually entering data.
 This is done through indexing:
 
 ???+ example "Indexing `DataTable`"
-    ```
+    ``` py
     table = DataTable(header_row_count=1)
     table[1, 1] = 5  # Set value for a single table cell
     table[0, :] = ["Name", "Count"]  # Set values for multiple cells (first row)

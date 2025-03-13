@@ -17,14 +17,14 @@ The templates for either skeleton will include an example of using the canvas.
 
 If you use [`BasicChallenge`](Skeletons.md#basicchallenge) (or no skeleton) you will want to manually add the elements to the canvas, like so:
 ???+ example "Manually adding elements to canvas"
-    ```
+    ``` py
     def setup_canvas(self):
         self.my_rectangle = Rectangle(x=10, y=10, color="green", parent=self.canvas)
     ```
 
 If you use [`StageChallenge`](Skeletons.md#stagechallenge) or [`GameChallenge`](Skeletons.md#gamechallenge) you will want to return the element in the `setup_view` method:
 ???+ example "Implicitly adding element to canvas"
-    ```
+    ``` py
     def setup_view(self):
         self.my_rectangle = Rectangle(color="green")
         return self.my_rectangle
@@ -53,7 +53,7 @@ You can use any of the names listed here, e.g. `width` or `w` or `size_x`.
 The same names can be used to get or modify the attributes later on.
 
 ???+ example "Accessing attributes"
-    ```
+    ``` py
     my_rect = Rectangle(w=8, h=6, x=10, y=12, parent=self.canvas)
     my_rect.width = 4
     my_rect.color = "blue"
@@ -73,7 +73,7 @@ Many elements have common attributes, which are detailed in their own section to
 All these elements can be imported from the `lib.ui` package, along with any of the enums and constants listed here.
 
 ???+ example "Importing and using an element"
-    ```
+    ``` py
     from lib.ui import Rectangle, Text
 
     my_rect = Rectangle(children=[Text("Hello", color="white", font_size=30)])
@@ -109,7 +109,7 @@ General attributes/methods:
 : Add rounded corners to the rectangle
 
 ???+ example "Creating three `Rectangle` objects"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         
         # Wide rectangle
@@ -151,7 +151,7 @@ General attributes/methods:
 : Prevents automatic resizing of the circle
 
 ???+ example "Creating three `Circle` objects"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         
         # Red circle
@@ -188,7 +188,7 @@ General attributes/methods:
 : The bounds of the polygon used to determine size and pivot, calculated if omitted
 
 ???+ example "Creating three `Polygon` objects"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         # Red triangle
         Polygon([(0, 0), (5, 0), (2, 1)], color="red", x=0.4, y=0, z_index = 1),
@@ -231,7 +231,7 @@ General attributes/methods:
 : Whether the shape should be closed or not
 
 ???+ example "Creating a `ComplexShape`"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         ComplexShape([[(0, 0)], [(5, 5), (0, 10)], [(10, 10)], [(5, 5), (15, 5), (10, 0)], [(0, 0)], [(5, 5), (0, 10)], [(10, 10)], [(5, 5), (15, 5), (10, 0)]], color="green")
     ])
@@ -269,7 +269,7 @@ General attributes/methods:
 : The horizontal text align
 
 ???+ example "Creating a `Text`"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         Text("Hello\nWorld!", font_size=5, color="orange")
     ])
@@ -305,7 +305,7 @@ General attributes/methods:
 : The vertical text align
 
 ???+ example "Creating a `DynamicText`"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         DynamicText("Hello\nWorld!", font_size=5, color="orange", w=10)
     ])
@@ -338,7 +338,7 @@ General attributes/methods:
 : Disables auto font scale and the text font size will be applied.
 
 ???+ example "Creating an `HtmlArea`"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         HtmlArea("Hello <b>World</b>!", font_size=4, w=15, h=15, disable_scroll=True, disable_auto_font_scale=True)
     ])
@@ -369,7 +369,7 @@ General attributes/methods:
 : A color to use for tinting the image
 
 ???+ example "Creating three `Image` objects"
-    ```
+    ``` py
     self.my_rectangle = Rectangle(color="white", children = [
         # Left cat
         Image("std_katniss_standing.webp", w=4, h=3),
@@ -416,7 +416,7 @@ General attributes/methods:
 : An animation frame to end on
 
 ???+ example "Creating three `Sprite` objects"
-    ```
+    ``` py
     a = Sprite("weird_sheet.png", w=2, h=2, x=1, y=1)
     b = Sprite("weird_sheet.png", w=2, h=2, x=3, y=1, start=2, end=0, scale_x=-1)
     c = Sprite("weird_sheet.png", w=1.5, h=2, x=5, y=1, animation="just_display_guy")
@@ -438,7 +438,7 @@ General attributes/methods:
 [`scroll`](UI.md#scroll)
 
 ???+ example "Creating a `ScrollArea`"
-    ```
+    ``` py
     scroll = ScrollArea(w=40, h=20)
     Text("Hello World!", font_size=20, parent=scroll)
     ```
@@ -460,7 +460,7 @@ General attributes/methods:
 : The font size to use for the tab headers
 
 ???+ example "Creating a `TabArea`"
-    ```
+    ``` py
     red = Rectangle(color="red", children=[Text("R", font_size=20)])
     green = Rectangle(color="green", children=[Text("G", font_size=20)])
     blue = Rectangle(color="blue", children=[Text("B", font_size=20)])
@@ -491,7 +491,7 @@ All positional arguments are added as children.
 : Proportions of size to give to each element, 0 means an even proportion of the remaining space
 
 ???+ example "Creating a `Horizontal`"
-    ```
+    ``` py
     Horizontal(Rectangle(color="yellow"), Rectangle(color="magenta"), Rectangle(color="cyan"))
     ```
     ![](../assets/Horizontal_example.png){loading=lazy}
@@ -511,7 +511,7 @@ All positional arguments are added as children.
 : Proportions of size to give to each element, 0 means an even proportion of the remaining space
 
 ???+ example "Creating a `Vertical`"
-    ```
+    ``` py
     Vertical(*[Text(str(i)) for i in range(5)], spacing=5)
     ```
     ![](../assets/Vertical_example.png){loading=lazy}
@@ -543,7 +543,7 @@ All positional arguments are added as children.
 : Proportions of size to give to each row and column, `0` means an even proportion of the remaining space
 
 ???+ example "Creating a `Grid`"
-    ```
+    ``` py
     Grid(*[Text(str(i)) for i in range(20)], columns=5, w=30, h=30, spacing=5)
     ```
     ![](../assets/Grid_example.png){loading=lazy}
@@ -596,7 +596,7 @@ General attributes/methods:
 : If set to `False` will both disable click callbacks and use the disabled styling
 
 ???+ example "Creating a `Button`"
-    ```
+    ``` py
     def callback(event):
         print("Button clicked!")
 
@@ -639,7 +639,7 @@ General attributes/methods:
 : Called whenever the checkbox changes state
 
 ???+ example "Creating a `Checkbox`"
-    ```
+    ``` py
     def callback(event):
         print("Checkbox was checked" if event.checked else "Checkbox was unchecked")
 
@@ -687,7 +687,7 @@ General attributes/methods:
 : The distance between panel content/title and the outer edge
 
 ???+ example "Creating a `Panel`"
-    ```
+    ``` py
     Panel(w=50, h=50, content=Circle(color="blue"), title="My Panel")
     ```
     ![](../assets/Panel_example.png){loading=lazy, width={{ page.meta.width.standard }}}
@@ -715,7 +715,7 @@ General attributes/methods:
 : The distance between toolbar content and the outer edge
 
 ???+ example "Creating a `Toolbar`"
-    ```
+    ``` py
     Toolbar(
         w=80,
         h=10,
@@ -758,7 +758,7 @@ General attributes/methods:
 : The distance between popup content and the outer edge
 
 ???+ example "Creating a `Popup`"
-    ```
+    ``` py
     def callback(event):
         print("Deal!")
 
@@ -820,7 +820,7 @@ General attributes/methods:
 : Whether to use the overlay styling for this board or not
 
 ???+ example "Creating a `Board`"
-    ```
+    ``` py
     def callback(event):
         event.source.color = "orange"
 
@@ -1197,7 +1197,7 @@ The coordinate property has some additional convenience features:
 - Conversion of scalar values to a pair
 
 ???+ example "Using coordinates"
-    ```
+    ``` py
     rect = Rectangle()
     rect.size = 20       # set size to (20, 20)
     rect.pos += (5, 10)  # add (5, 10) to position
@@ -1220,7 +1220,7 @@ It returns a virtual copy of the element which represents the element at that ti
 The time should be a number from `0.0` to `1.0` which corresponds to a fraction of the time step, where `0.0` is at the start, `0.5` is at the middle, and `1.0` is at the end of the time step.
 
 ???+ example "Creating a shaking animation"
-    ```
+    ``` py
     # setup_canvas / setup_view
     self.box = Rectangle()
 
@@ -1237,7 +1237,7 @@ If you want it to happen later in the time step you can first add the old value 
 This will ensure that the value change occurs immediately without any intermediate values.
 
 ???+ example "Making boxes suddenly transparent"
-    ```
+    ``` py
     # setup_canvas / setup_view
     self.box_0 = Rectangle()
     self.box_1 = Rectangle()
@@ -1272,7 +1272,7 @@ If we do all this it should be placed like in the image below:
     The grey dots show all points that have integer coordinates, i.e. (1, 1), (2, 1), and so on.
 
 ???+ example "Code for defining our rectangle"
-    ```
+    ``` py
     self.falling_rect = Rectangle(w=2, h=8, x=6, y=9, color="red", pivot_x=1, pivot_y=4)
     ```
 
@@ -1286,7 +1286,7 @@ To make the fall look somewhat natural we will divide it up like this:
 ![](../assets/Animation_of_falling_rectangle_explanation_figure.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 ???+ example "Code for defining our rectangle's fall"
-    ```
+    ``` py
     # No animation in the first step
     self._context.canvas.split_step()
     # In the first 70% of the step the rectangle falls 45 degrees
@@ -1321,14 +1321,14 @@ The `Effect` object has support for the following attributes:
 The specified values will be applied while the condition is met, and reverted once it is not.
 
 ???+ example "Hover effect on a circle"
-    ```
+    ``` py
     Circle(r=30, color="blue", hover_effect=Effect(color="orange"))
     ```
 
 Many times you would want an effect only when an element is interactable. For this we have the `action_effect` attribute.
 
 ???+ example "Making a circle interactable _only_ when clickable"
-    ```
+    ``` py
     Circle(r=30, color="blue", action_effect=Effect(color="orange"), on_click=lambda e: setattr(e.source, "color", "green"))
     ```
 
@@ -1424,7 +1424,7 @@ The following table list some convenient constants that can be used:
 
 
 ???+ example "Manually check keyboard value (only works in interact mode)"
-    ```
+    ``` py
     Rectangle(opacity=0, parent=self.canvas, on_key_up=lambda e: print(e.key))
     ```
 
@@ -1443,7 +1443,7 @@ When elements are in a group at most one of the elements can be toggled on at a 
 The toggling logic is slightly modified for elements within a toggle group, particularly they will not toggled off unless another element is toggled on.
 
 ???+ example "Example of creating a tooltip"
-    ```
+    ``` py
     tooltip_text = Text("My tooltip")
     tooltip = Panel(size=tooltip_text.size + 3, y=-5, children=[tooltip_text])
     Circle(children=[tooltip], hover_targets=[tooltip])
