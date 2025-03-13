@@ -613,7 +613,12 @@ Like the stage skeleton, there are plenty of features specifically for interact 
         look: handDrawn
     ---
     graph TB
-        START([START]) --> A[setup_level];
+        START([START]) --> GA[setup_game];
+        subgraph NEW
+        GA --> GB[setup_players];
+        GB --> GC[setup_statistics];
+        end
+        GC --> A[setup_level];
         A --> B[setup_state];
         B --> IF_1{show_canvas};
         IF_1 --> |True| C[setup_view];
@@ -621,13 +626,8 @@ Like the stage skeleton, there are plenty of features specifically for interact 
         SA --> SB[setup_description];
         SB --> SC[setup_center_buttons];
         SC --> SD[setup_right_buttons];
-        SD -->  GA[setup_game];
-        IF_1 --> |False| GA;
-        subgraph NEW
-        GA --> GB[setup_players];
-        GB --> GC[setup_statistics];
-        end
-        GC --> D[update_state];
+        SD --> D[update_state];
+        IF_1 --> |False| D;
         D --> IF_2{self.finished};
         IF_2 ---> |True| END([END]);
         IF_2 --> |False| IF_3{show_canvas};
