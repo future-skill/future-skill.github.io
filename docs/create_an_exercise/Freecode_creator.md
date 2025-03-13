@@ -69,24 +69,31 @@ This can be good to use if you have added and removed Solution APIs and want to 
 
 ## Create API Method
 
+![Create API methods](../assets/Create-api-methods.png){ loading=lazy }
+
 All method names must be space-separated list of words containing lowercase letters and can't start with a number.
 Specific language formatting is applied automatically.
 Default return values for different return types in solution methods: 
-![Create API methods](../assets/Create-api-methods.png){ loading=lazy }
-```
-Int: -2
 
-float: -2.0
+`Int`
+: `-2`
 
-Bool: False
+`float`
+: `-2.0`
 
-string: 'Foo'
+`Bool`
+: `False`
 
-list[]: A list can only contain one of the other types, ie int, float, bool, or string.
+`string`
+: `'Foo'`
 
-Map: {}: A map can only contain one type of key and one type of value.
- The types of the key and value can be different. The key and value can only be of the int, float, bool, or string.
-```
+`list[]`
+: A list can only contain one of the other types, ie `int`, `float`, `bool`, or `string`.
+
+`Map`
+: `{}`: A map can only contain one type of key and one type of value.
+The types of the key and value can be different. The key and value can only be of the int, float, bool, or string.
+
 For implementation methods you get raise NotImplementedError('"APImethod" not implemented') as default regardless of the return type.
 
 

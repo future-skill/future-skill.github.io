@@ -62,7 +62,7 @@ The class has the following attributes:
 : The object responsible for managing prefabricated assets, generally no need to override the default value
 
 ???+ example "Creating the setup object"
-    ```
+    ``` py
     setup = WorldSetup(
         directions=SQUARE_DIRECTIONS,
         perspective="isometric",
@@ -137,7 +137,7 @@ First way is to include a `tiles` argument to `setup.create_world()`.
 This can take the form of a dictionary with coordinates as keys and tiles as values.
 
 ???+ example "Add tiles using a dictionary"
-    ```
+    ``` py
     world = setup.create_world(tiles={
         (0, 0): "grass",
         (1, 0): "grass",
@@ -148,7 +148,7 @@ This can take the form of a dictionary with coordinates as keys and tiles as val
 Alternatively the `tiles` argument can be a string as described in [tile map](World.md#tile-map)
 
 ???+ example "Add tiles using a string"
-      ```
+      ``` py
       world = setup.create_world(tiles="gg\nr")
       ```
 Both the examples above result in a world that looks like this:
@@ -160,19 +160,19 @@ Second way is to use the `World` methods:
 `world.add_tile(coordinate, data)`  
 : Where `data` depends on what types of tiles you are using
 :   ???+ example "Add single tile"
-        ```
+        ``` py
         world.add_tile((1, 1), {"name": "grass"})
         ```
 : Or if using basic tiles:
 :   ???+ example "Add single basic tile"
-        ```
+        ``` py
         world.add_tile((1, 1), {"color": "black"})
         ```
 
 `world.fill(top_left, bottom_right, data)`  
 : Which will add the same tile to the area spanned by `top_left` and `bottom_right`
 :   ???+ example "Fill area with tiles"
-        ```
+        ``` py
         world.fill((0, 0), (1, 1), {"name": "mud", "color": "tan"})
         ```
 
@@ -213,7 +213,7 @@ Or you can use the special sequence `\n` instead of adding a line break.
 Leading and trailing whitespace is ignored, which allows indenting the tile maps.
 
 ???+ example "Tile string from main section"
-    ```  
+    ``` py  
     ex1 = "gg\nr"
     # Equivalent to ex1
     ex2 = """
@@ -224,7 +224,7 @@ Leading and trailing whitespace is ignored, which allows indenting the tile maps
     ![](../assets/Small_tile_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 ???+ example "Tile string using gaps"
-    ```
+    ``` py
     ex3 = """
         .wr.
         mrrg
@@ -245,7 +245,7 @@ Tiles can be interacted with using an on click listener.
 The callback function to this listener is given to the `WorldSetup.create_world` function.
 
 ???+ example "Implementation of `on_tile_click` callback"
-    ```  
+    ``` py  
     from lib.world import Tile 
 
     def on_tile_click(info: TileInfo) -> None:
@@ -285,7 +285,7 @@ First way is to include a `walls` argument to `setup.create_world()`.
 This takes the form of a dictionary with coordinate pairs as keys and walls as values:
 
 ???+ example "Add walls using a dictionary"
-    ```
+    ``` py
     world = setup.create_world(tiles={
         ((0, 0), (1, 0)): "hedge",
         ((0, 0), (0, 1)): "stone",
@@ -298,12 +298,12 @@ Second way is to use the `World` method:
 `world.add_wall(coordinate_pair, data)`  
 : Where `data` depends on what types of walls you are using
 : ???+ example "Add a single prefab wall"
-        ```
+        ``` py
         world.add_wall(((0, 1), (1, 1)), {"name": "hedge_2"})
         ```
 : Or if using basic walls:
 : ???+ example "Add a single basic wall"
-        ```
+        ``` py
         world.add_wall(((1, 0), (1, 1)), {"color": "orange", "height": 0.3})
         ```
 
@@ -362,19 +362,19 @@ The `World` class has the following `Actor`-related methods:
 : `at` - `tuple[int, int]`  
     : Coordinate (tile) to search at.
     : ???+ example "Find actor at tile `(0, 0)`"
-            ```
+            ``` py
             world.find_actors(at=(0, 0))
             ```
 : `tags` - `set[str]`  
     : Tags the actor must have.
     : ???+ example "Find actors with tag `"my_tag"`"
-            ```
+            ``` py
             world.find_actors(tags={"my_tag"})
             ```
 : `tags_match_any` - `bool`  
     : Only requires that one tag in `tags` matches.
     : ???+ example "Find actors with either the `"player"` or `"enemy"` tag"
-            ```
+            ``` py
             world.find_actors(tags={"player", "enemy"}, tags_match_any=True)
             ```
 
@@ -418,7 +418,7 @@ Actors have a set of methods related to movement:
 : Moves the actor one step in the given direction.
 : Does not require movement to be properly set up.
 : ???+ example "Move `actor` one tile to the left"
-        ```
+        ``` py
         actor.move(Cardinal.LEFT)
         ```
 
@@ -427,7 +427,7 @@ Actors have a set of methods related to movement:
 : Returns `False` if the movement failed.
 : Requires movement to be properly set up.
 : ???+ example "Attempt to move `actor` one tile to the left"
-        ```
+        ``` py
         actor.move(Ordinal.LEFT_DOWN, check=True)
         ```
 
@@ -442,7 +442,7 @@ Actors have a set of methods related to movement:
 : Moves the actor one step towards the given coordinate along a shortest path.
 : Returns `False` if the movement failed or the actor is already there.
 : ???+ example "Move `actor` one step towards tile `(3, 4)`"
-        ```
+        ``` py
         actor.move_towards((3, 4))
         ```
 
@@ -479,17 +479,17 @@ When creating an actor you can supply the following arguments:
 We supply a default keymap for cardinal movement called `MOVE_KEY_MAP` which supports arrow keys and ++w++ ++a++ ++s++ ++d++ movement.
 
 ???+ example "Using default movement for a main character"
-    ```
+    ``` py
     world.add_actor((0, 0), setup.create_character("skilly", "blue", key_map=MOVE_KEY_MAP))
     ```
 
 ???+ example "Adding an additional action when pressing ++p++"
-    ```
+    ``` py
     world.add_actor((0, 0), setup.create_character("skilly", "orange", key_map=MOVE_KEY_MAP | {"p": lambda e: e.source.pick_up()}))
     ```
 
 ???+ example "Printing the value when a key is pressed"
-    ```
+    ``` py
     world.add_actor((0, 0), setup.create_character("skilly", "orange", on_key_up=lambda e: print(e.key)))
     ```
 
@@ -561,14 +561,14 @@ Character actors have an additional set of methods with animations:
 `actor.gesture(direction)`  
 : Plays a gesturing animation in the given direction.
 : ???+ example "Make `actor` gesture facing down"
-        ```
+        ``` py
         actor.gesture(Cardinal.DOWN)
         ```
 
 `actor.say(text)`  
 : Plays a speaking animation and shows a speech bubble with the given text.
 : ???+ example "Make `actor` say "Hello World!""
-        ```
+        ``` py
         actor.say("Hello World!")
         ```
 
@@ -616,7 +616,7 @@ Smaller props such as flowers and stones can preferably be added as cosmetic sce
 Here is an example where a couple of stones and flowers are added:
 
 ???+ example "Add a couple of stones and flowers to the world"
-    ```
+    ``` py
     scenary = [
         ("stone", (0, 0), (-0.3, 0)),
         ("flower", (0, 0), (0.3, 0.4)),
@@ -631,7 +631,7 @@ Bigger props should generally be used without an offset to avoid intersecting wa
 You would generally also want to give the bigger props a tag that can be used to block movement.
 
 ???+ example "Add a prop with a tag to the world"
-    ```
+    ``` py
     world.add_actor((0, 2), setup.create_prop("bush", tags={"obstacle"}))
     ```
 
@@ -897,7 +897,7 @@ This is useful if you want to highlight the tiles that a player can interact wit
 This example will use `ButtonActor`, which is a child of `ImageActor`, see code below.
 
 ???+ example "Code for our `ButtonActor`"
-    ```
+    ``` py
     class ButtonActor(ImageActor):
         def __init__(self, callback, coords):
             ImageActor.__init__(self, image = "Button.png")
@@ -926,7 +926,7 @@ It is recommended that the image is as tight as possible, and a bit smaller than
 The next step is to add `ButtonActor`s to all tiles that you want the player to interact with.
 
 ???+ example "Adding `ButtonActor` to some tiles"
-    ```
+    ``` py
     for x in range(3):
         for y in range(3):
             coord = (x, y)
@@ -943,7 +943,7 @@ The following template is a bit rough around the edges and might not always show
 
 This template showcases how the world library can be used together with the [`GameChallenge` skeleton](Skeletons.md#gamechallenge):
 
-```
+``` py
 """
 This is the module containing the challenge implementation.
 """

@@ -33,7 +33,7 @@ This is the base of all the skeletons and provide the essential functionality, w
 However, keep in mind that some skeletons do implement some of the `BasicChallenge` methods for you.
 
 ??? example "Template for `BasicChallange`"
-    ```
+    ``` py
     """
     This is the module containing the challenge implementation.
     """
@@ -247,7 +247,7 @@ This skeleton adds a GUI setup called the stage on top of the basic skeleton, an
 It acts as the base for other GUI focused skeletons, so it is likely you will want to use one of them instead.
 
 ??? example "Template for `StageChallenge`"
-    ```
+    ``` py
     """
     This is the module containing the challenge implementation.
     """
@@ -419,7 +419,7 @@ The `SettingInfo` object has the following attributes:
 - `default` - The default value (defaults to `False`)
 
 ??? example "Example of setting up and using settings"
-    ```
+    ``` py
     def setup_settings(self):
         return [SettingInfo(key="my_setting", label="My Setting", category="Example")]
 
@@ -442,7 +442,7 @@ Buttons can be added by returning a list of buttons in either `setup_center_butt
 These buttons will be sized and positioned appropriately, but you will have to attach behaviour yourself.
 
 ??? example "Example of setting up buttons and using the info prompt"
-    ```
+    ``` py
     def setup_center_buttons(self):
         return [Button("Center", on_click=lambda _: setattr(self, "info_prompt", "Center clicked"))]
 
@@ -461,7 +461,7 @@ It makes extensive use of the stage skeleton features, so only implement methods
 Like the stage skeleton, there are plenty of features specifically for interact mode.
 
 ??? example "Template for `GameChallenge`"
-    ```
+    ``` py
     """
     This is the module containing the challenge implementation.
     """
