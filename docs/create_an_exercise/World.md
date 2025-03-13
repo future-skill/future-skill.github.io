@@ -772,6 +772,12 @@ Tile images are named `<perspective>_tile_<name>.webp`.
     self.world.add_tile((0, 0), {"name": "grass"})
     ```
 
+!!! note
+    It is important to get the right size, aspect ratio, etc when making a tile image.
+    This can be difficult, especially when working in an isometric view.
+
+    The easiest way to ensure that the tile image will work properly is to use a [prefab tile image](World.md#prefab-tiles) as a base and draw the custom tile on top of it.
+
 
 ### `WallEntry`
 
@@ -800,6 +806,10 @@ Directions for topdown are `face` and `side`, and directions for isometric are `
     DEFAULT_PREFAB_MANAGER.register_walls(WallEntry(name="stone"))
     self.world.add_wall(((0, 0), (0, 1)), {"name": "stone"})
     ```
+
+!!! note
+    While not as important as with tiles, it can still be nice to get a perfectly aligned wall.
+    Just as with tiles, it is easiest to ensure this by using a [prefab wall image](World.md#prefab-walls) as a base and draw the custom wall image on top of it.
 
 
 ### `CharacterEntry`
