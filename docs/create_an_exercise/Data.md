@@ -23,6 +23,9 @@ The classes provided in this module are not UI elements, but they have a render 
 
 Each type of data manager has an abstract base class which provides the common functionality.
 
+!!! note
+    All classes on this page need to be imported from `lib.data`.
+
 
 ## Tables
 
