@@ -45,6 +45,8 @@ markdown_extensions:
   - def_list
   - admonition
   - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.keys
   - pymdownx.superfences:
       custom_fences:
