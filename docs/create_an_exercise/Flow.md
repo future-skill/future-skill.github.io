@@ -3,6 +3,9 @@ title: Flow
 contributors:
   - Ludvig
   - Henrik
+width:
+  standard: 250px
+  wide: 500px
 ---
 
 A flow is an overlay that is displayed before the user attempts an exercise level.
@@ -24,6 +27,11 @@ To write a flow specific to a level the `[level?]` tag is used - where `?` is th
     This is shown during the flow for Level 2.
     [/level2]
     ```
+    The above text will depending on which level the user is at render as the following in the flow:
+    === "Level 1"
+        This is shown during the flow for Level 1.
+    === "Level 2"
+        This is shown during the flow for Level 2.
 
 !!! warning
     The `[level?]` tags cannot share a row with anything else, not even other `[level?]` tags or their own content.
@@ -43,6 +51,7 @@ It takes a body which is the button's text.
     ```
     [coding]Start coding[/coding]
     ```
+    ![](../assets/Coding_button_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 !!! warning
     It is not possible to have any continue/coding buttons inside language tags (ex. `[english][/english]`).
@@ -85,6 +94,17 @@ A quiz is a question/answer section that the user can interact with and get eith
       [feedback-incorrect]Almost there[/feedback-incorrect]
     [/quiz]
     ```
+    === "Quiz"
+        ![](../assets/Quiz_example.png){loading=lazy, width={{ page.meta.width.wide }}}
+    === "Hint"
+        ![](../assets/Quiz_hint_example.png){loading=lazy, width={{ page.meta.width.wide }}}
+    === "Explanation"
+        ![](../assets/Quiz_explanation_example.png){loading=lazy, width={{ page.meta.width.wide }}}
+    === "Correct answer"
+        ![](../assets/Quiz_correct_answer_example.png){loading=lazy, width={{ page.meta.width.wide }}}
+    === "Incorrect answer"
+        ![](../assets/Quiz_incorrect_answer_example.png){loading=lazy, width={{ page.meta.width.wide }}}
+
 A `[continue]` or `[coding]` tag is often needed after the quiz.
 
 ### Interact
@@ -118,12 +138,19 @@ Several other tags which work in the Description are also supported in the flow,
       [default]==[/default]
     [/switch]
     ```
+    Depending on which language the user is using it will be rendered as:
+    === "Python"
+        "is" or "==" depending on what you are comparing
+    === "JavaScript"
+        ===
+    === "TypeScript"
+        ===
+    === "Some other language"
+        ==
 
 - Translation tables, e.g.
 ???+ example "Translation table, hello"
     ```
-    HELLO: *hello
-    hello - *hello - hello
     [translate]
       [from]hello[/from]
       [python]HELLO!!!![/python]
@@ -131,6 +158,15 @@ Several other tags which work in the Description are also supported in the flow,
       [default]h e l l o . . .[/default]
     [/translate]
     ```
+    If we have the translation table above and write `*hello` in our flow, it will be rendered as something different depending on which language you are using.
+    === "Python"
+        HELLO!!!!
+    === "C"
+        \_h\_e\_l\_l\_o\_
+    === "C++"
+        \_h\_e\_l\_l\_o\_
+    === "Some other language"
+        h e l l o . . .
 
 ???+ example "Translation table, programming language"
     ```
@@ -141,14 +177,43 @@ Several other tags which work in the Description are also supported in the flow,
       [cpp]C++[/cpp]
       [go]Go[/go]
       [java]Java[/java]
-      [javascript]Javascript[/javascript]
       [kotlin]Kotlin[/kotlin]
+      [javascript]JavaScript[/javascript]
+      [typescript]TypeScript[/typescript]
       [php]PHP[/php]
       [python]Python[/python]
       [ruby]Ruby[/ruby]
       [rust]Rust[/rust]
       [scala]Scala[/scala]
-      [typescript]Typescript[/typescript]
       [default]the programming language at hand[/default]
     [/translate]
     ```
+    If you have the translation table below and type `*language` in the flow it will show as the language the user is using:
+    === "C"
+        C
+    === "C#"
+        C#
+    === "C++"
+        C++
+    === "Go"
+        Go
+    === "Java"
+        Java
+    === "Kotlin"
+        Kotlin
+    === "JavaScript"
+        JavaScript
+    === "TypeScript"
+        TypeScript
+    === "PHP"
+        PHP
+    === "Python"
+        Python
+    === "Ruby"
+        Ruby
+    === "Rust"
+        Rust
+    === "Scala"
+        Scala
+    === "Some other language"
+        the programming language at hand
