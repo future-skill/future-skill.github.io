@@ -27,9 +27,10 @@ So positions will be based on integer coordinates.
 The prefabricated content supports both topdown and isometric perspectives, and it is very easy to switch between the two as needed.
 Additional perspectives are possible, but not supported by the prefab content.
 
-All classes, types, and constants mentioned in this article can be imported from `lib.world`.
-
 Easiest way to get started is to pick up one of the [templates](World.md#templates) at the end of the article, and then jump to relevant sections as questions come up.
+
+!!! note
+    All classes on this page need to be imported from `lib.world`, unless otherwise specified.
 
 
 ## Setup
@@ -720,8 +721,6 @@ The world element has a subtle menu on the top left which can be used to activat
 It is possible to extend the existing list of prefabs with your own additions.
 This is not trivial and only recommended if you are well versed in the Freecode platform and have some image editing experience (you will have to provide your own images in a particular format).
 
-All classes or variables mentioned in the following section needs to be imported from `lib.world.prefab`.
-
 Although you can create your own prefab manager, you would generally just register them with the `DEFAULT_PREFAB_MANAGER` which is used by default.
 Just keep in mind that it is better to add new entries rather than overriding existing ones.
 There is no way to add new values to the enums, so you will have to only use the strings directly (or define your own string enum, or use constants).
@@ -738,6 +737,9 @@ The following subsections detail what parameters exist and what they do, as well
 
 !!! note
     Images must be provided in WebP, which should be supported by most modern image editors.
+
+!!! note
+    You need to import `DEFAULT_PREFAB_MANAGER` and any `<Type>Entry` classes you plan on using from `lib.world.prefab`.
 
 
 ### `TileEntry`
