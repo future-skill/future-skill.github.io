@@ -75,24 +75,15 @@ All method names must be space-separated list of words containing lowercase lett
 Specific language formatting is applied automatically.
 Default return values for different return types in solution methods: 
 
-`Int`
-: `-2`
-
-`float`
-: `-2.0`
-
-`Bool`
-: `False`
-
-`string`
-: `'Foo'`
-
-`list[]`
-: A list can only contain one of the other types, ie `int`, `float`, `bool`, or `string`.
-
-`Map`
-: `{}`: A map can only contain one type of key and one type of value.
-The types of the key and value can be different. The key and value can only be of the int, float, bool, or string.
+| Data type | Default return value |
+|-----------|----------------------|
+| `int`     | `-2`                 |
+| `double`  | `-2.0`               |
+| `bool`    | `False`              |
+| `string`  | `'Foo'`              |
+| `byte`    | `b'foo'`             |
+| `list`    | `[]`                 |
+| `map`     | `{}`                 |
 
 For implementation methods you get raise NotImplementedError('"APImethod" not implemented') as default regardless of the return type.
 
@@ -106,6 +97,24 @@ Some settings might disable other settings, if canvas is disabled there will be 
 
 
 ### Canvas Animation
+
+**Uses Canvas:**
+: Check this if the canvas will be used.
+
+**Has Canvas Animation:**
+: Check this to enable canvas animations.
+This will additionally add the option **Canvas step time (ms)**, which will determine how many milliseconds will pass between each canvas animation step.
+
+**Supports Interact:**
+: Check this to enable interactive mode.
+This will additionally add one check box for each level to determine what levels will be interactable.
+
+**Interact using Human Adapter:**
+: Lorem ipsum
+
+**Interact using separate step time:**
+: Check this to set a different step time in the interactive mode.
+This will additionally add the option **Interact step time (ms)**, which will determine how many milliseconds will pass between each canvas animation step in the interactive mode.
 
 If the canvas should be used, if it should be animated, and if the implementation supports human input.
 If the canvas is animated then there is also a setting for how long each animation step should be.
@@ -130,14 +139,15 @@ The canvas background color is the color that will be displayed as a background 
 
 **Default background colors:**
 
-- Light mode: \#F6FAFF
-- Dark mode: \#3A4556
+- Light mode: \#F2F5F7
+- Dark mode:
 
 
 ### Resolution
 
 The resolution decided the dimensions of the canvas element, and what coordinates should be used to display elements in the implementation.
 10x20 will have the same dimensions as 100x200, but in order to display graphics precise locations in a 10x20 canvas you might have to use more decimal points than if the canvas is 100x200.
+Additionally, some graphics elements will display differently at different resolutions.
 
 
 ### Landing Page Image
@@ -148,18 +158,29 @@ This image will be used as both background and thumbnail for the implementation.
 
 ## Settings Tab
 
-A mismatch between the total number of levels and the number of levels in the implementation _configurations variable can lead to an error.
+A mismatch between the total number of levels and the number of levels in the implementation `_configurations` variable can lead to an error.
 
 ![](../assets/Settings_tab.png){loading=lazy}
 
 
-### Tournament
+### Test Meta
 
-These options are only visible when the type of Freecode is set to Challenge.
+**Is Tournament:**
+: This setting is only visible if when the type of Freecode is set to Challenge.
+When checked this setting turns the Challenge into a Tournament.
+For an explanation of the difference between Challenge and Tournament see: [Coding Community](../basics/Coding_Community.md)
 
-Is Tournament: For an explanation of the difference between Challenge and tournament see: [Coding Community](../basics/Coding_Community.md)
+**Number of players:**
+: This setting is only visible if "Is Tournament" is checked.
+This setting will determine the number of solution that will compete against each other in every run.
 
-Number of players: if isTournament this setting will determine the number of solution that will compete against each other in every run.
+**Is Freecode:**
+: This setting is only visible when the type of Freecode is set to Exercise.
+When checked this setting turns the Exercise into a Freecode.
+For an explanation of the difference between Exercise and Freecode see: [Coding Community](../basics/Coding_Community.md)
+
+**Difficulty:**
+: This is the displayed difficulty for the Freecode in the Freecode browser.
 
 
 ### Level Settings
@@ -282,16 +303,23 @@ If you want a default value there is also a switch options.
     [default]==[/default]
     [/switch]
     ```
+    Depending on which language the user is using it will be rendered as:
+    === "Python"
+        Here is a logical equals operator: "is" or "==" depending on what you are comparing
+    === "JavaScript"
+        Here is a logical equals operator: ===
+    === "TypeScript"
+        Here is a logical equals operator: ===
+    === "Some other language"
+        Here is a logical equals operator: ==
 
 Finally there is also a translation dict that can replace multiple instances of the same text based on the contents.
-The text to replace must be prepended with a \*.
+The text to replace must be prepended with a `*`.
 Each word or phrase to replace needs its own translation definition.
 If there is no match or default text the from text will be replaced with an empty string.
 
 ???+ example "Using a translate tag"
     ```
-    HELLO: *hello
-    hello - *hello - hello
     [translate]
     [from]hello[/from]
     [python]HELLO!!!![/python]
@@ -299,6 +327,15 @@ If there is no match or default text the from text will be replaced with an empt
     [default]h e l l o . . .[/default]
     [/translate]
     ```
+    If we have the translation table above and write `*hello` in our flow, it will be rendered as something different depending on which language you are using.
+    === "Python"
+        HELLO!!!!
+    === "C"
+        \_h\_e\_l\_l\_o\_
+    === "C++"
+        \_h\_e\_l\_l\_o\_
+    === "Some other language"
+        h e l l o . . .
 
 
 ### Summary

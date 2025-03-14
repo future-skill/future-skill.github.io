@@ -15,7 +15,7 @@ This flow should typically contain an overview description of the level with som
 
 ### Levels
 
-Flows nned to be separated for differend levels, so that each level has it's own flow.
+Flows need to be separated for different levels, so that each level has it's own flow.
 To write a flow specific to a level the `[level?]` tag is used - where `?` is the level number starting at 1.
 
 ???+ example Level separation
