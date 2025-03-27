@@ -721,5 +721,5 @@ The following step modes exists:
 
 For a complete example of a Tournament Freecode which uses the GameChallenge, check out one of these (you have to be logged in to view the implementations):
 
-- [Reversi](https://futureskill.com/freecode-creator/60ace4a1b705932a147b0686)
-- [Widescreen](https://futureskill.com/freecode-creator/6668377f8e7fd9a591996e33) - how to remove parts of a GameChallenge
+- [Reversi](https://futureskill.com/freecode-creator/60ace4a1b705932a147b0686){:target="_blank"}
+- [Widescreen](https://futureskill.com/freecode-creator/6668377f8e7fd9a591996e33){:target="_blank"} - how to remove parts of a GameChallenge
