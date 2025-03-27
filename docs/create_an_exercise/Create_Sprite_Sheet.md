@@ -17,7 +17,7 @@ Sprite sheets compatible with the Futureskill platform require that each individ
 If they are not the same size the images will stretch to accomodate the size defined for the sprite_sheet element in the implementation code.
 
 The Sprite sheet atlas must be a JSON compatible with the PIXI.js framework.
-A free tool that can be used to generate sprite sheets from individual sprite images is [spritesheet.js](https://github.com/krzysztof-o/spritesheet.js).
+A free tool that can be used to generate sprite sheets from individual sprite images is [spritesheet.js](https://github.com/krzysztof-o/spritesheet.js){:target="_blank"}.
 
 
 ## Using spritesheet.js

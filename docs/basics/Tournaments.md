@@ -11,11 +11,11 @@ A Tournament is a special type of Challenge where matches are used to create the
 - In other (non-Tournament) Challenges, each solution gets scored on its own, immediately after it is submitted. These individual scores are then used in the toplist.
 
 Each night, a tournament takes place where code from participating programmers compete with others in multiple matches.
-Each submitted solution receives an initial [ELO-rating](https://en.wikipedia.org/wiki/Elo_rating_system) of 1000 and this rating is then modified with each match.
+Each submitted solution receives an initial [ELO-rating](https://en.wikipedia.org/wiki/Elo_rating_system){:target="_blank"} of 1000 and this rating is then modified with each match.
 When the tournament is finished the final rating for the night is used for the toplist.
 The principle behind this rating is that the rating increase is large when winning against a much stronger (higher rated) opponent, and only a minimal increase is received when beating a much weaker opponent.
 
-ELO rating normally only handles 1 vs 1 matches, but since we may have three or more solutions competing in the same match we use multi-player ELO, as described [here](http://uk.diplom.org/pouch/Email/Ratings/JDPR/describe.html).
+ELO rating normally only handles 1 vs 1 matches, but since we may have three or more solutions competing in the same match we use multi-player ELO, as described [here](http://uk.diplom.org/pouch/Email/Ratings/JDPR/describe.html){:target="_blank"}.
 A solution starts the next nightly run with the ELO rating it had from the night before, and we use fewer and fewer matches for a solution once the ELO rating has stabilised.
 If, however, a modified version is submitted we allow more matches to establish the ELO rating of the modified solution.
 

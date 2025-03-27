@@ -241,7 +241,7 @@ It is played out over two steps; in the first step the red rectangle is static a
 !!! note
     To get an animation to work, go to the Graphics tab in Freecode Creator and check "Uses Canvas" and "Has Canvas Animation".
 
-Freecode which implements this animation: [Freecode](https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706) (can only be seen if logged in)
+Freecode which implements this animation: [Freecode](https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706){:target="_blank"} (can only be seen if logged in)
 
 ![Falling rectangle](../assets/Falling_rectangle.gif){ loading=lazy }
 
@@ -276,7 +276,7 @@ This means (since the rectangle is 2 wide and 8 high) that we now position the r
 
 - B\) The first step we don't carry out any animation, so the red rectangle is still static.
 
-- C\) In the second step (1) we carry out a 45 degree rotation at time point (sub-step time) 0.7 and since the canvas will [tween](https://en.wikipedia.org/wiki/Inbetweening) the rectangle from time 0.0 to 0.7 it will have a 22.5 degree rotation at time 0.35.
+- C\) In the second step (1) we carry out a 45 degree rotation at time point (sub-step time) 0.7 and since the canvas will [tween](https://en.wikipedia.org/wiki/Inbetweening){:target="_blank"} the rectangle from time 0.0 to 0.7 it will have a 22.5 degree rotation at time 0.35.
 
 - D\) At time 0.7 the rectangle will have a 45 degree rotation, around the anchor point at (x=6, y=9).
 
@@ -395,4 +395,4 @@ This can be useful if you want to perform an extra step such as drawing a final 
 
 All graphical operations performed after finish_step will occur in a new step.
 
-The example Freecode from above uses `canvas.finish_step()` on row 93: [Freecode](https://app.futureskill.com/freecode-test-editor/602e752d1667cc6d98aee706) (can only be seen if logged in).
+The example Freecode from above uses `canvas.finish_step()` on row 93: [Freecode](https://app.futureskill.com/freecode-test-editor/602e752d1667cc6d98aee706){:target="_blank"} (can only be seen if logged in).

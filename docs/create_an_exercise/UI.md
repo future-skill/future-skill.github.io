@@ -1299,7 +1299,7 @@ The end result will look like this:
 
 ![](../assets/Falling_rectangle.gif){loading=lazy, width={{ page.meta.width.standard }}}
 
-Freecode that implements this animation: [Freecode](https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706)
+Freecode that implements this animation: [Freecode](https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706){:target="_blank"}
 !!! note
     You need to be logged in to see the freecode
 !!! warning
