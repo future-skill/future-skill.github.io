@@ -4,6 +4,7 @@ contributors:
   - Admin
   - Henrik Rostedt
   - Ludvig
+  - Lamiya
 hide:
     - navigation
     - toc
@@ -105,3 +106,7 @@ As the name implies, "Legacy" contains information about the older systems, it i
 
 - [Old graphics](legacy/Freecode_graphics.md) - replaced with [UI](create_an_exercise/UI.md)
 - [Old implementation](legacy/Implementation.md) - replaced with [Skeletons](create_an_exercise/Skeletons.md)
+
+## Future Skill GPT Instructions
+
+As the name implies, "Future Skill GPT Instructions" contains information about how to use Future Skill GPT to create exercises.
