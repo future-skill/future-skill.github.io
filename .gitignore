@@ -20,6 +20,8 @@
 !docs/create_an_exercise/*.md
 !docs/legacy
 !docs/legacy/*.md
+!docs/future_skill_gpt
+!docs/future_skill_gpt/*.md
 
 # Include images and gifs
 !docs/assets
