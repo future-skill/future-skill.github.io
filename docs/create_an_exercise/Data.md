@@ -88,6 +88,12 @@ The following attributes are available for all tables and can be specified in th
 `grid_line_size` - `float | None`
 : The thickness of the grid lines, `None` disables the lines completely
 
+`compact_mode` – bool (default: False)
+: Renders the table with reduced padding and spacing to save screen space.
+
+`fixed_cell_size` – bool (default: False)
+: Forces all table cells to have the same fixed width and height, regardless of their content.
+
 
 ### Methods
 

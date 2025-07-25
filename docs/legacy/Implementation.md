@@ -31,6 +31,9 @@ This section goes through them in detail.
 
 The current challenge level.
 
+#### is_interact_mode: bool
+
+Returns True when the canvas is running in interact mode
 
 #### canvas
 
@@ -38,6 +41,12 @@ An object that is used to interact with the canvas.
 It is used to add new graphical elements, more details on them are covered by another document.
 It is best practice to only modify the canvas in dedicated setup and update methods (by default `_setup_canvas` and `_update_canvas`).
 
+##### width: float
+Returns the total width of the canvas in coordinate units.
+
+
+##### height: float
+Returns the total height of the canvas in coordinate units.
 
 #### console
 
