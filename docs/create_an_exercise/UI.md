@@ -8,7 +8,7 @@ width:
   standard: 250px
 ---
 
-This article goes through how to use the Freecode canvas and the UI library.
+The UI section controls how the exercise appears to the user. It allows you to define a custom interface, provide instructions, show hints or graphics, and handle interactions through a canvas.
 
 ## How to use the canvas
 
@@ -105,7 +105,7 @@ General attributes/methods:
 [`drag`](UI.md#drag),
 [`keyboard`](UI.md#keyboard)
 
-`corner_radius` - `float | None` S  
+`corner_radius` - `float | None` S 
 : Add rounded corners to the rectangle
 
 ???+ example "Creating three `Rectangle` objects"
@@ -114,6 +114,9 @@ General attributes/methods:
         
         # Wide rectangle
         Rectangle(w=4, h=2, x=0, y=0, color="#FF6347"),
+
+        # Rounded rectangle
+        Rectangle(w=3, h=1, x=1, y=1, color="blue", corners_radius=1),
         
         # Rotated square
         Rectangle(w=2, h=2, x=-1, y=-1, color="red", rotation=60),
@@ -122,7 +125,7 @@ General attributes/methods:
         Rectangle(w=2, h=2, x=0, y=0, color="green", rotation=-20, stroke=0.2, opacity=0.3)
     ])
     ```
-    ![](../assets/Three_rectangles.png){loading=lazy, width={{ page.meta.width.standard }}}
+    ![](../assets/Four_rectangles.png){loading=lazy, width={{ page.meta.width.standard }}}
 
 
 #### `Circle`
@@ -345,7 +348,6 @@ General attributes/methods:
     ```
     ![](../assets/HtmlArea_example.png){loading=lazy, width={{ page.meta.width.standard }}}
 
-
 ### Graphics
 
 These elements can be used to display images and animations.
@@ -428,6 +430,11 @@ General attributes/methods:
 
 These elements can be used to fit more content in the canvas.
 
+???+ example "Creating a container"
+    ``` py
+    canvas.new_container(x=2.5, y=4)
+    ```
+
 
 #### `ScrollArea`
 
@@ -443,6 +450,17 @@ General attributes/methods:
     Text("Hello World!", font_size=20, parent=scroll)
     ```
 
+A scroll area is a container that can hold other elements, allowing the user to scroll through them if they don't all fit in the visible region. This is useful when you want to show many elements in a limited space.
+
+General attributes/methods:
+[`common`](UI.md#common),
+[`scroll`](UI.md#scroll)
+
+???+ example "Creating a `ScrollArea`"
+    ``` py
+    scroll_area = canvas.new_scroll_area(width=8, height=3,color='blacklwhite', thickness=0.3, x=3.5, y=12)
+    canvas.new_circle(radius= 0.4, color='red', x=O, y=O,parent=scroll_area)
+    ```
 
 #### `TabArea`
 
@@ -496,6 +514,18 @@ All positional arguments are added as children.
     ```
     ![](../assets/Horizontal_example.png){loading=lazy}
 
+When using proportions, the values should always add up to 1. In the example below, the Horizontal layout contains two objects, and only one proportion is explicitly defined: 0.1. This means the first object takes up 10% of the width, and the second automatically gets the remaining 90% (i.e., 1 - 0.1 = 0.9).
+
+When there are exactly two objects, it's enough to specify the proportion for one — the other will be calculated automatically.
+
+???+ example "Creating a `Horizontal Proportions`"
+    ``` py
+    Horizontal(
+        self.title_solution,
+        self.label_solution,
+        proportions=[0.1] 
+    )
+    ```
 
 #### `Vertical`
 
@@ -516,6 +546,31 @@ All positional arguments are added as children.
     ```
     ![](../assets/Vertical_example.png){loading=lazy}
 
+When using proportions, the values in the list should always add up to 1. In the example below, the Vertical layout contains five objects. The sizes of the first four are set to 0.05, 0.1, 0.3, and 0.3, which means the fifth object automatically takes the remaining space: 0.25.
+
+When there are multiple objects, you can specify proportions for all but the last one — its size will be calculated automatically to make the total equal to 1.
+
+???+ example "Creating a `Vectical Proportions`"
+    ``` py
+    self.tab_step_2 = Vertical(
+        self.title2,
+        Horizontal(
+            self.button_row,
+            proportions=[0],
+        ),
+        self.top_caesar_graph,
+        self.bottom_caesar_graph,
+        Horizontal(
+            self.title_solution,
+            self.label_solution,
+            proportions=[0.1],
+        ),
+        anchor=-1,
+        spacing=2,
+        proportions=[0.05, 0.1, 0.3, 0.3]
+    )
+    
+    ```
 
 #### `Grid`
 
@@ -764,7 +819,7 @@ General attributes/methods:
 
     buttons = [Button("OK", primary=True, on_click=callback), Button("Cancel")]
     popup = Popup("My Popup!", buttons, w=30, h=15, anchor_y=1, y=-5)
-    Rectangle(size=10, hover_targets=[popup], children=[popup])
+    Rectangle(size=20, hover_targets=[popup], children=[popup])
     ```
 
 
@@ -1106,6 +1161,11 @@ S - static
 `hover_effect` - `Effect | None`  
 : Effect to apply when hovering the element
 
+???+ example "Adding three polygons"
+    ```
+    canvas.new_rectangle(1.6, 0.8, 'red', x=15, y=5, radius=0.1, hover_effect={'color': 'orange|yellow'})
+    ```
+
 `hover_targets` - `list[BaseElement]`  
 : Elements that will be toggled while this element is hovered
 
@@ -1135,6 +1195,21 @@ S - static
 
 `drag_effect` - `Effect | None`  
 : Effect to apply when the element is being dragged
+
+`drop_zones`
+: Target areas in the exercise UI where draggable elements can be dropped. 
+
+`drop_zone_effect`
+: Describes the visual or behavioral feedback a drop zone provides when a user drags an item over it. This can include highlighting, cursor changes, or animations to indicate whether a drop is allowed or desirable.
+
+`drag_zone`
+: Refers to the source area or elements from which items can be dragged. 
+
+`drag_zone_effect`
+: Describes the user feedback or restrictions applied during the drag operation. This might include the type of drag allowed (e.g. "move", "copy"), visual cues like shadows or opacity, and constraints on which elements can be dragged.
+
+`drop_event`
+: A system or browser event that is triggered when a draggable item is released over a drop zone. This event is captured to determine whether the item was dropped in a valid location and to trigger scoring or feedback logic.
 
 
 ### Keyboard
@@ -1441,6 +1516,10 @@ This can be avoided by setting `toggle_by_default` to `True` on the element in q
 It is possible to group together elements in a toggle group by setting `toggle_group` to the same value for all elements.
 When elements are in a group at most one of the elements can be toggled on at a time.
 The toggling logic is slightly modified for elements within a toggle group, particularly they will not toggled off unless another element is toggled on.
+
+We support `toggle_group=<string id>` which will make sure that at most one in the toggle group is visible.
+
+we also support `toggle_by_default=<boolean>` which is by default False, but can be set True to show a member of the group from initial state.
 
 ???+ example "Example of creating a tooltip"
     ``` py

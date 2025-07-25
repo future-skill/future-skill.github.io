@@ -212,7 +212,7 @@ Here is a list of class members and what they are used for:
 
 To call solutions in parallel the `context.parallel` object should be used instead of the `solution` objects.
 
-The results of a parallel call is a dictionary with `solution` indices as kets and the `solution` results as value.
+The results of a parallel call is a dictionary with `solution` indices as keys and the `solution` results as value.
 There is no need to catch `SolutionException` when making parallel calls.
 Only `solutions` that lived before making the call are included in the dictionary.
 The solution result is either the return value from the player's code, or a `SolutionException` if the player's code crashed, therefore it is necessary to make an `isinstance` check on the result if the return value is used.
@@ -239,6 +239,28 @@ A callback can be removed using `.deregister_callback(id, key)`.
     However, those keys will always be prefixed with two "_" to avoid clashes.
 
 These features use the `interact_session_state` and `interact_setting_state` to store the values, so make sure that you are not using those directly as well.
+
+`interact_session_state`
+: An object to store the session state of the challenge in interact mode to activate the resume interact after stopping interact mode, either manually or after a timeout. It can be filled by any type including string, array, dictionary, etc., and then you can access it as the same type. The default value is None at first and it will again be set to None if the user restarts the interact or if the challenge is marked as finished. The interact_session_state also will automatically be set to None if the user leaves the page or refreshes the browser tab.
+
+??? example "Set Sample Value to interact_session_state"
+    ``` py
+    self._context.interact_session_state = [(l,0), (1,1), (0,1), (-1,1)]
+    ```
+
+Note: Remember to check the value of interact_session_state in the init function of the challenge class to initial the challenge based on the previous session state stored before and resume the interact mode to that state.
+
+
+`interact_setting_state`
+: An object to store the seUing state like the user setting for the challenge in interact mode. It will be saved in the local storage of the users' browser, and it will retrieve in future interact sessions as well. Same as the interact_session_state, the interact setting state can be used in any type including string, array, dictionary, etc.
+
+
+??? example "Set Sample Value to interact_setting_state"
+    ``` py
+    self._context.interact_setting_state = {"show_possible_moves":True}
+    ```
+
+Note: Remember to check the value of interact_setting_state in the init function of the challenge class to initialize the challenge based on the previous user setting state stored before.
 
 
 ## `StageChallenge`

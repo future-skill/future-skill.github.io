@@ -154,6 +154,61 @@ By default text_align is "left", other possible values are "right", and "center"
 
 ![Three texts](../assets/Three_texts.png)
 
+#### `HtmlText`
+Is for text, the property is "is_html=True", then it is rendered as HTML. Fonts are also available, bold, italic etc (using inline css). It basically behaves as an image. If the area is too small there might be a scroll bar, but cannot be used.
+
+???+ example "Implementation in setup_canvas:"
+    ``` py
+    canvas.new_text('<p><em>This</em></p>is<br>an<strong>HTML</strong>area!</p>, size=1, color='blue', x=1, y=1, is_html=True')
+
+    canvas.new_text('<div style="width:200px; height:auto"><em>This</em> is an<strong style="color:brown">HTML</strong>area with a quite long text in it! Maybe it could be even longer, but why push it?</p>, size=0.7, color='red', x=1, y=7, is_html=True')
+    ```
+    ![](../assets/HtmlArea_example.png){loading=lazy, width={{ page.meta.width.standard }}}
+
+`size`
+: If in new_text() is set to 1, it will be the same as the default size for text in html.
+
+`<div>`
+: The latter has default size for text in html. Therefor, it seems more safe to us than <p>.
+
+`style="width:50%"`
+: Gives 50% of something wider than the canvas, but not as wide as the page
+
+
+### Input Text Field
+`InputTextField`creates a text input box on a canvas. It allows users to enter text, and you can attach a callback function that is triggered when the user submits the text.
+
+???+ example "Input Text Field:"
+    ``` py
+    def on_submit(self, text):
+        print('I received {}'.format(text))
+        self.tf.set_text(text)
+
+    def on_submit2(self, text):
+        print('Received {}'.format(text))
+
+    def _setup_canvas(self):
+        canvas = self.context.canvas
+        
+        self.tf = InputTextField(canvas, "First Name", 40, 5, x=10, y=20, on_submit=self.on_submit)
+        self.tf2 = InputTextField(canvas, "Last Name", 70, 10, x=10, y=33, on_submit=self.on_submit2)
+
+        key_list = ['s', 'a', 'd', 'w', 'ArrowLeft', 'ArrowRight', 'ArrowDown', 'ArrowUp']
+        
+        self.red_rect = canvas.new_rectangle(15, 15, 'red', x=100, y=15,
+                                            hover_effect={'color': 'blue'},
+                                            radius=0.1,
+                                            on_click=self.do_something)
+        
+        self.rect = canvas.new_rectangle(15, 15, 'green', x=100, y=50,
+                                        radius=0.1,
+                                        key_list=key_list,
+                                        on_key_up=self.fun)
+
+    def do_something(self):
+        self.tf.set_text('XYZ123')
+        print('hello')
+    ```
 
 ### Bitmap
 
@@ -175,7 +230,13 @@ The image argument should be the name of the image as it is written in the graph
 
 ![Three bitmaps](../assets/Three_bitmaps.png){ loading=lazy }
 
+There are two theme options for the image: light and dark. So, it can have two different values.
 
+???+ example "Adding two values to image"
+    ```
+    canvas.new_bitmap(4, 4, 'Blobfish.png|cat1_00027.png', x=12, y=7)
+    ```
+    
 ### Sprite sheet
 
 The sprite sheets requires that the defined image is the name of a compatible sprite sheet.

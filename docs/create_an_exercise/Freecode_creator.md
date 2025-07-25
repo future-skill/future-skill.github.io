@@ -7,19 +7,21 @@ contributors:
   - Ludvig
 ---
 
-On Future skill it is possible to create your own [Challenges](../basics/Challenges.md), [Exercises](../basics/Exercises.md), and [Freecodes](../basics/Freecodes.md), this is done with the Freecode creator that you can access from the create option when you are signed in.
+You can design and publish your own [Challenges](../basics/Challenges.md), [Exercises](../basics/Exercises.md), and [Freecodes](../basics/Freecodes.md) 
 
-The Creator is very similar to the Freecode Editor which you can read more about here: [Freecode editor](../basics/Freecode_editor.md)
-
-
-## The Implementation tab
-
-This is where you as the author design your Freecode. The implementation tab contains the implementation code that is used to run the challenge, call the solutions, generate graphics, and set the scores.
-
-Read more detailed information of how the implementation works here: [Skeletons](Skeletons.md)
+The Creator is very similar to the Freecode Editor which you can read more about here: [Freecode editor](../basics/Freecode_editor.md) on Future Skill using the Freecode Creator. Just sign in, click Create, and select Freecode to get started.
 
 
-## The Solution tab
+## The Implementation Tab
+
+This is where you as the author design your Freecode:
+
+- Write your creator code: call solution methods,    generate graphics, define scoring.
+- It acts as the “engine” behind the Freecode.
+- For detailed logic patterns, visit the [Skeletons](Skeletons.md) page (link).
+
+
+## The Solution Tab
 
 The solution tab contains a default solution that is used when running the code in the creator.
 This is not visible for the Members when opening the Freecode. Here you as the author can create a solution to your own Freecode to try it.
@@ -28,6 +30,12 @@ This solution is also the default solution used in contests when there are no ot
 
 
 ## The API Tab
+
+Manage two types of APIs:
+
+- Implementation APIs: provide supporting methods for users.
+- Solution APIs: define the stubs users must implement.
+
 ![API tab](../assets/Api-tab.png){ loading=lazy }
 
 
@@ -88,10 +96,12 @@ Default return values for different return types in solution methods:
 For implementation methods you get raise NotImplementedError('"APImethod" not implemented') as default regardless of the return type.
 
 
-## The graphics tab
+## The Graphics Tab
+Configure canvas, animations, images, and resolution:
 
-This tab contains settings for how the implementation should use the canvas and manages the default landing page background and thumbnail.
-Some settings might disable other settings, if canvas is disabled there will be no other canvas settings available.
+- Enable/disable canvas and animations.
+- Upload PNGs or sprite sheets.
+- Set canvas resolution, background color, and thumbnails.
 
 ![](../assets/Graphics_tab.png){loading=lazy}
 
@@ -155,10 +165,14 @@ Additionally, some graphics elements will display differently at different resol
 The default landing page image used by challanges and exercises.
 This image will be used as both background and thumbnail for the implementation.
 
-
 ## Settings Tab
+Configure Freecode metadata:
 
-A mismatch between the total number of levels and the number of levels in the implementation `_configurations` variable can lead to an error.
+- Select challenge type, difficulty, tournaments.
+- Set public/hidden levels, performance thresholds.
+- Enable community sharing, official tag, and version control.
+- A mismatch between the total number of levels and the number of levels in the implementation `_configurations` variable can lead to an error.
+
 
 ![](../assets/Settings_tab.png){loading=lazy}
 

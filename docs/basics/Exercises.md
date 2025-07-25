@@ -54,3 +54,27 @@ On Future skill it is possible to create your own Exercises!
 This is done with the Freecode creator that you can access from the create option.
 
 Read more about the Freecode creator [here](../create_an_exercise/Freecode_creator.md).
+
+## Sample Exercises
+
+Get inspiration from existing exercises to see how the features provided by Future Skill are used.
+
+- [Wide Screen](https://futureskill.com/freecode-creator/6668377f8e7fd9a591996e33) – A sample exercise to get started with the basics of interactive programming challenges, including world creation, character movement, and dynamic view rendering. It also introduces per-level settings, speech bubbles, and score tracking.
+
+- [Global Pos](https://futureskill.com/freecode-creator/666835c98e7fd9a591996c70) - A sample exercise to explore visual transformations in interactive programming, including offset, anchor, scale, rotation, and pivot. Learners experiment with how these properties affect UI elements when clicking on the canvas. Ideal for understanding coordinate systems and graphical element manipulation.
+
+- [Reversi](https://futureskill.com/freecode-creator/60ace4a1b705932a147b0686) - A two-player Reversi challenge that teaches turn-based logic, state tracking, and interactive board rendering (Grid). Players implement move strategies, handle flips, and respond to UI interactions with dynamic visuals. Ideal for exploring game rules enforcement, conditional animation, and user-AI gameplay mechanics.
+
+- [World Creator](https://futureskill.com/freecode-creator/667928e88d54121aebab2143) - A multi-level challenge where learners build and validate a 5x5 ecosystem using a custom world grid. It teaches grid manipulation, spatial reasoning, and condition-based logic to populate and animate characters based on environmental rules. Ideal for exploring API design, visual feedback, and dynamic solution evaluation.
+
+- [The Sims](https://futureskill.com/freecode-creator/6687da3b6fd0568ae4ea8204) - A sample exercise to explore advanced usage of tile-based world creation in UI-driven challenges, including character placement, object decoration, and level layout using coordinate systems. Learners build a dynamic, interactive environment with props, walls, and multiple characters, while managing isometric or top-down perspectives. Great for learning spatial reasoning, world graph construction, and programmatic level design in a reactive canvas.
+
+- [Drag & Drop Sample Exercise](https://futureskill.com/freecode-creator/687fc1de1dec4dd59642c832) - A sample exercise to explore drag-and-drop mechanics in a canvas-based UI challenge. Learners interact with draggable shapes and designated drop zones, triggering visual feedback and logic-based validation through event handlers. Ideal for practicing interactive UI behaviors, event-driven programming, and dynamic object manipulation.
+
+- [Data Tables](https://futureskill.com/freecode-creator/66681a878e7fd9a591991ae4) - A sample exercise to explore advanced usage of data tables in UI-based challenges, including formatting, styling, and dynamic updates. Learners work with multiple tables to apply custom data highlighters, cell formatting, and visual feedback like checklists and conditional coloring. Great for learning structured data manipulation and visual representation in a reactive canvas.
+
+- [Inventory](https://futureskill.com/freecode-creator/666836c18e7fd9a591996d5f) - A sample exercise to learn movement logic, path tracking, and environment interaction in an isometric game world. Learners control a character using keyboard input, manage score deductions based on tile types, and interact with items and containers. Useful for exploring real-time feedback, tile-based world design, and basic game mechanics.
+
+- [Complex Shapes](https://futureskill.com/freecode-creator/6668363b8e7fd9a591996d0e) - A visual programming exercise to explore drawing with Bézier curves using ComplexShape. Learners experiment with different path types—linear, quadratic, and cubic—and control properties like color, stroke, and shape closure across levels. Perfect for understanding vector graphics, shape composition, and custom canvas rendering.
+
+- [Keyboard Input](https://futureskill.com/freecode-creator/6880b9ea1dec4dd59643860a) - A sample exercise to explore reactive canvas programming through real-time object manipulation and keyboard-driven interaction. Learners implement movement logic for multiple on-screen objects, respond to key events, and dynamically update object positions within a bounded environment. Ideal for practicing event handling, state management, and interactive UI design. Great for building intuition around animation loops, user input processing, and basic game mechanics in a visual, feedback-rich setting.
