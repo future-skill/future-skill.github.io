@@ -1,0 +1,3318 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.futureskill.com/create_an_exercise/World/">
+      
+      
+        <link rel="prev" href="../UI/">
+      
+      
+        <link rel="next" href="../Data/">
+      
+      
+      <link rel="icon" href="../../assets/fs_small_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>World - Future Skill wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="World - Future Skill wiki" >
+      
+        <meta  property="og:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  property="og:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/World.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://wiki.futureskill.com/create_an_exercise/World/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="World - Future Skill wiki" >
+      
+        <meta  name="twitter:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  name="twitter:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/World.png" >
+      
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: #295c88; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Future Skill wiki" class="md-header__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Future Skill wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              World
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/Freecode_editor/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Freecode_creator/" class="md-tabs__link">
+          
+  
+  Create an exercise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../legacy/Freecode_graphics/" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-tabs__link">
+          
+  
+  Future Skill GPT
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Future Skill wiki" class="md-nav__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    Future Skill wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecode_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Coding_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/How_to_get_experience_points/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get experience points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Canvas_element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Types of code challenges
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Types of code challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Tournaments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tournaments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Create an exercise
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create an exercise
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Freecode_creator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Skeletons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world" class="md-nav__link">
+    <span class="md-ellipsis">
+      World
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="World">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prefab-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prefab tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tile-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tile map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactable-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactable tiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#walls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Walls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Walls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prefab-walls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prefab walls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-corners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block corners
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props" class="md-nav__link">
+    <span class="md-ellipsis">
+      Props
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Items
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-prefabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Prefabs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Prefabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tileentry" class="md-nav__link">
+    <span class="md-ellipsis">
+      TileEntry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wallentry" class="md-nav__link">
+    <span class="md-ellipsis">
+      WallEntry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterentry" class="md-nav__link">
+    <span class="md-ellipsis">
+      CharacterEntry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propentry" class="md-nav__link">
+    <span class="md-ellipsis">
+      PropEntry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containerentry" class="md-nav__link">
+    <span class="md-ellipsis">
+      ContainerEntry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itementry" class="md-nav__link">
+    <span class="md-ellipsis">
+      ItemEntry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imageactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageActor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ImageActor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-imageactor-to-make-interactable-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ImageActor to make interactable tiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Create_Sprite_Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Sprite Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built in images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Freecode_graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Gameboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gameboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Future Skill GPT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Future Skill GPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Skill GPT Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>World</h1>
+
+<p>This article goes through how to use the World library to create a topdown or isometric world.</p>
+<h2 id="overview">Overview</h2>
+<p>The World library is split into two main parts:</p>
+<ul>
+<li>Core functionality, focused on flexibility and reuse</li>
+<li>Prefabricated content, focused on easy of use</li>
+</ul>
+<p>This article will focus on the prefab content, but include enough core details to be able to take full advantage of the library.</p>
+<p>The worlds created using this library are divided into descrete spaces, usually a square grid.
+So positions will be based on integer coordinates.</p>
+<p>The prefabricated content supports both topdown and isometric perspectives, and it is very easy to switch between the two as needed.
+Additional perspectives are possible, but not supported by the prefab content.</p>
+<p>Easiest way to get started is to pick up one of the <a href="./#templates">templates</a> at the end of the article, and then jump to relevant sections as questions come up.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All classes on this page need to be imported from <code>lib.world</code>, unless otherwise specified.</p>
+</div>
+<h2 id="setup">Setup</h2>
+<p>To use the prefab content you will have to use the <code>WorldSetup</code> class.
+The following sections will assume that you have an instance of this class called <code>setup</code>.</p>
+<p>To start, just create the setup object like this <code>setup = WorldSetup()</code>.</p>
+<p>The class has the following attributes:</p>
+<dl>
+<dt><code>directions</code> - <code>list[tuple[int, int]]</code></dt>
+<dd>The allowed movement directions, see <a href="./#directions">directions</a>, defaults to <code>CARDINAL_DIRECTIONS</code></dd>
+<dt><code>basic</code> - <code>bool</code></dt>
+<dd>If <code>True</code> will draw colored geometric shapes rather than the image-based tiles and walls</dd>
+<dt><code>perspective</code> - <code>"topdown" | "isometric"</code></dt>
+<dd>The perspective to use for the prefab content, defautls to <code>"topdown"</code></dd>
+<dt><code>resolution</code> - <code>int</code></dt>
+<dd>The "unit size", the size of a tile in topdown, will be used for all content</dd>
+<dt><code>block_corners</code> - <code>bool</code></dt>
+<dd>If <code>True</code> will block diagonal movement next to a wall, should generally be enabled when using <code>SQUARE_DIRECTIONS</code></dd>
+<dt><code>debug_mode</code> - <code>bool</code></dt>
+<dd>If <code>True</code> adds additional debugging features to the world element, see <a href="./#debugging">debugging</a></dd>
+<dt><code>manager</code> - <code>PrefabManager</code></dt>
+<dd>The object responsible for managing prefabricated assets, generally no need to override the default value</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating the setup object</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">setup</span> <span class="o">=</span> <span class="n">WorldSetup</span><span class="p">(</span>
+    <span class="n">directions</span><span class="o">=</span><span class="n">SQUARE_DIRECTIONS</span><span class="p">,</span>
+    <span class="n">perspective</span><span class="o">=</span><span class="s2">&quot;isometric&quot;</span><span class="p">,</span>
+    <span class="n">block_corners</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="directions">Directions</h3>
+<p>You can specify which directions exist in the world, which will affect how actors can move.</p>
+<p>By default only the cardinal directions exist:</p>
+<ul>
+<li><code>Cardinal.LEFT</code> = (-1, 0)</li>
+<li><code>Cardinal.RIGHT</code> = (1, 0)</li>
+<li><code>Cardinal.UP</code> = (0, -1)</li>
+<li><code>Cardinal.DOWN</code> = (0, 1)</li>
+</ul>
+<p>But these can be extended with diagonals:</p>
+<ul>
+<li><code>Ordinal.LEFT_UP</code> = (-1, -1)</li>
+<li><code>Ordinal.RIGHT_UP</code> = (1, -1)</li>
+<li><code>Ordinal.LEFT_DOWN</code> = (-1, 1)</li>
+<li><code>Ordinal.RIGHT_DOWN</code> = (1, 1)</li>
+</ul>
+<p>For convenience, the following direction list constants are available:</p>
+<ul>
+<li><code>CARDINAL_DIRECTIONS</code></li>
+<li><code>ORDINAL_DIRECTIONS</code></li>
+<li><code>SQUARE_DIRECTIONS</code></li>
+</ul>
+<p>You can specify any other set of directions you want, but it will seldom make sense to do so.</p>
+<h2 id="world">World</h2>
+<p>To create the world itself you can use <code>world = setup.create_world()</code>.</p>
+<p>This section will not go into detail of how the <code>World</code> object works, that will be covered throughout this article.</p>
+<h3 id="rendering">Rendering</h3>
+<p>The world library can be used without rendering, but generally you do want to show the results.
+When using the library you will initialize and make changes to the world in the <code>setup_state</code> and <code>update_state</code> methods.
+Then you will want to render and re-render the world in the <code>setup_canvas</code>/<code>setup_view</code> and <code>update_canvas</code>/<code>update_view</code> methods.</p>
+<p>When doing the initial render you can choose how the rendered element will behave:</p>
+<ul>
+<li>Use <code>world.render_resizable()</code> to get an element which dynamically scales the world to fit within the size of the element.
+Recommended for smaller worlds.</li>
+<li>Use <code>world.render_scrollable()</code> to get a scroll area containing the world.
+The size of the world is based on the <code>resolution</code>.
+Recommended for larger worlds.</li>
+</ul>
+<p>No matter which way you create the initial element, you need to call <code>world.render_changes()</code> when you want the world to be re-rendered.
+No need to do anything else.</p>
+<p>See the <a href="./#templates">templates section</a> for examples of how to do this in practice.</p>
+<h2 id="tiles">Tiles</h2>
+<p>Worlds consist mainly of tiles, which are used to both define the walkable area of the world and the visual tiles the world consist of.</p>
+<p>The library comes with <a href="./#prefab-tiles">prefabricated graphical tiles</a> and has built-in support for plain colored tiles, but it is also possible to make custom tiles.</p>
+<p>There are a few ways to add tiles to the world, which to use is partly up to need and partly up to preference.</p>
+<p>First way is to include a <code>tiles</code> argument to <code>setup.create_world()</code>.
+This can take the form of a dictionary with coordinates as keys and tiles as values.</p>
+<details class="example" open="open">
+<summary>Add tiles using a dictionary</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span> <span class="o">=</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_world</span><span class="p">(</span><span class="n">tiles</span><span class="o">=</span><span class="p">{</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="s2">&quot;grass&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="s2">&quot;grass&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> <span class="s2">&quot;gravel&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Alternatively the <code>tiles</code> argument can be a string as described in <a href="./#tile-map">tile map</a></p>
+<details class="example" open="open">
+<summary>Add tiles using a string</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span> <span class="o">=</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_world</span><span class="p">(</span><span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;gg</span><span class="se">\n</span><span class="s2">r&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Both the examples above result in a world that looks like this:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Small_tile_example.png" width="250px" /></a></p>
+<p>Second way is to use the <code>World</code> methods:</p>
+<dl>
+<dt><code>world.add_tile(coordinate, data)</code></dt>
+<dd>Where <code>data</code> depends on what types of tiles you are using</dd>
+<dd>
+<details class="example" open="open">
+<summary>Add single tile</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_tile</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;grass&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+<dd>
+<p>Or if using basic tiles:</p>
+</dd>
+<dd>
+<details class="example" open="open">
+<summary>Add single basic tile</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_tile</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</dd>
+<dt><code>world.fill(top_left, bottom_right, data)</code></dt>
+<dd>Which will add the same tile to the area spanned by <code>top_left</code> and <code>bottom_right</code></dd>
+<dd>
+<details class="example" open="open">
+<summary>Fill area with tiles</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mud&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;tan&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+</dl>
+<p>It is possible to get tile data for a coordinate using <code>world.get_tile_data(coordinate)</code>, and it is possible to get all tile coordinates using <code>world.get_tile_coordinates()</code>.</p>
+<p>You can remove a tile using <code>world.remove_tile(coordinate)</code>.</p>
+<h3 id="prefab-tiles">Prefab tiles</h3>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Name</th>
+<th>Code</th>
+<th>Notes</th>
+<th>Top down</th>
+<th>Isometric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tile.BLOCKED</td>
+<td>blocked</td>
+<td>b</td>
+<td>blocking</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_blocked.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_blocked.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.CARPET</td>
+<td>carpet</td>
+<td>c</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_beige_carpet.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_beige_carpet.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.CARPET_BLUE</td>
+<td>carpet_blue</td>
+<td>k</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_dark_blue_carpet.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_dark_blue_carpet.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.CARPET_BLUE_2</td>
+<td>carpet_blue_2</td>
+<td>K</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_light_blue_carpet.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_light_blue_carpet.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.CARPET_GREY</td>
+<td>carpet_grey</td>
+<td>C</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_grey_carpet.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_grey_carpet.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.GRASS</td>
+<td>grass</td>
+<td>g</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_grass.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_grass.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.GRASS_2</td>
+<td>grass_2</td>
+<td>G</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_grass_2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_grass_2.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.GRAVEL</td>
+<td>gravel</td>
+<td>r</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_gravel.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_gravel.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.MUD</td>
+<td>mud</td>
+<td>m</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_ground.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_ground.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.PARQUET</td>
+<td>parquet</td>
+<td>p</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_dark_parquet.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_dark_parquet.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.PARQUET_2</td>
+<td>parquet_2</td>
+<td>P</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_light_parquet.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_light_parquet.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.TILES</td>
+<td>tiles</td>
+<td>t</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_stone_tiles.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_stone_tiles.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.TILES_2</td>
+<td>tiles_2</td>
+<td>T</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_bathroom_tiles.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_bathroom_tiles.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.WATER</td>
+<td>water</td>
+<td>w</td>
+<td>blocking</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_calm_water.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_calm_water.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.WATER_2</td>
+<td>water_2</td>
+<td>W</td>
+<td>blocking</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_tile_water.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_water.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.SPACE_BLUE</td>
+<td>space_blue</td>
+<td>s</td>
+<td></td>
+<td>N/A</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_space_blue.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Tile.SPACE_GREEN</td>
+<td>space_green</td>
+<td>S</td>
+<td></td>
+<td>N/A</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_tile_space_green.webp" width="100px"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tile-map">Tile map</h3>
+<p>The tile map string is a convenient way of specifying what tiles to use.
+Each tile is specified using a code (see table in previous section), use <code>.</code> to mark gaps.
+To be able to add line breaks you will have to use triple <code>"</code> for the strings.
+Or you can use the special sequence <code>\n</code> instead of adding a line break.
+Leading and trailing whitespace is ignored, which allows indenting the tile maps.</p>
+<details class="example" open="open">
+<summary>Tile string from main section</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ex1</span> <span class="o">=</span> <span class="s2">&quot;gg</span><span class="se">\n</span><span class="s2">r&quot;</span>
+<span class="c1"># Equivalent to ex1</span>
+<span class="n">ex2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    gg</span>
+<span class="s2">    r</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Small_tile_example.png" width="250px" /></a></p>
+</details>
+<details class="example" open="open">
+<summary>Tile string using gaps</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ex3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    .wr.</span>
+<span class="s2">    mrrg</span>
+<span class="s2">    mrgg</span>
+<span class="s2">    .rg.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="c1"># Equivalent to ex3, but hard to read</span>
+<span class="n">ex4</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;.wr</span>
+<span class="s2">mrrg</span>
+<span class="s2">    mrgg</span><span class="se">\n</span><span class="s2">.rg&quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Big_tile_example.png" width="250px" /></a></p>
+</details>
+<h3 id="interactable-tiles">Interactable tiles</h3>
+<p>Tiles can be interacted with using an on click listener.
+The callback function to this listener is given to the <code>WorldSetup.create_world</code> function.</p>
+<details class="example" open="open">
+<summary>Implementation of <code>on_tile_click</code> callback</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">lib.world</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tile</span> 
+
+<span class="k">def</span><span class="w"> </span><span class="nf">on_tile_click</span><span class="p">(</span><span class="n">info</span><span class="p">:</span> <span class="n">TileInfo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">coord</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">coordinate</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Tile</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tile clicked: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">coord</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">world</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="o">.</span><span class="n">create_world</span><span class="p">(</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tiles</span><span class="p">,</span>
+    <span class="n">on_tile_click</span><span class="o">=</span><span class="n">on_tile_click</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on how the tile was instantiated <code>info["name"]</code> can either be a string or a <code>Tile(StrEnum)</code>.
+If the tiles are generated using a <code>TileMap</code> the name in <code>TileInfo</code> will be a <code>Tile(StrEnum)</code>, but if instantiated using <code>World.add_tile({"name": "tile_name"})</code> the name in <code>TileInfo</code> till be the string <code>"tile_name"</code>.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Interactable tiles do not work well in the isometric view.
+You can use <code>ImageActor</code> to circumvent this issue, see <a href="./#using-imageactor-to-make-interactable-tiles">Using <code>ImageActor</code> to make interactable tiles</a> for more info.</p>
+</div>
+<h2 id="walls">Walls</h2>
+<p>It is possible to place walls between tiles in the world, these will block movement between the tiles.</p>
+<p>While tiles are identified using a single coordinate, walls are identified using a pair of coordinates.
+The pair is the coordinates of the tiles the wall is placed between.
+E.g. if the wall should be placed between tiles <code>(0, 1)</code> and <code>(1, 1)</code> then the coordinate pair is <code>((0, 1), (1, 1))</code>.</p>
+<p>Like tiles, the library comes with <a href="./#prefab-walls">prefabricated graphical walls</a> and support for plain colored walls.
+And it is possible to make custom walls.</p>
+<p>Walls are added to the world in a similar way as tiles, except there is no equivalent to tile maps.</p>
+<p>First way is to include a <code>walls</code> argument to <code>setup.create_world()</code>.
+This takes the form of a dictionary with coordinate pairs as keys and walls as values:</p>
+<details class="example" open="open">
+<summary>Add walls using a dictionary</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span> <span class="o">=</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_world</span><span class="p">(</span><span class="n">tiles</span><span class="o">=</span><span class="p">{</span>
+    <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span> <span class="s2">&quot;hedge&quot;</span><span class="p">,</span>
+    <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span> <span class="s2">&quot;stone&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Walls_example.png" width="250px" /></a></p>
+</details>
+<p>Second way is to use the <code>World</code> method:</p>
+<dl>
+<dt><code>world.add_wall(coordinate_pair, data)</code></dt>
+<dd>Where <code>data</code> depends on what types of walls you are using</dd>
+<dd>
+<details class="example" open="open">
+<summary>Add a single prefab wall</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_wall</span><span class="p">(((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hedge_2&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+<dd>
+<p>Or if using basic walls:</p>
+</dd>
+<dd>
+<details class="example" open="open">
+<summary>Add a single basic wall</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_wall</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</dd>
+</dl>
+<p>It is possible to get wall data for a pair of coordinates using <code>world.get_wall_data(coordinate_pair)</code>.</p>
+<p>You can remove a wall using <code>world.remove_wall(coordinate_pair)</code>.</p>
+<h3 id="prefab-walls">Prefab walls</h3>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Name</th>
+<th>Top down, face</th>
+<th>Top down, side</th>
+<th>Isometric, left</th>
+<th>Isometric, right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wall.BRICK</td>
+<td>brick</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_brick_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_brick_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_brick_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_brick_right.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Wall.BRICK_FENCE</td>
+<td>brick_fence</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_brick_fence_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_brick_fence_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_brick_fence_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_brick_fence_right.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Wall.HEDGE</td>
+<td>hedge</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_hedge_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_hedge_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_hedge_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_hedge_right.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Wall.HEDGE_2</td>
+<td>hedge_2</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_hedge_2_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_hedge_2_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_hedge_2_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_hedge_2_right.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Wall.PICKET_FENCE</td>
+<td>picket_fence</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_picket_fence_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_picket_fence_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_picket_fence_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_picket_fence_right.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Wall.PLAIN</td>
+<td>plain</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_white_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_white_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_white_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_white_right.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Wall.STONE</td>
+<td>stone</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_stone_face.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_wall_stone_side.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_stone_left.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_wall_stone_right.webp" width="100px"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="block-corners">Block corners</h3>
+<p>Due to the geometry of a square grid, you will generally only want to have visual walls between tiles in the cardinal directions.
+However, when allowing diagonal movement (e.g. using <code>directions=SQUARE_DIRECTIONS</code>) the characters can move diagonally across the corners.
+This will look incorrect and not make intuitive sense for the users.</p>
+<p>To solve this you can set <code>block_corners=True</code> in the <code>WorldSetup</code> or <code>World</code> constructors.
+This will automatically add invisible walls at the corners next to walls so that movement is blocked as expected.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These walls must be manually removed if needed.</p>
+</div>
+<h2 id="actors">Actors</h2>
+<p>Everything that is not a tile or a wall is an <code>Actor</code>.
+This includes characters, objects, and even props like flowers.</p>
+<p>The easiest way to create actors is to use the <code>WorldSetup</code> methods (see following sections), but you can also create them manually if you need more flexibility.</p>
+<p>The <code>World</code> class has the following <code>Actor</code>-related methods:</p>
+<dl>
+<dt><code>world.add_actor(coordinate, actor)</code></dt>
+<dd>Places the actor in the world at the given coordinate.</dd>
+<dd>The actor will be configured to follow the movement rules of the world.</dd>
+<dd>Multiple actors can be placed on the same coordinate.</dd>
+<dt><code>world.remove_actor(actor)</code></dt>
+<dd>Removes the actor from the world.</dd>
+<dt><code>world.find_actors()</code></dt>
+<dd>Allows looking up actors based on various criteria, returns a list.</dd>
+<dd>If given no arguments it returns all actors in the world.</dd>
+<dd>The following arguments are supported:</dd>
+<dd>
+<dl>
+<dt><code>at</code> - <code>tuple[int, int]</code></dt>
+<dd>Coordinate (tile) to search at.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Find actor at tile <code>(0, 0)</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">find_actors</span><span class="p">(</span><span class="n">at</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>tags</code> - <code>set[str]</code></dt>
+<dd>Tags the actor must have.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Find actors with tag <code>"my_tag"</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">find_actors</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my_tag&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>tags_match_any</code> - <code>bool</code></dt>
+<dd>Only requires that one tag in <code>tags</code> matches.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Find actors with either the <code>"player"</code> or <code>"enemy"</code> tag</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">find_actors</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;player&quot;</span><span class="p">,</span> <span class="s2">&quot;enemy&quot;</span><span class="p">},</span> <span class="n">tags_match_any</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+</dl>
+</dd>
+</dl>
+<h3 id="attributes">Attributes</h3>
+<p>All actors have a number of attributes that usually can be set when creating the actor:</p>
+<dl>
+<dt><code>actor.coordinate</code> - <code>tuple[int, int] | None</code></dt>
+<dd>The current coordinate of the actor, or <code>None</code> if the actor is not in a world.</dd>
+<dt><code>actor.offset</code> - <code>tuple[float, float] | None</code></dt>
+<dd>A visual offset on the current tile, mainly used to add small props (such as rocks and flowers).</dd>
+<dt><code>actor.tags</code> - <code>set[str]</code></dt>
+<dd>A set of tags for the actor, which are used in <code>world.find_actors</code> or other features.</dd>
+<dt><code>actor.block_tags</code> - <code>set[str]</code></dt>
+<dd>A set of tags this actor is blocked by. If a space has an actor with any of these tags, then this actor can not move there.</dd>
+</dl>
+<h3 id="deletion">Deletion</h3>
+<p>All actors have the <code>actor.delete()</code> method with will ask for the actor to be removed from existence, such as the world or a container.
+If the actor was rendered manually, this will have no effect.</p>
+<h3 id="movement">Movement</h3>
+<p>This library has a pathing system which enables actors to find the quickest path from point a to point b.</p>
+<p>In order for this system to work, you must call <code>world.update_world_graph()</code>.
+This should be done after finishing setting up the world, and when you have modified any tiles or walls.</p>
+<p>Actors have a set of methods related to movement:</p>
+<dl>
+<dt><code>actor.can_move(direction)</code></dt>
+<dd>Returns <code>True</code> if the actor currently can move in the given direction.</dd>
+<dt><code>actor.move(direction)</code></dt>
+<dd>Moves the actor one step in the given direction.</dd>
+<dd>Does not require movement to be properly set up.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Move <code>actor</code> one tile to the left</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">actor</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">Cardinal</span><span class="o">.</span><span class="n">LEFT</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+<dt><code>actor.move(direction, check=True)</code></dt>
+<dd>Same as above, but includes additional checks (such as blocked check).</dd>
+<dd>Returns <code>False</code> if the movement failed.</dd>
+<dd>Requires movement to be properly set up.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Attempt to move <code>actor</code> one tile to the left</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">actor</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">Ordinal</span><span class="o">.</span><span class="n">LEFT_DOWN</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+<dt><code>actor.possible_moves()</code></dt>
+<dd>Returns the possible directions this actor can move (currently).</dd>
+<dt><code>actor.next_move_towards(coordinate)</code></dt>
+<dd>Returns the current direction the actor should move to get one step closer to the given coordinate along a shortest path.</dd>
+<dd>Returns <code>None</code> if there is no path to to coordinate or if the actor is already there.</dd>
+<dt><code>actor.move_towards(coordinate)</code></dt>
+<dd>Moves the actor one step towards the given coordinate along a shortest path.</dd>
+<dd>Returns <code>False</code> if the movement failed or the actor is already there.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Move <code>actor</code> one step towards tile <code>(3, 4)</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">actor</span><span class="o">.</span><span class="n">move_towards</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+</dl>
+<p>You can have a callback trigger whenever the actor performs a successful movement, by supplying the following argument when creating an actor:</p>
+<dl>
+<dt><code>on_move</code> - <code>(ActorMoveEventData) -&gt; None</code></dt>
+<dd>Callback to call when the actor successfully moves (one step)</dd>
+<dd>The <code>ActorMoveEventData</code> object has the following attributes:</dd>
+<dd>
+<dl>
+<dt><code>source</code> - <code>Actor</code></dt>
+<dd>The actor that moved</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>direction</code> - <code>tuple[int, int]</code></dt>
+<dd>The direction the actor moved</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>origin</code> - <code>tuple[int, int]</code></dt>
+<dd>The coordinate the actor came from</dd>
+</dl>
+</dd>
+</dl>
+<h3 id="keyboard-input">Keyboard Input</h3>
+<p>This library has a keyboard input system which enables users to use the keyboard to move actors or perform other actions.</p>
+<p>When creating an actor you can supply the following arguments:</p>
+<dl>
+<dt><code>key_map</code> - <code>dict[str, tuple[int, int] | (ActorKeyboardEventData) -&gt; None] | None</code></dt>
+<dd>Maps keys to movements and/or callbacks.</dd>
+<dt><code>on_key_up</code> - <code>(ActorKeyboardEventData) -&gt; None</code></dt>
+<dd>Callback to call if the key is not found in the key map.</dd>
+<dd>The <code>ActorKeyboardEventData</code> object has the following attributes:</dd>
+<dd>
+<dl>
+<dt><code>source</code> - <code>Actor</code></dt>
+<dd>The actor that received the key event</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>key</code> - <code>str</code></dt>
+<dd>The key value</dd>
+</dl>
+</dd>
+</dl>
+<p>We supply a default keymap for cardinal movement called <code>MOVE_KEY_MAP</code> which supports arrow keys and <span class="keys"><kbd class="key-w">W</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> movement.</p>
+<details class="example" open="open">
+<summary>Using default movement for a main character</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_character</span><span class="p">(</span><span class="s2">&quot;skilly&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">key_map</span><span class="o">=</span><span class="n">MOVE_KEY_MAP</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example" open="open">
+<summary>Adding an additional action when pressing <span class="keys"><kbd class="key-p">P</kbd></span></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_character</span><span class="p">(</span><span class="s2">&quot;skilly&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">key_map</span><span class="o">=</span><span class="n">MOVE_KEY_MAP</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">pick_up</span><span class="p">()}))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example" open="open">
+<summary>Printing the value when a key is pressed</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_character</span><span class="p">(</span><span class="s2">&quot;skilly&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">on_key_up</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">key</span><span class="p">)))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="interaction">Interaction</h3>
+<p>This library has an interaction system with allows responding to mouse clicks or can be used with keyboard input or just through code.</p>
+<p>Actors have a set of methods related to interaction:</p>
+<dl>
+<dt><code>actor.interact()</code></dt>
+<dd>Invokes the actors <code>on_interact</code> callback.</dd>
+<dt><code>actor.interact(agent=agent)</code></dt>
+<dd>Invokes the actors <code>on_interact</code> callback, specifying the interaction agent (must be an <code>Actor</code>).</dd>
+</dl>
+<p>When creating an actor you can supply the following arguments:</p>
+<dl>
+<dt><code>on_interact</code> - <code>(ActorInteractEventData) -&gt; None</code></dt>
+<dd>Callback to call when this actor is interacted with.</dd>
+<dt><code>interact_on_click</code> - <code>bool</code></dt>
+<dd>If set to <code>True</code>, <code>on_interact</code> will be called when the user clicks on this actor.</dd>
+</dl>
+<p>The <code>ActorInteractEventData</code> object has the following attributes:</p>
+<dl>
+<dt><code>source/target</code> - <code>Actor</code></dt>
+<dd>The actor that received the key event</dd>
+<dt><code>agent</code> - <code>Actor | None</code></dt>
+<dd>The actor that caused the event, set to <code>None</code> if not caused by another actor (such as clicked by user).</dd>
+</dl>
+<p>Some prefab actors have predefined <code>on_interact</code> callbacks, which can be overridden and are detailed under their respective section.</p>
+<h2 id="characters">Characters</h2>
+<p>Character actors have a few extra features and, most importantly, are animated.
+The characters will automatically get appropriate walking animations based on movement, and there are a couple of additional actions with dedicated animations.</p>
+<p>When you call <code>world.render_changes()</code> the appropriate animation will be chosen.
+If you want to perform multiple movements or actions, you have to use <code>canvas.split_step()</code> and call <code>world.render_changes()</code> multiple times.</p>
+<p>Like with props, there is a dedicated method to create a character <code>setup.create_character(name, color)</code>. 
+Available characters and colors are listed in the following tables:</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Name</th>
+<th>Description</th>
+<th>Top down</th>
+<th>Isometric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character.ADA</td>
+<td>ada</td>
+<td>a girl</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_ada_black_idling.webp" width="250px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_ada_black_idling.webp" width="250px"></a></td>
+</tr>
+<tr>
+<td>Character.DOUGLAS</td>
+<td>douglas</td>
+<td>a dog</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_douglas_black_idling.webp" width="250px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_douglas_black_idling.webp" width="250px"></a></td>
+</tr>
+<tr>
+<td>Character.KATNISS</td>
+<td>katniss</td>
+<td>a cat</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_katniss_black_idling.webp" width="250px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_katniss_black_idling.webp" width="250px"></a></td>
+</tr>
+<tr>
+<td>Character.RUST</td>
+<td>rust</td>
+<td>a boy</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_rust_black_idling.webp" width="250px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_rust_black_idling.webp" width="250px"></a></td>
+</tr>
+<tr>
+<td>Character.SKILLY</td>
+<td>skilly</td>
+<td>a robot</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_skilly_black_idling.webp" width="250px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_skilly_black_idling.webp" width="250px"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CharacterColor.BLACK</td>
+<td>black</td>
+</tr>
+<tr>
+<td>CharacterColor.BLUE</td>
+<td>blue</td>
+</tr>
+<tr>
+<td>CharacterColor.ORANGE</td>
+<td>orange</td>
+</tr>
+<tr>
+<td>CharacterColor.RED</td>
+<td>red</td>
+</tr>
+<tr>
+<td>CharacterColor.WHITE</td>
+<td>white</td>
+</tr>
+<tr>
+<td>CharacterColor.YELLOW</td>
+<td>yellow</td>
+</tr>
+</tbody>
+</table>
+<p>Character actors have an additional set of methods with animations:</p>
+<dl>
+<dt><code>actor.pick_up()</code></dt>
+<dd><a href="./#interaction">Interacts</a> with any other actors on the current tile, and plays a picking up animation.</dd>
+<dt><code>actor.gesture(direction)</code></dt>
+<dd>Plays a gesturing animation in the given direction.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Make <code>actor</code> gesture facing down</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">actor</span><span class="o">.</span><span class="n">gesture</span><span class="p">(</span><span class="n">Cardinal</span><span class="o">.</span><span class="n">DOWN</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+<dt><code>actor.say(text)</code></dt>
+<dd>Plays a speaking animation and shows a speech bubble with the given text.</dd>
+<dd>
+<details class="example" open="open">
+<summary>Make <code>actor</code> say "Hello World!"</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">actor</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></details>
+</dd>
+</dl>
+<p>Additional optional parameters:</p>
+<dl>
+<dt><code>font_size</code></dt>
+<dd>Adjust the font size for the bubble.</dd>
+<dt><code>theme</code></dt>
+<dd>See <a href="../UI/#speechbubble">speech bubble</a> documentation.</dd>
+<dt><code>actor.interact_with(dir=dir)</code></dt>
+<dd><a href="./#interaction">Interacts</a> with any actors on the tile in the specified direction, and plays a gesturing animation.</dd>
+</dl>
+<h2 id="props">Props</h2>
+<p>Prop actors are simply prefabricated actors that can be placed in the world.
+It is up to you to decide how to use them.</p>
+<p>Props are created using <code>setup.create_prop(name)</code> which also accepts various <code>Actor</code> and <code>Image</code> attributes.
+The available prefab props are listed in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Name</th>
+<th>Notes</th>
+<th>Top down</th>
+<th>Isometric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container.BARREL</td>
+<td>barrel</td>
+<td>container</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_barrel1.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_barrel1.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Container.BARREL_SIDE</td>
+<td>barrel_side</td>
+<td>container</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_barrel2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_barrel2.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Container.CHEST</td>
+<td>chest</td>
+<td>container</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_chest1.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_chest1.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Container.CHEST_BAND</td>
+<td>chest_band</td>
+<td>container</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_chest2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_chest2.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Container.CRATE</td>
+<td>crate</td>
+<td>container</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_crate1.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_crate1.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Container.CRATE_TALL</td>
+<td>crate_tall</td>
+<td>container</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/td_prop_crate2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_crate2.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Item.COIN</td>
+<td>coin</td>
+<td>item</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_coin_spawn.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_coin_spawn.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Item.HEART</td>
+<td>heart</td>
+<td>item</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_heart_spawn.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_heart_spawn.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Item.KEY</td>
+<td>key</td>
+<td>item</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_key_spawn.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_key_spawn.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Item.STAR</td>
+<td>star</td>
+<td>item</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_star_spawn.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_star_spawn.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.BUSH</td>
+<td>bush</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_bush1.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_bush1.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.FLOWER</td>
+<td>flower</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower1.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower1.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.FLOWER_2</td>
+<td>flower_2</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_flower2.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.STONE</td>
+<td>stone</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.STONE_2</td>
+<td>stone_2</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone_2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_stone_2.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.TREE</td>
+<td>tree</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree1.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree1.webp" width="100px"></a></td>
+</tr>
+<tr>
+<td>Prop.TREE_STONES</td>
+<td>tree_stones</td>
+<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree2.webp" width="100px"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/external/sws-uploads.s3.eu-central-1.amazonaws.com/lazy/iso_prop_tree2.webp" width="100px"></a></td>
+</tr>
+</tbody>
+</table>
+<p>Smaller props such as flowers and stones can preferably be added as cosmetic scenary to world, with an offset from the center.
+Here is an example where a couple of stones and flowers are added:</p>
+<details class="example" open="open">
+<summary>Add a couple of stones and flowers to the world</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scenary</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;stone&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">&quot;flower&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">&quot;stone&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">)),</span>
+<span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">offset</span> <span class="ow">in</span> <span class="n">scenary</span><span class="p">:</span>
+    <span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_prop</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Props_example.png" width="250px" /></a></p>
+</details>
+<p>Bigger props should generally be used without an offset to avoid intersecting walls and characters.
+You would generally also want to give the bigger props a tag that can be used to block movement.</p>
+<details class="example" open="open">
+<summary>Add a prop with a tag to the world</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">setup</span><span class="o">.</span><span class="n">create_prop</span><span class="p">(</span><span class="s2">&quot;bush&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;obstacle&quot;</span><span class="p">}))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>The props marked as <code>container</code> or <code>item</code> can be used as normal props, but if you want to have them be opened/broken, then you should take a look at the <a href="./#containers">containers section</a> or <a href="./#items">items section</a>.</p>
+<h2 id="containers">Containers</h2>
+<p>Container actors are created using the method <code>setup.create_container(name)</code> with one of the names marked as <code>Container</code> in <a href="./#props">the props table</a>.</p>
+<p>The containers feature a very lightweight inventory system where <code>ItemActor</code> objects can be "stored" inside the container.
+When the container is opened, the first of these items will be displayed on/inside the container.</p>
+<p>By default, when interacting with the container it will (1) be opened if closed, or (2) the first contained item will be interacted with (usually leading to it being removed, depending on the item itself).</p>
+<p>Containers have the following extra attributes:</p>
+<dl>
+<dt><code>actor.items</code> - <code>list[ItemActor]</code></dt>
+<dd>List of items contained within the container, readonly</dd>
+<dt><code>actor.opened</code> - <code>bool</code></dt>
+<dd>Whether the container currently is opened/broken or not, readonly</dd>
+</dl>
+<p>And the following extra methods:</p>
+<dl>
+<dt><code>actor.add_item(item)</code></dt>
+<dd>Adds the given item to the container (at the end)</dd>
+<dt><code>actor.remove_item(item)</code></dt>
+<dd>Removes the given item from the container</dd>
+<dt><code>actor.open()</code></dt>
+<dd>Opens/breaks the container</dd>
+<dt><code>actor.close()</code></dt>
+<dd>Closes/un-breaks the container</dd>
+</dl>
+<p>The containers have animations that play when they open/break, and then they will keep the open/broken appearance.
+They can then be closed, but there currently are no animations playing for this action.</p>
+<h2 id="items">Items</h2>
+<p>Item actors are created using the method <code>setup.create_item(name)</code> with one of the names marked as <code>Item</code> in <a href="./#props">the props table</a>.</p>
+<p>By default, when interacting with an item any <code>on_pick_up</code> callbacks will be called and then the item will be <a href="./#deletion">deleted</a>.
+If the <code>on_pick_up</code> callback returns <code>True</code>, then the item will not be deleted.
+This default behaviour can be overridden by setting <code>on_interact</code> manually, however, it is usually better to just set <code>on_pick_up</code>.</p>
+<p>Items have the following extra attributes:</p>
+<dl>
+<dt><code>actor.hidden</code> - <code>bool</code></dt>
+<dd>Whether the item currently is hidden or not, readonly</dd>
+</dl>
+<p>And the following extra methods:</p>
+<dl>
+<dt><code>actor.reveal()</code></dt>
+<dd>Reveals the item</dd>
+<dt><code>actor.hide()</code></dt>
+<dd>Hides the item</dd>
+<dt><code>actor.pick_up()</code></dt>
+<dd>Manually invoke the items <code>on_pick_up</code> callback, with the same behaviour as default interaction</dd>
+</dl>
+<p>The items have animations that play when they are revealed.
+They can then be hidden, but there currently are no animations playing for this action.</p>
+<h2 id="debugging">Debugging</h2>
+<p>The world element has a subtle menu on the top left which can be used to activate various visualizations:</p>
+<dl>
+<dt><code>(x, y)</code> - coordinates</dt>
+<dd>Shows coordinates for all tiles, which can greatly help when placing actors or writing solutions.</dd>
+<dd>Always available.</dd>
+<dt><code>nav</code> - navigation</dt>
+<dd>Visualization of the pathfinding graph, does not take into account blocking tags.</dd>
+<dd>Requires debug mode.</dd>
+</dl>
+<h2 id="custom-prefabs">Custom Prefabs</h2>
+<p>It is possible to extend the existing list of prefabs with your own additions.
+This is not trivial and only recommended if you are well versed in the Freecode platform and have some image editing experience (you will have to provide your own images in a particular format).</p>
+<p>Although you can create your own prefab manager, you would generally just register them with the <code>DEFAULT_PREFAB_MANAGER</code> which is used by default.
+Just keep in mind that it is better to add new entries rather than overriding existing ones.
+There is no way to add new values to the enums, so you will have to only use the strings directly (or define your own string enum, or use constants).</p>
+<p>For each prefab type, the manager has a corresponding <code>.register_</code><type><code>s(entry_1, entry_2, ...)</code> method (e.g. <code>.register_items(...)</code>).
+It can be used to register one or more prefab entries.
+The entries are instances of the corresponding <code>&lt;Type&gt;Entry</code> classes for the prefab types (e.g. <code>ItemEntry</code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you register any prop variant (such as container or item) a corresponding prop entry will automatically be created for you.</p>
+</div>
+<p>The entry instance allows you to tweak a number of parameters which will be used to determine the image names, positioning, and more.
+The following subsections detail what parameters exist and what they do, as well as what image names are expected.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Images must be provided in WebP, which should be supported by most modern image editors.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to import <code>DEFAULT_PREFAB_MANAGER</code> and any <code>&lt;Type&gt;Entry</code> classes you plan on using from <code>lib.world.prefab</code>.</p>
+</div>
+<h3 id="tileentry"><code>TileEntry</code></h3>
+<dl>
+<dt><code>name</code> - <code>str</code></dt>
+<dd>The name to be used to refer to this prefab.
+Required and must be unique within the prefab category (will otherwise override the others).</dd>
+<dt><code>image</code> - <code>str | None</code> (default <code>None</code>)</dt>
+<dd>An alternative name to use for determining the image name.</dd>
+<dt><code>animated</code> - <code>bool</code> (default <code>False</code>)</dt>
+<dd>Whether the prefab is animated or not.
+Animations requires an additional sprite sheet json file.</dd>
+<dt><code>code</code> - <code>str | None</code> (default <code>None</code>)</dt>
+<dd>A code to be used in tile maps. Must be exactly one character.</dd>
+<dt><code>color</code> - <code>str</code> (default <code>"magenta"</code>)</dt>
+<dd>The color to use when <code>basic</code> mode is enabled.</dd>
+<dt><code>blocked</code> - <code>bool</code> (default <code>False</code>)</dt>
+<dd>Whether the tile should be considered blocked for movement.</dd>
+</dl>
+<p>Tile images are named <code>&lt;perspective&gt;_tile_&lt;name&gt;.webp</code>.</p>
+<details class="example" open="open">
+<summary>Add a custom top down grass tile</summary>
+<p>Upload an image called <code>td_tile_grass.webp</code> to the <a href="../Freecode_creator/#the-graphics-tab">Freecode creator</a>, then add the tile like this:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DEFAULT_PREFAB_MANAGER</span><span class="o">.</span><span class="n">register_tiles</span><span class="p">(</span><span class="n">TileEntry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;grass&quot;</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">add_tile</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;grass&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to get the right size, aspect ratio, etc when making a tile image.
+This can be difficult, especially when working in an isometric view.</p>
+<p>The easiest way to ensure that the tile image will work properly is to use a <a href="./#prefab-tiles">prefab tile image</a> as a base and draw the custom tile on top of it.</p>
+</div>
+<h3 id="wallentry"><code>WallEntry</code></h3>
+<dl>
+<dt><code>name</code> - <code>str</code></dt>
+<dd>The name to be used to refer to this prefab.
+Required and must be unique within the prefab category (will otherwise override the others).</dd>
+<dt><code>image</code> - <code>str | None</code> (default <code>None</code>)</dt>
+<dd>An alternative name to use for determining the image name.</dd>
+<dt><code>animated</code> - <code>bool</code> (default <code>False</code>)</dt>
+<dd>Whether the prefab is animated or not.
+Animations requires an additional sprite sheet json file.</dd>
+<dt><code>color</code> - <code>str</code> (default <code>"magenta"</code>)</dt>
+<dd>The color to use when <code>basic</code> mode is enabled.</dd>
+<dt><code>height</code> - <code>float</code> (default <code>0.5</code>)</dt>
+<dd>The height of the wall when <code>basic</code> mode is enabled.</dd>
+</dl>
+<p>Wall images are named <code>&lt;perspective&gt;_wall_&lt;name&gt;_&lt;direction&gt;.webp</code>.
+Directions for topdown are <code>face</code> and <code>side</code>, and directions for isometric are <code>left</code> and <code>right</code>.</p>
+<details class="example" open="open">
+<summary>Add a custom isometric stone wall</summary>
+<p>Upload two images called <code>iso_wall_stone_left.webp</code> and <code>iso_wall_stone_right.webp</code> to the <a href="../Freecode_creator/#the-graphics-tab">Freecode creator</a>, then add the wall like this:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DEFAULT_PREFAB_MANAGER</span><span class="o">.</span><span class="n">register_walls</span><span class="p">(</span><span class="n">WallEntry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">add_wall</span><span class="p">(((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;stone&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While not as important as with tiles, it can still be nice to get a perfectly aligned wall.
+Just as with tiles, it is easiest to ensure this by using a <a href="./#prefab-walls">prefab wall image</a> as a base and draw the custom wall image on top of it.</p>
+</div>
+<h3 id="characterentry"><code>CharacterEntry</code></h3>
+<dl>
+<dt><code>name</code> - <code>str</code></dt>
+<dd>The name to be used to refer to this prefab.
+Required and must be unique within the prefab category (will otherwise override the others).</dd>
+<dt><code>image</code> - <code>str | None</code> (default <code>None</code>)</dt>
+<dd>An alternative name to use for determining the image name.</dd>
+<dt><code>colors</code> - <code>set[str]</code> (default <code>set(CharacterColor)</code>)</dt>
+<dd>The set of supported colors for the character.</dd>
+<dt><code>size</code> - <code>tuple[float, float]</code> (default <code>(1, 1)</code>)</dt>
+<dd>The size of the prefab, in world units.</dd>
+<dt><code>center_offset</code> - <code>tuple[float, float]</code> (default <code>(0, 0)</code>)</dt>
+<dd>Offset from the center of the image to the center of the prefab footprint.</dd>
+<dt><code>face_offset</code> - <code>tuple[float, float]</code> (default <code>(0, 0)</code>)</dt>
+<dd>Offset from the center of the image to the center of the character face.</dd>
+</dl>
+<p>Character sprite sheets are named <code>&lt;perspective&gt;_&lt;name&gt;_&lt;color&gt;_&lt;action&gt;.webp</code>.
+See <a href="../Create_Sprite_Sheet/">Create Sprite Sheet</a> for instructions for creating sprite sheets.</p>
+<p>Color options are: <code>black</code>, <code>blue</code>, <code>orange</code>, <code>red</code>, <code>white</code>, and <code>yellow</code>.</p>
+<p>Action options are: <code>gesture</code>, <code>gesture_away</code>, <code>idling</code>, <code>idling_away</code>, <code>picking</code>, <code>walking</code>, and <code>walking_away</code>.</p>
+<details class="example" open="open">
+<summary>Add a custom topdown character called Kim associated with the color blue</summary>
+<p>Upload all the necessary sprite sheets on the pattern <code>td_kim_blue_&lt;action&gt;.webp</code> to the <a href="../Freecode_creator/#the-graphics-tab">Freecode creator</a>, then add the character like this:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DEFAULT_PREFAB_MANAGER</span><span class="o">.</span><span class="n">register_characters</span><span class="p">(</span><span class="n">CharacterEntry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;kim&quot;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;blue&quot;</span><span class="p">}))</span>
+<span class="n">kim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="o">.</span><span class="n">create_character</span><span class="p">(</span><span class="s2">&quot;kim&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">kim</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<h3 id="propentry"><code>PropEntry</code></h3>
+<dl>
+<dt><code>name</code> - <code>str</code></dt>
+<dd>The name to be used to refer to this prefab.
+Required and must be unique within the prefab category (will otherwise override the others).</dd>
+<dt><code>image</code> - <code>str | None</code> (default <code>None</code>)</dt>
+<dd>An alternative name to use for determining the image name.</dd>
+<dt><code>animated</code> - <code>bool</code> (default <code>False</code>)</dt>
+<dd>Whether the prefab is animated or not.
+Animations requires an additional sprite sheet json file.</dd>
+<dt><code>size</code> - <code>tuple[float, float] | dict[str, tuple[float, float]]</code> (default <code>(1, 1)</code>)</dt>
+<dd>The size of the prefab, in world units.</dd>
+<dd>Can give a dictionary to have different values based on perspective.</dd>
+<dt><code>center_offset</code> - <code>tuple[float, float] | dict[str, tuple[float, float]]</code> (default <code>(0, 0)</code>)</dt>
+<dd>Offset from the center of the image to the center of the prefab footprint.</dd>
+<dd>Can give a dictionary to have different values based on perspective.</dd>
+<dt><code>prespective</code> - <code>str | None</code> (default <code>None</code>)</dt>
+<dd>If set, override with the given perspective when determining the image name.</dd>
+</dl>
+<p>Prop images are named <code>&lt;perspective&gt;_prop_&lt;name&gt;.webp</code>.</p>
+<details class="example" open="open">
+<summary>Add a custom isometric coffee prop</summary>
+<p>Upload an image called <code>iso_prop_coffee.webp</code> to the <a href="../Freecode_creator/#the-graphics-tab">Freecode creator</a>, then add the prop like this:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DEFAULT_PREFAB_MANAGER</span><span class="o">.</span><span class="n">register_props</span><span class="p">(</span><span class="n">PropEntry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;coffee&quot;</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">add_prop</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;coffee&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The perspective must match if a particular perspective was forced.</p>
+</div>
+<h3 id="containerentry"><code>ContainerEntry</code></h3>
+<p>Same fields as <a href="./#propentry"><code>PropEntry</code></a>, with the following additions:</p>
+<dl>
+<dt><code>item_offset</code> - <code>tuple[float, float] | dict[str, tuple[float, float]]</code> (default <code>(0, 0)</code>)</dt>
+<dd>Offset from the center of the footprint of the container to the center of the footprint of the showcased item.</dd>
+<dd>Can give a dictionary to have different values based on perspective.</dd>
+</dl>
+<p>Containers follow the same naming as props, except that the base image should be the open animation.
+An image suffixed with <code>_closed</code> will be used for the default state and an image suffixed with <code>_opened</code> will be used for the opened state.</p>
+<h3 id="itementry"><code>ItemEntry</code></h3>
+<p>Same fields as <a href="./#propentry"><code>PropEntry</code></a>.</p>
+<p>Items follow the same naming as props. An image suffixed with <code>_spawn</code> will be used for the reveal animation.</p>
+<h3 id="imageactor"><code>ImageActor</code></h3>
+<p>While <code>ImageActor</code> is not a custom prefab, it can sometimes be used as one.
+As the name implies it is an <a href="./#actors"><code>Actor</code></a>, that takes the name of an uploaded or <a href="../Images/">built in image</a> or sprite with the corresponding parameter name <code>image</code> or <code>sprite</code>.</p>
+<p>Additionally it has the following optional parameters:</p>
+<dl>
+<dt><code>size</code> - <code>tuple[float, float]</code> (default <code>(1, 1)</code>)</dt>
+<dd>The size of the <code>ImageActor</code>, in world units.</dd>
+<dt><code>animation</code> - <code>str</code> (default <code>"default"</code>)</dt>
+<dd>The name of the animation to be used for the sprite, if applicable.</dd>
+<dt><code>image_offset</code> - <code>tuple[float, float]</code> (default <code>(0, 0)</code>)</dt>
+<dd>Offset from the center of the image/sprite to the center of the <code>ImageActor</code>'s footprint.</dd>
+<dt><code>flipped</code> - <code>bool</code> (default <code>False</code>)</dt>
+<dd>Determines if the image/sprite should be flipped.</dd>
+</dl>
+<h4 id="using-imageactor-to-make-interactable-tiles">Using <code>ImageActor</code> to make interactable tiles</h4>
+<p>You can use <code>ImageActor</code> to make a button that can be placed on a tile in the <code>World</code>.
+This is useful if you want to highlight the tiles that a player can interact with in interact mode, or if you are using the isometric view where <a href="./#interactable-tiles">interactable tile</a> do not work.
+This example will use <code>ButtonActor</code>, which is a child of <code>ImageActor</code>, see code below.</p>
+<details class="example" open="open">
+<summary>Code for our <code>ButtonActor</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ButtonActor</span><span class="p">(</span><span class="n">ImageActor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
+        <span class="n">ImageActor</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="s2">&quot;Button.png&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback</span> <span class="o">=</span> <span class="n">callback</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_opacity</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_render_new</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BaseElement</span><span class="p">:</span>
+        <span class="n">button_size</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="n">mulv</span><span class="p">((</span><span class="n">button_size</span><span class="p">,</span> <span class="n">button_size</span><span class="p">),</span> <span class="n">resolution</span><span class="p">),</span>
+            <span class="s2">&quot;on_click&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;Button.png&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_opacity</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">do_show</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_opacity</span> <span class="k">if</span> <span class="n">do_show</span> <span class="k">else</span> <span class="mi">0</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>To get this example to work you will also need to upload an image to act as the button.
+This image does not need to be visible for the <code>ButtonActor</code> to work, you can set <code>self.default_opacity = 0</code>, but you need a picture.
+It is recommended that the image is as tight as possible, and a bit smaller than a tile, to ensure that there is as little overlap between the buttons as possible.</p>
+<p>The next step is to add <code>ButtonActor</code>s to all tiles that you want the player to interact with.</p>
+<details class="example" open="open">
+<summary>Adding <code>ButtonActor</code> to some tiles</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">coord</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">button_interact</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Interacted with tile on </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+        <span class="n">button</span> <span class="o">=</span> <span class="n">ButtonActor</span><span class="p">(</span><span class="n">button_interact</span><span class="p">,</span> <span class="n">coord</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">button</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>That is all you need to do to use an <code>ImageActor</code> to make interactable tiles!</p>
+<h2 id="templates">Templates</h2>
+<p>The following template is a bit rough around the edges and might not always showcase best practices.</p>
+<p>This template showcases how the world library can be used together with the <a href="../Skeletons/#gamechallenge"><code>GameChallenge</code> skeleton</a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the module containing the challenge implementation.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">SolutionException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.skeletons</span><span class="w"> </span><span class="kn">import</span> <span class="n">LevelInfo</span><span class="p">,</span> <span class="n">GameChallenge</span><span class="p">,</span> <span class="n">GameInfo</span><span class="p">,</span> <span class="n">PlayerInfo</span><span class="p">,</span> <span class="n">StatisticInfo</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.world</span><span class="w"> </span><span class="kn">import</span> <span class="n">MOVE_KEY_MAP</span><span class="p">,</span> <span class="n">WorldSetup</span>
+
+
+<span class="c1"># NOTE: only needed due to a bug</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">HumanAdapter</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Challenge</span><span class="p">(</span><span class="n">GameChallenge</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a challenge implementation using the game skeleton and the world library.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_game</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns required game information for setting up the challenge.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># The info prompt shows up in the bottom left corner in interact mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_prompt</span> <span class="o">=</span> <span class="s2">&quot;Move using WASD or arrow keys&quot;</span>
+        <span class="c1"># We don&#39;t use the turn system, this change is just cosmetic</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_finish_turn</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">GameInfo</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">summary</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_players</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns a list with required information for each player.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">PlayerInfo</span><span class="p">(</span>
+            <span class="n">role</span><span class="o">=</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Your solution&quot;</span><span class="p">,</span>
+            <span class="n">image</span><span class="o">=</span><span class="s2">&quot;TODO&quot;</span><span class="p">,</span>
+        <span class="p">)]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_info_panel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_tabs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># Disable the auto-finish turn setting</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns required level information for the current level.</span>
+<span class="sd">        The &quot;level&quot; parameter is the level index, starting at 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">match</span> <span class="n">level</span><span class="p">:</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Right down the path&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tiles</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    rrrrr</span>
+<span class="s2">                    GGGGr</span>
+<span class="s2">                    GGGGr</span>
+<span class="s2">                    GGGGr</span>
+<span class="s2">                    GGGGr</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">walls</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">path_length</span> <span class="o">=</span> <span class="mi">8</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Not straight-farward&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tiles</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    rrrGb</span>
+<span class="s2">                    mmrGb</span>
+<span class="s2">                    mrrGb</span>
+<span class="s2">                    mrGGG</span>
+<span class="s2">                    mrrrr</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">walls</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">path_length</span> <span class="o">=</span> <span class="mi">10</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Walls as well&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tiles</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    rrmmm</span>
+<span class="s2">                    grrrm</span>
+<span class="s2">                    grrrm</span>
+<span class="s2">                    grrrm</span>
+<span class="s2">                    wwwrr</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">walls</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span> <span class="s2">&quot;stone&quot;</span><span class="p">,</span>
+                    <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)):</span> <span class="s2">&quot;stone&quot;</span><span class="p">,</span>
+                    <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)):</span> <span class="s2">&quot;hedge&quot;</span><span class="p">,</span>
+                    <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span> <span class="s2">&quot;hedge&quot;</span><span class="p">,</span>
+                    <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)):</span> <span class="s2">&quot;picket_fence&quot;</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">path_length</span> <span class="o">=</span> <span class="mi">12</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Not so square&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tiles</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    rGGGb</span>
+<span class="s2">                    rrr.g</span>
+<span class="s2">                    .mrrr</span>
+<span class="s2">                    ..mrr</span>
+<span class="s2">                    ...rr</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">walls</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span> <span class="s2">&quot;hedge_2&quot;</span><span class="p">,</span>
+                    <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)):</span> <span class="s2">&quot;brick_fence&quot;</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">path_length</span> <span class="o">=</span> <span class="mi">10</span>
+            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;level </span><span class="si">{</span><span class="n">level</span><span class="si">}</span><span class="s2"> not supported&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">LevelInfo</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">max_score</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should do all initial setup, except for graphics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We first need to create the world setup, in this case we just use the default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setup</span> <span class="o">=</span> <span class="n">WorldSetup</span><span class="p">()</span>
+        <span class="c1"># Create the world using the tiles and walls assigned for the level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="o">.</span><span class="n">create_world</span><span class="p">(</span><span class="n">tiles</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tiles</span><span class="p">,</span> <span class="n">walls</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">walls</span><span class="p">)</span>
+        <span class="c1"># Needed to enable movement</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">update_world_graph</span><span class="p">()</span>
+        <span class="c1"># Create the player character with standard movement controls and a movement callback</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">player_character</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="o">.</span><span class="n">create_character</span><span class="p">(</span><span class="s2">&quot;rust&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">key_map</span><span class="o">=</span><span class="n">MOVE_KEY_MAP</span><span class="p">,</span> <span class="n">on_move</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">move_callback</span><span class="p">)</span>
+        <span class="c1"># Add the player to the world at the starting position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">add_actor</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_character</span><span class="p">)</span>
+        <span class="c1"># Keep track of how many steps the player has taken</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns the main view for the challenge, which can be any graphics element.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We want the world to be resized to fit the designated area</span>
+        <span class="c1"># For a bigger world we would want to use &quot;render_scrollable&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">render_resizable</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should call solutions and update the current state.</span>
+<span class="sd">        It is called continuously until `self.finished` is set to &quot;True&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># When calling a solution you need to handle any &quot;SolutionException&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">solution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">solutions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># TODO: call a solution method</span>
+        <span class="k">except</span> <span class="n">SolutionException</span><span class="p">:</span>
+            <span class="c1"># Code put here will run if the solution crashed</span>
+            <span class="k">pass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should update the view based on the current state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Need to trigger rendering of any changes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">render_changes</span><span class="p">()</span>
+
+    <span class="c1"># We add this method to be called whenever the player character moves</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c1"># If the player takes too many steps they will lose points</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_count</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_length</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">points</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="c1"># If the player moves off the path they will lose points</span>
+        <span class="n">tile_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">get_tile_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player_character</span><span class="o">.</span><span class="n">coordinate</span><span class="p">)</span>
+        <span class="k">match</span> <span class="n">tile_data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span>
+            <span class="c1"># On the path, do not deduct points</span>
+            <span class="k">case</span> <span class="s2">&quot;gravel&quot;</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="c1"># Walked on mud, deduct double points</span>
+            <span class="k">case</span> <span class="s2">&quot;mud&quot;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">points</span> <span class="o">-=</span> <span class="mi">2</span>
+            <span class="c1"># Matches any other tile</span>
+            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">points</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="c1"># If the player has reached the end, we stop the run</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_character</span><span class="o">.</span><span class="n">coordinate</span> <span class="o">==</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info_prompt</span> <span class="o">=</span> <span class="s2">&quot;You made it to the end of the path!&quot;</span>
+        <span class="c1"># We can update the scores here</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">points</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/future-skill/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/futureskillsweden/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search.suggest", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,3371 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.futureskill.com/create_an_exercise/UI/">
+      
+      
+        <link rel="prev" href="../Skeletons/">
+      
+      
+        <link rel="next" href="../World/">
+      
+      
+      <link rel="icon" href="../../assets/fs_small_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>UI - Future Skill wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="UI - Future Skill wiki" >
+      
+        <meta  property="og:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  property="og:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/UI.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://wiki.futureskill.com/create_an_exercise/UI/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="UI - Future Skill wiki" >
+      
+        <meta  name="twitter:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  name="twitter:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/UI.png" >
+      
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: #295c88; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-the-canvas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Future Skill wiki" class="md-header__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Future Skill wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/Freecode_editor/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Freecode_creator/" class="md-tabs__link">
+          
+  
+  Create an exercise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../legacy/Freecode_graphics/" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-tabs__link">
+          
+  
+  Future Skill GPT
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Future Skill wiki" class="md-nav__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    Future Skill wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecode_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Coding_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/How_to_get_experience_points/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get experience points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Canvas_element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Types of code challenges
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Types of code challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Tournaments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tournaments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Create an exercise
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create an exercise
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Freecode_creator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Skeletons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-the-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use the canvas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shapes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rectangle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      ComplexShape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamictext" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamicText
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htmlarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      HtmlArea
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graphics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scrollarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ScrollArea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      TabArea
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vertical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checkbox
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specialized">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speechbubble" class="md-nav__link">
+    <span class="md-ellipsis">
+      SpeechBubble
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes / Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes / Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#click" class="md-nav__link">
+    <span class="md-ellipsis">
+      Click
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scroll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scroll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fittocontent" class="md-nav__link">
+    <span class="md-ellipsis">
+      FitToContent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-falling-rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Falling rectangle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resizeeventdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResizeEventData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#childeventdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChildEventData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clickeventdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClickEventData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drageventdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      DragEventData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboardeventdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      KeyboardEventData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkboxeventdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckboxEventData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toggling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toggling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Create_Sprite_Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Sprite Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built in images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Freecode_graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Gameboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gameboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Future Skill GPT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Future Skill GPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Skill GPT Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>UI</h1>
+
+<p>The UI section controls how the exercise appears to the user. It allows you to define a custom interface, provide instructions, show hints or graphics, and handle interactions through a canvas.</p>
+<h2 id="how-to-use-the-canvas">How to use the canvas</h2>
+<p>Depending on what skeleton you are using, the way you add your graphics to the canvas differs.
+The templates for either skeleton will include an example of using the canvas.</p>
+<p>If you use <a href="../Skeletons/#basicchallenge"><code>BasicChallenge</code></a> (or no skeleton) you will want to manually add the elements to the canvas, like so:</p>
+<details class="example" open="open">
+<summary>Manually adding elements to canvas</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">setup_canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>If you use <a href="../Skeletons/#stagechallenge"><code>StageChallenge</code></a> or <a href="../Skeletons/#gamechallenge"><code>GameChallenge</code></a> you will want to return the element in the <code>setup_view</code> method:</p>
+<details class="example" open="open">
+<summary>Implicitly adding element to canvas</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">setup_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You specify neither parent nor position in <code>setup_view</code>, this is done for you.</p>
+</div>
+<p>Either way you will get a canvas containing only a green square.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Setup_element_example.png" width="250px" /></a></p>
+<h2 id="overview">Overview</h2>
+<p>The UI library is object oriented, meaning that the graphical elements are represented by Python objects.
+You create a new element by creating a new object and you can modify the elements by modifying the objects.
+An element will not show up on the canvas unless the object has the canvas as a parent (or grandparent, or great grandparent, and so on).</p>
+<p>A child element will inherit some of the attributes from it's parent.
+They will be positioned relative to the parent, scaled according to the parent, and opacity of the parent is applied.
+A child with opacity of <code>0.5</code> and with a parent with opacity of <code>0.5</code> will in effect have an opacity of <code>0.25</code>.</p>
+<p>When creating an element object, you can (and sometimes must) include a number of attributes.
+You can use any of the names listed here, e.g. <code>width</code> or <code>w</code> or <code>size_x</code>.
+The same names can be used to get or modify the attributes later on.</p>
+<details class="example" open="open">
+<summary>Accessing attributes</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">my_rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">)</span>
+<span class="n">my_rect</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">my_rect</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>All elements can have a parent, and some can have children.
+If an element switches parent it will be removed from the previous parent's list of children.
+You can either use the <code>parent</code> attribute or the <code>.add_child(child)</code>/<code>.remove_child(child)</code> methods to update the hierarchy.
+But remember that for an element to show up in the canvas it needs to have it as an ancestor.</p>
+<p>The following section and subsections will detail the different elements available in the UI library, grouped by similarities.
+Many elements have common attributes, which are detailed in their own section to make things cleaner.</p>
+<h2 id="elements">Elements</h2>
+<p>All these elements can be imported from the <code>lib.ui</code> package, along with any of the enums and constants listed here.</p>
+<details class="example" open="open">
+<summary>Importing and using an element</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">lib.ui</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Text</span>
+
+<span class="n">my_rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">30</span><span class="p">)])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Child_element_example.png" width="250px" /></a></p>
+</details>
+<p>Remember to add the element to the import list, or you will get an error.</p>
+<p>All elements extend either the <code>BaseElement</code> or <code>ContainerElement</code> base class which provides the <a href="./#common"><code>common</code></a> and <a href="./#container"><code>container</code></a> attributes and methods.</p>
+<h3 id="shapes">Shapes</h3>
+<p>These elements are used to make geometric shapes, either filled or outlines.
+Use <code>Polygon</code> to make additional shapes such as triangles and hexagons.
+For more complex shapes, consider using images instead.</p>
+<h4 id="rectangle"><code>Rectangle</code></h4>
+<p>Used to make squares, rectangles and rounded rectangles.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#container"><code>container</code></a>,
+<a href="./#shape"><code>shape</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>corner_radius</code> - <code>float | None</code> S</dt>
+<dd>Add rounded corners to the rectangle</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating three <code>Rectangle</code> objects</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+
+    <span class="c1"># Wide rectangle</span>
+    <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FF6347&quot;</span><span class="p">),</span>
+
+    <span class="c1"># Rounded rectangle</span>
+    <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">corners_radius</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+
+    <span class="c1"># Rotated square</span>
+    <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">60</span><span class="p">),</span>
+
+    <span class="c1"># Hollow square</span>
+    <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Four_rectangles.png" width="250px" /></a></p>
+</details>
+<h4 id="circle"><code>Circle</code></h4>
+<p>Used to make circles.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#container"><code>container</code></a>,
+<a href="./#shape"><code>shape</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>radius</code>/<code>r</code> - <code>float</code> S</dt>
+<dd>The radius of the circle, use instead of <code>width</code>/<code>height</code></dd>
+<dt><code>min_radius</code>/<code>min_r</code> - <code>float</code></dt>
+<dd>The minimum radius for this element, does not affect the current radius</dd>
+<dt><code>max_radius</code>/<code>max_r</code> - <code>float</code></dt>
+<dd>The maximum radius for this element, does not affect the current radius</dd>
+<dt><code>fixed_radius</code> - <code>bool</code></dt>
+<dd>Prevents automatic resizing of the circle</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating three <code>Circle</code> objects</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+
+    <span class="c1"># Red circle</span>
+    <span class="n">Circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=-</span><span class="mi">1</span><span class="p">),</span>
+
+    <span class="c1"># Blue circle</span>
+    <span class="n">Circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+
+    <span class="c1"># Green ring</span>
+    <span class="n">Circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Three_circles.png" width="250px" /></a></p>
+</details>
+<h4 id="polygon"><code>Polygon</code></h4>
+<p>Used to make any other straight edge shapes.
+Consider using images if you need a large number of points.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#container"><code>container</code></a>,
+<a href="./#shape"><code>shape</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>points</code> - <code>list[tuple[float, float]]</code> R</dt>
+<dd>A list of points to use to draw the polygon, required and positional</dd>
+<dt><code>bounds</code> - <code>tuple[tuple[float, float], tuple[float, float]]</code> S</dt>
+<dd>The bounds of the polygon used to determine size and pivot, calculated if omitted</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating three <code>Polygon</code> objects</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Red triangle</span>
+    <span class="n">Polygon</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z_index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span>
+
+    <span class="c1"># Blue line</span>
+    <span class="n">Polygon</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=-</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">z_index</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+
+    <span class="c1"># Green quadrilateral</span>
+    <span class="n">Polygon</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">170</span><span class="p">,</span> <span class="n">z_index</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Three_polygons.png" width="250px" /></a></p>
+</details>
+<h4 id="complexshape"><code>ComplexShape</code></h4>
+<p>Used to make a shape with straight or Bézier curves.
+Consider using images if you need very complex shapes or a large number of points.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#container"><code>container</code></a>,
+<a href="./#shape"><code>shape</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>segments</code> - <code>list[list[tuple[float, float]]]</code> R</dt>
+<dd>A list of segments (list of points) to use to draw the shape, required and positional</dd>
+<dd>Each segment must consist of one to three points (first must be one point):</dd>
+<dd>
+<ul>
+<li>Single point means a straight line to that point</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>Two points is a quadratic Bézier curve with a control point (first) and an end point (second)</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>Three points is a cubic Bézier curve with two control points and an end point (last)</li>
+</ul>
+</dd>
+<dt><code>bounds</code> - <code>tuple[tuple[float, float], tuple[float, float]]</code> S</dt>
+<dd>The bounds of the shape used to determine size and pivot, calculated if omitted</dd>
+<dt><code>closed</code> - <code>bool</code> S</dt>
+<dd>Whether the shape should be closed or not</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>ComplexShape</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">ComplexShape</span><span class="p">([[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)],</span> <span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/ComplexShape_example.png" width="250px" /></a></p>
+</details>
+<h3 id="text">Text</h3>
+<p>These elements can be used to display text.</p>
+<h4 id="text_1"><code>Text</code></h4>
+<p>Simple text element.
+The size is based on the text string and font size.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>text</code> - <code>str</code></dt>
+<dd>The text to display, required and positional</dd>
+<dt><code>color</code> - <code>str</code></dt>
+<dd>The text color</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The text font size</dd>
+<dt><code>align_x</code> - <code>"left" | "right" | "center"</code></dt>
+<dd>The horizontal text align</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Text</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Text</span><span class="p">(</span><span class="s2">&quot;Hello</span><span class="se">\n</span><span class="s2">World!&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Text_example.png" width="250px" /></a></p>
+</details>
+<h4 id="dynamictext"><code>DynamicText</code></h4>
+<p>Alternative to <code>Text</code> where the text is adjusted to fit within the size rather than the other way around.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a>,
+<a href="./#fittocontent"><code>fit to content</code></a></p>
+<dl>
+<dt><code>text</code> - <code>str</code></dt>
+<dd>The text to display, required and positional</dd>
+<dt><code>color</code> - <code>str</code></dt>
+<dd>The text color</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The text font size</dd>
+<dt><code>align_x</code> - <code>"left" | "right" | "center"</code></dt>
+<dd>The horizontal text align</dd>
+<dt><code>align_y</code> - <code>"top" | "bottom" | "center"</code></dt>
+<dd>The vertical text align</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>DynamicText</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">DynamicText</span><span class="p">(</span><span class="s2">&quot;Hello</span><span class="se">\n</span><span class="s2">World!&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="htmlarea"><code>HtmlArea</code></h4>
+<p>Used to add a block of text that can be formatted using HTML code.
+If the content is wider or taller than the element size, a scrollbar will appear.
+It is possible to include images and CSS, using normal HTML syntax.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#scroll"><code>scroll</code></a></p>
+<dl>
+<dt><code>html</code> - <code>str</code></dt>
+<dd>The HTML text to display, required and positional</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The text font size</dd>
+<dt><code>align_x</code> - <code>"left" | "right" | "center"</code></dt>
+<dd>The horizontal text align</dd>
+<dt><code>disable_scroll</code> - <code>bool</code></dt>
+<dd>Disables scroll and all ScrollArea features so it will limit the HtmlArea to its width and height.</dd>
+<dt><code>disable_auto_font_scale</code> - <code>bool</code></dt>
+<dd>Disables auto font scale and the text font size will be applied.</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating an <code>HtmlArea</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">HtmlArea</span><span class="p">(</span><span class="s2">&quot;Hello &lt;b&gt;World&lt;/b&gt;!&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">disable_scroll</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">disable_auto_font_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/HtmlArea_example.png" width="250px" /></a></p>
+</details>
+<h3 id="graphics">Graphics</h3>
+<p>These elements can be used to display images and animations.</p>
+<h4 id="image"><code>Image</code></h4>
+<p>Displays a static image.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>image</code> - <code>str</code> S</dt>
+<dd>The name of the image to show</dd>
+<dt><code>color</code> - <code>str</code></dt>
+<dd>A color to use for tinting the image</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating three <code>Image</code> objects</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">my_rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Left cat</span>
+    <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;std_katniss_standing.webp&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+
+    <span class="c1"># Slightly squished cat</span>
+    <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;std_katniss_standing.webp&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.5</span><span class="p">),</span>
+
+    <span class="c1"># Red background cat</span>
+    <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;std_katniss_standing.webp&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">z_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">scale_x</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Three_bitmaps.png" width="250px" /></a></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are many images provided by the framework that can be accessed simply by using their names as the <code>image</code> string.
+You can find them all in <a href="../Images/">Built in images</a>.</p>
+</div>
+<h4 id="sprite"><code>Sprite</code></h4>
+<p>Displays an animated image.
+See <a href="../Create_Sprite_Sheet/">Create Sprite Sheet</a> to learn about creating a sprite sheet.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#drag"><code>drag</code></a>,
+<a href="./#keyboard"><code>keyboard</code></a></p>
+<dl>
+<dt><code>image</code> - <code>str</code> S</dt>
+<dd>The name of the sprite sheet to show</dd>
+<dt><code>color</code> - <code>str</code></dt>
+<dd>A color to use for tinting the image</dd>
+<dt><code>animation</code>/<code>anim</code> - <code>str</code> S</dt>
+<dd>The name of the animation to play, use <code>"default"</code> for the default animation</dd>
+<dt><code>start_frame</code>/<code>start</code> - <code>int | None</code> S</dt>
+<dd>An animation frame to start on</dd>
+<dt><code>end_frame</code>/<code>end</code> - <code>int | None</code> S</dt>
+<dd>An animation frame to end on</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating three <code>Sprite</code> objects</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;weird_sheet.png&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;weird_sheet.png&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale_x</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;weird_sheet.png&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">animation</span><span class="o">=</span><span class="s2">&quot;just_display_guy&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Three_spritesheets.png" width="250px" /></a></p>
+</details>
+<h3 id="containers">Containers</h3>
+<p>These elements can be used to fit more content in the canvas.</p>
+<details class="example" open="open">
+<summary>Creating a container</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">canvas</span><span class="o">.</span><span class="n">new_container</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="scrollarea"><code>ScrollArea</code></h4>
+<p>Use when you want some content to be scrollable (vertical and/or horizontal).</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#scroll"><code>scroll</code></a></p>
+<details class="example" open="open">
+<summary>Creating a <code>ScrollArea</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scroll</span> <span class="o">=</span> <span class="n">ScrollArea</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">Text</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">scroll</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>A scroll area is a container that can hold other elements, allowing the user to scroll through them if they don't all fit in the visible region. This is useful when you want to show many elements in a limited space.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#scroll"><code>scroll</code></a></p>
+<details class="example" open="open">
+<summary>Creating a <code>ScrollArea</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">scroll_area</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">new_scroll_area</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blacklwhite&#39;</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">3.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">canvas</span><span class="o">.</span><span class="n">new_circle</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">O</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">O</span><span class="p">,</span><span class="n">parent</span><span class="o">=</span><span class="n">scroll_area</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="tabarea"><code>TabArea</code></h4>
+<p>Use when you want to split up some content into tabs.
+Consider putting tab content into <code>ScrollArea</code>s for even more space.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a></p>
+<dl>
+<dt><code>tabs</code> - <code>dict[str, BaseElement]</code></dt>
+<dd>The tab names and content to include, required and positional, constructor only</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The font size to use for the tab headers</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>TabArea</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">red</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">)])</span>
+<span class="n">green</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">)])</span>
+<span class="n">blue</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">)])</span>
+
+<span class="n">TabArea</span><span class="p">({</span><span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="n">red</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="n">green</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="n">blue</span><span class="p">},</span> <span class="n">w</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="layouts">Layouts</h3>
+<p>These elements can be used to simplify positioning of elements.
+They handle addition, removal and resizing of elements as well.
+Also, these elements cascade resizing down to any children.
+Other elements like <code>Rectangle</code> are resized if the parent is a <code>Layout</code> element, but a <code>Rectangle</code> doesn't cascade resizing to its children.</p>
+<h4 id="horizontal"><code>Horizontal</code></h4>
+<p>Used to position elements horizontally.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#layout"><code>layout</code></a></p>
+<p>All positional arguments are added as children.</p>
+<dl>
+<dt><code>proportions</code> - <code>list[float]</code></dt>
+<dd>Proportions of size to give to each element, 0 means an even proportion of the remaining space</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Horizontal</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Horizontal</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">),</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;cyan&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy" src="../../assets/Horizontal_example.png" /></a></p>
+</details>
+<p>When using proportions, the values should always add up to 1. In the example below, the Horizontal layout contains two objects, and only one proportion is explicitly defined: 0.1. This means the first object takes up 10% of the width, and the second automatically gets the remaining 90% (i.e., 1 - 0.1 = 0.9).</p>
+<p>When there are exactly two objects, it's enough to specify the proportion for one — the other will be calculated automatically.</p>
+<details class="example" open="open">
+<summary>Creating a <code>Horizontal Proportions</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Horizontal</span><span class="p">(</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">title_solution</span><span class="p">,</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_solution</span><span class="p">,</span>
+    <span class="n">proportions</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">]</span> 
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="vertical"><code>Vertical</code></h4>
+<p>Used to position elements vertically.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#layout"><code>layout</code></a></p>
+<p>All positional arguments are added as children.</p>
+<dl>
+<dt><code>proportions</code> - <code>list[float]</code></dt>
+<dd>Proportions of size to give to each element, 0 means an even proportion of the remaining space</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Vertical</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Vertical</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)],</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy" src="../../assets/Vertical_example.png" /></a></p>
+</details>
+<p>When using proportions, the values in the list should always add up to 1. In the example below, the Vertical layout contains five objects. The sizes of the first four are set to 0.05, 0.1, 0.3, and 0.3, which means the fifth object automatically takes the remaining space: 0.25.</p>
+<p>When there are multiple objects, you can specify proportions for all but the last one — its size will be calculated automatically to make the total equal to 1.</p>
+<details class="example" open="open">
+<summary>Creating a <code>Vectical Proportions</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">tab_step_2</span> <span class="o">=</span> <span class="n">Vertical</span><span class="p">(</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">title2</span><span class="p">,</span>
+    <span class="n">Horizontal</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_row</span><span class="p">,</span>
+        <span class="n">proportions</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">top_caesar_graph</span><span class="p">,</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">bottom_caesar_graph</span><span class="p">,</span>
+    <span class="n">Horizontal</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title_solution</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label_solution</span><span class="p">,</span>
+        <span class="n">proportions</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">anchor</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">spacing</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">proportions</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="grid"><code>Grid</code></h4>
+<p>Used to position elements in a grid.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#layout"><code>layout</code></a></p>
+<p>All positional arguments are added as children.</p>
+<dl>
+<dt><code>rows</code> - <code>int</code></dt>
+<dd>Number of rows in the grid, calculated if not set</dd>
+<dt><code>columns</code> - <code>int</code></dt>
+<dd>Number of columns in the grid, calculated if not set</dd>
+<dt><code>transpose</code> - <code>bool</code></dt>
+<dd>Whether to place columns first, rather than rows first</dd>
+<dt><code>alignments</code> - <code>tuple[list["left" | "right" | "center" | None], list["top" | "bottom" | "center" | None]</code></dt>
+<dd>Alignments for each column or row and column, <code>None</code> means use the <code>align_x/align_y</code> value</dd>
+<dt><code>proportions</code> - <code>tuple[list[float], list[float]</code></dt>
+<dd>Proportions of size to give to each row and column, <code>0</code> means an even proportion of the remaining space</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Grid</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Grid</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)],</span> <span class="n">columns</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy" src="../../assets/Grid_example.png" /></a></p>
+</details>
+<h3 id="controls">Controls</h3>
+<p>These elements are interactive UI elements mostly useful in interact mode.</p>
+<h4 id="button"><code>Button</code></h4>
+<p>Used to create a button.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a>,
+<a href="./#fittocontent"><code>fit to content</code></a></p>
+<dl>
+<dt><code>text</code> - <code>str</code></dt>
+<dd>The text on the button, required and positional</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The font size of the button text</dd>
+<dt><code>align_x</code> - <code>"left" | "right" | "center"</code></dt>
+<dd>The horizontal text align</dd>
+<dt><code>align_y</code> - <code>"top" | "bottom" | "center"</code></dt>
+<dd>The vertical text align</dd>
+<dt><code>padding</code> - <code>float</code></dt>
+<dd>Padding around the text within the button</dd>
+<dt><code>border_size</code> - <code>float | None</code></dt>
+<dd>The thickness of the border around the button</dd>
+<dt><code>corner_radius</code> - <code>float | None</code></dt>
+<dd>The radius of the corners of the button, set to <code>None</code> for a square button</dd>
+<dt><code>overlay</code> - <code>bool</code></dt>
+<dd>Whether to use the overlay styling for this button or not</dd>
+<dt><code>primary</code> - <code>bool</code></dt>
+<dd>Whether to use the primary styling for this button or not</dd>
+<dt><code>enabled</code> - <code>bool</code> S</dt>
+<dd>If set to <code>False</code> will both disable click callbacks and use the disabled styling</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Button</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Button clicked!&quot;</span><span class="p">)</span>
+
+<span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Click me!&quot;</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="n">callback</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="checkbox"><code>Checkbox</code></h4>
+<p>Use to create a checkbox.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a>,
+<a href="./#action"><code>action</code></a>,
+<a href="./#click"><code>click</code></a></p>
+<dl>
+<dt><code>checked</code> - <code>bool</code> S</dt>
+<dd>Whether the checkbox is checked or not</dd>
+<dt><code>intermediate</code> - <code>bool</code> S</dt>
+<dd>Whether the checkbox is in an intermediate state or not</dd>
+<dt><code>intermediate_value</code> - <code>bool</code></dt>
+<dd>The checked value to use when the checkbox is in an intermediate state</dd>
+<dt><code>text</code> - <code>str | None</code></dt>
+<dd>The label next to the checkbox</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The font size of the checkbox label</dd>
+<dt><code>solid</code> - <code>bool</code> S</dt>
+<dd>Whether to use the solid icons for this checkbox or not</dd>
+<dt><code>enabled</code> - <code>bool</code> S</dt>
+<dd>If set to <code>False</code> will both disable click callbacks and use the disabled styling</dd>
+<dt><code>on_change</code> - <code>(CheckboxEventData) -&gt; None</code> E</dt>
+<dd>Called whenever the checkbox changes state</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Checkbox</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Checkbox was checked&quot;</span> <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">checked</span> <span class="k">else</span> <span class="s2">&quot;Checkbox was unchecked&quot;</span><span class="p">)</span>
+
+<span class="n">Checkbox</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">on_change</span><span class="o">=</span><span class="n">callback</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="panels">Panels</h3>
+<p>These elements can be used to visually separate a set of other elements.</p>
+<h4 id="panel"><code>Panel</code></h4>
+<p>A simple panel.
+Can have a title and a title image.
+Can also have content with will be resized based on the panel size.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a></p>
+<dl>
+<dt><code>content</code> - <code>BaseElement</code> R</dt>
+<dd>Content to but inside the panel, constructor only</dd>
+<dt><code>title</code> - <code>str</code> R</dt>
+<dd>A title for the panel, constructor only</dd>
+<dt><code>title_image</code> - <code>str</code></dt>
+<dd>An image to put in the top-right corner of the panel, only visible if a title is set</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The font size of the title text</dd>
+<dt><code>corner_radius</code> - <code>float | None</code></dt>
+<dd>The radius of the corners of the panel, set to <code>None</code> for a square panel</dd>
+<dt><code>overlay</code> - <code>bool</code></dt>
+<dd>Whether to use the overlay styling for this panel or not</dd>
+<dt><code>spacing</code> - <code>float</code></dt>
+<dd>The distance between the title and content</dd>
+<dt><code>padding</code> - <code>float</code></dt>
+<dd>The distance between panel content/title and the outer edge</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Panel</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Panel</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">Circle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My Panel&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Panel_example.png" width="250px" /></a></p>
+</details>
+<h4 id="toolbar"><code>Toolbar</code></h4>
+<p>A panel with three distinct areas: left, right, and center.
+Children within each area are arranged horizontally.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a></p>
+<dl>
+<dt><code>corner_radius</code> - <code>float | None</code></dt>
+<dd>The radius of the corners of the panel, set to <code>None</code> for a square panel</dd>
+<dt><code>overlay</code> - <code>bool</code></dt>
+<dd>Whether to use the overlay styling for this panel or not</dd>
+<dt><code>spacing</code> - <code>float</code></dt>
+<dd>The distance between children within each area</dd>
+<dt><code>padding</code> - <code>float</code></dt>
+<dd>The distance between toolbar content and the outer edge</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Toolbar</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Toolbar</span><span class="p">(</span>
+    <span class="n">w</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">fixed_height</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">left_children</span><span class="o">=</span><span class="p">[</span><span class="n">Circle</span><span class="p">()],</span>
+    <span class="n">right_children</span><span class="o">=</span><span class="p">[</span><span class="n">Rectangle</span><span class="p">()],</span>
+    <span class="n">center_children</span><span class="o">=</span><span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;TOOLBAR&quot;</span><span class="p">)],</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Toolbar_example.png" width="250px" /></a></p>
+</details>
+<h4 id="popup"><code>Popup</code></h4>
+<p>A popup panel with a message and ability to add buttons.
+The popup needs to be activated by <a href="./#toggling">toggling</a>.
+Clicking any of the popup buttons will close the popup.
+Only works properly in interact mode.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a></p>
+<dl>
+<dt><code>text</code> - <code>str</code> R</dt>
+<dd>The message to display, required and positional, constructor only</dd>
+<dt><code>buttons</code> - <code>list[Button]</code> R</dt>
+<dd>The buttons to include, required and positional, constructor only</dd>
+<dt><code>corner_radius</code> - <code>float | None</code></dt>
+<dd>The radius of the corners of the panel, set to <code>None</code> for a square panel</dd>
+<dt><code>overlay</code> - <code>bool</code></dt>
+<dd>Whether to use the overlay styling for this panel or not</dd>
+<dt><code>spacing</code> - <code>float</code></dt>
+<dd>The distance between buttons</dd>
+<dt><code>padding</code> - <code>float</code></dt>
+<dd>The distance between popup content and the outer edge</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Popup</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deal!&quot;</span><span class="p">)</span>
+
+<span class="n">buttons</span> <span class="o">=</span> <span class="p">[</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="n">primary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="n">callback</span><span class="p">),</span> <span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Cancel&quot;</span><span class="p">)]</span>
+<span class="n">popup</span> <span class="o">=</span> <span class="n">Popup</span><span class="p">(</span><span class="s2">&quot;My Popup!&quot;</span><span class="p">,</span> <span class="n">buttons</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">anchor_y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">Rectangle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">hover_targets</span><span class="o">=</span><span class="p">[</span><span class="n">popup</span><span class="p">],</span> <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">popup</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="specialized">Specialized</h3>
+<p>These elements are not as generally useful as the others, but are very useful for specific tasks.</p>
+<h4 id="board"><code>Board</code></h4>
+<p>Use to create a chess-like game board of square grids.
+If you need something more dynamic or want more features, take a look at <a href="../World/">World</a>.</p>
+<p>You can place elements on the board by coordinates, e.g. <code>board[0, 2] = Circle(color="red")</code>.
+The elements will automatically be positioned and resized to match the specified square.
+There can only be one element at each coordinate, which can be fetch like so: <code>board[0, 2]</code>.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a></p>
+<dl>
+<dt><code>rows</code> - <code>int</code> R</dt>
+<dd>How many rows the board should have</dd>
+<dt><code>columns</code> - <code>int</code> R</dt>
+<dd>How many columns the board should have</dd>
+<dt><code>line_size</code> - <code>float</code></dt>
+<dd>The thickness of the grid lines</dd>
+<dt><code>edge_size</code> - <code>float</code></dt>
+<dd>The thickness of the edge outside the grid</dd>
+<dt><code>font_size</code> - <code>float</code></dt>
+<dd>The font size of the square coordinate labels</dd>
+<dt><code>row_labels</code> - <code>list[str]</code> R</dt>
+<dd>The labels to use for the rows, you can use the constants <code>LOWERCASE_LABELS</code>, <code>UPPERCASE_LABELS</code>, and <code>NUMBER_LABELS</code></dd>
+<dt><code>column_labels</code> - <code>list[str]</code> R</dt>
+<dd>The labels to use for the columns, you can use the constants <code>LOWERCASE_LABELS</code>, <code>UPPERCASE_LABELS</code>, and <code>NUMBER_LABELS</code></dd>
+<dt><code>invert_rows</code> - <code>bool</code> R</dt>
+<dd>Will draw the rows bottom to top rather than top to bottom</dd>
+<dt><code>invert_columns</code> - <code>bool</code> R</dt>
+<dd>Will draw the columns right to left rather than left to right</dd>
+<dt><code>corner_radius</code> - <code>float | None</code></dt>
+<dd>The radius of the corners of the board, set to <code>None</code> for a square panel</dd>
+<dt><code>overlay</code> - <code>bool</code></dt>
+<dd>Whether to use the overlay styling for this board or not</dd>
+</dl>
+<details class="example" open="open">
+<summary>Creating a <code>Board</code></summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">event</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span>
+
+<span class="n">board</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">rows</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+        <span class="n">board</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="n">callback</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Board_example.png" width="250px" /></a></p>
+</details>
+<h4 id="stage"><code>Stage</code></h4>
+<p>This element is primarily used by the <a href="../Skeletons/#stagechallenge"><code>StageChallenge</code></a> and <a href="../Skeletons/#gamechallenge"><code>GameChallenge</code></a> skeletons.
+It is recommended to use those rather than using this element directly.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#style"><code>style</code></a></p>
+<dl>
+<dt><code>content</code> - <code>BaseElement</code> R</dt>
+<dd>The main content to put in the middle of the stage, required and positional, constructor only</dd>
+<dt><code>info_panel</code> - <code>BaseElement | None</code> R</dt>
+<dd>Optional content to put on the left-hand side, constructor only</dd>
+<dt><code>tabs</code> - <code>dict[str, BaseElement]</code> R</dt>
+<dd>Tabs to show on the right-hand side, constructor only</dd>
+<dt><code>show_toolbar</code> - <code>bool</code> R</dt>
+<dd>Whether to show the toolbar or not, constructor only</dd>
+<dt><code>center_buttons</code> - <code>list[Button]</code> R</dt>
+<dd>Buttons to put in the center of the toolbar, constructor only</dd>
+<dt><code>right_buttons</code> - <code>list[Button]</code> R</dt>
+<dd>Buttons to put to the right of the toolbar, constructor only</dd>
+<dt><code>info_prompt</code> - <code>str</code></dt>
+<dd>Text to show in the toolbar on the lower left</dd>
+<dt><code>spacing</code> - <code>float</code></dt>
+<dd>Distance between the areas of the stage</dd>
+<dt><code>toolbar_height</code> - <code>float</code></dt>
+<dd>The height of the toolbar</dd>
+</dl>
+<h4 id="speechbubble"><code>SpeechBubble</code></h4>
+<p>Use to create a speech bubble. Mainly used by the <code>.say(...)</code> command for character actors in <a href="../World/">World</a>.</p>
+<p>General attributes/methods:
+<a href="./#common"><code>common</code></a>,
+<a href="./#fittocontent"><code>fit to content</code></a></p>
+<dl>
+<dt><code>text</code> - <code>str</code> S</dt>
+<dd>The text within the speech bubble, required and positional</dd>
+<dt><code>font_size</code> - <code>float</code> S</dt>
+<dd>The desired text font size</dd>
+<dt><code>settings</code> - <code>SpeechBubbleSettings</code> S</dt>
+<dd>Specifies the shape of the speech bubble:</dd>
+<dd>
+<ul>
+<li><code>radius</code> - The radius of the speech-bubble "corners"</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>tail_inset</code> - How far in the tail should be positioned (x-offset)</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>tail_width</code> - How thick the tail should be</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>tail_height</code> - How tall the tail should be</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>tail_point_offset</code> - How the tail tip should be positioned (x-offset)</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>tail_position</code> - Where to put the tail, one of "bottom_left", "bottom_right", "top_left", or "top_right"</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>shadow_height</code> - How high up the lower shading of the bubble should go</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>edge_size</code> - How thick the edge around the bubble should be</li>
+</ul>
+</dd>
+<dt><code>theme</code> - <code>SpeechBubbleTheme</code></dt>
+<dd>Specifies the color scheme of the speech bubble:</dd>
+<dd>
+<ul>
+<li><code>text_color</code> - The color of the text</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>bubble_color</code> - The background color of the bubble</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>shadow_color</code> - The shading color of the bubble</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>edge_color</code> - The color of the bubble edge</li>
+</ul>
+</dd>
+<dt><code>auto_fit</code> - <code>bool</code></dt>
+<dd>Whether to automatically resize the bubble to fit the text or not, can use <code>.fit_to_content()</code> manually</dd>
+<dt><code>auto_anchor</code> - <code>bool</code></dt>
+<dd>Whether to automatically anchor the element position to the tail tip or not, can use <code>.anchor_at_tail()</code> manually</dd>
+</dl>
+<h4 id="table"><code>Table</code></h4>
+<p>Extends the <code>Grid</code> element with grid lines.
+It is recommended to use a <a href="../Data/">data manager</a>.</p>
+<p>Almost identical to <code>Grid</code>, but with the following additional attributes:</p>
+<dl>
+<dt><code>style</code> - <code>Style</code></dt>
+<dd>See <a href="./#styling">styling</a></dd>
+<dt><code>line_size</code> - <code>float | None</code></dt>
+<dd>The thickness of the grid lines, use <code>None</code> to remove the lines</dd>
+</dl>
+<h2 id="attributes-methods">Attributes / Methods</h2>
+<p>This section lists the attributes and methods common among several elements, check each element above for which apply.</p>
+<p>A few attributes are marked with a letter, they have the following meanings:</p>
+<dl>
+<dt>C - coordinate</dt>
+<dd>This attribute is a coordinate property, see <a href="./#coordinates">Coordinates</a></dd>
+<dt>E - event callback</dt>
+<dd>This attribute is an event callback, see <a href="./#events">Events</a></dd>
+<dt>R - readonly</dt>
+<dd>This attribute can not be updated (or animated)</dd>
+<dt>S - static</dt>
+<dd>This attribute can not be animated, see <a href="./#animation">Animation</a></dd>
+</dl>
+<h3 id="common">Common</h3>
+<dl>
+<dt><code>parent</code> - <code>Container | None</code> S</dt>
+<dd>The parent of the element</dd>
+<dt><code>size</code> - <code>tuple[float, float]</code> C</dt>
+<dd>The size (width and height) of the element</dd>
+<dd>Some elements calculate these values based on other attributes, in which case the size is read-only</dd>
+<dt><code>.request_size(size)</code></dt>
+<dd>Ask the element to adjust its size to match the given size, taking into account min and max size and other restrictions</dd>
+<dt><code>.request_size(size, time)</code></dt>
+<dd>Same as above but using an animation time, see <a href="./#animation">Animation</a></dd>
+<dt><code>size_x</code>/<code>width</code>/<code>w</code> - <code>float</code></dt>
+<dd>The width of the element, component of <code>size</code></dd>
+<dt><code>.request_width(width)</code></dt>
+<dd>Ask the element to adjust its width to match the given width, taking into account min and max width and other restrictions</dd>
+<dt><code>.request_width(width, time)</code></dt>
+<dd>Same as above but using an animation time, see <a href="./#animation">Animation</a></dd>
+<dt><code>size_y</code>/<code>height</code>/<code>h</code> - <code>float</code></dt>
+<dd>The height of the element, component of <code>size</code></dd>
+<dt><code>.request_height(height)</code></dt>
+<dd>Ask the element to adjust its height to match the given height, taking into account min and max height and other restrictions</dd>
+<dt><code>.request_height(height, time)</code></dt>
+<dd>Same as above but using an animation time, see <a href="./#animation">Animation</a></dd>
+<dt><code>min_size</code> - <code>tuple[float, float]</code> C</dt>
+<dd>The minimum size of the element, does not apply automatically and does not prevent setting the size manually</dd>
+<dt><code>min_size_x</code>/<code>min_width</code>/<code>min_w</code> - <code>float</code></dt>
+<dd>The minimum width of the element, component of <code>min_size</code></dd>
+<dt><code>min_size_y</code>/<code>min_height</code>/<code>min_h</code> - <code>float</code></dt>
+<dd>The minimum height of the element, component of <code>min_size</code></dd>
+<dt><code>max_size</code> - <code>tuple[float, float]</code> C</dt>
+<dd>The maximum size of the element, does not apply automatically and does not prevent setting the size manually</dd>
+<dt><code>max_size_x</code>/<code>max_width</code>/<code>max_w</code> - <code>float</code></dt>
+<dd>The maximum width of the element, component of <code>max_size</code></dd>
+<dt><code>max_size_y</code>/<code>max_height</code>/<code>max_h</code> - <code>float</code></dt>
+<dd>The maximum height of the element, component of <code>max_size</code></dd>
+<dt><code>fixed_width</code> - <code>bool</code></dt>
+<dd>If set to <code>True</code> then the width will not be changed automatically, can still be changed manually though</dd>
+<dt><code>fixed_height</code> - <code>bool</code></dt>
+<dd>If set to <code>True</code> then the height will not be changed automatically, can still be changed manually though</dd>
+<dt><code>position</code>/<code>pos</code> - <code>tuple[float, float]</code> C</dt>
+<dd>The position of the element, relative to the <code>anchor</code> (usually center of the element)</dd>
+<dt><code>position_x</code>/<code>pos_x</code>/<code>x</code> - <code>float</code></dt>
+<dd>The x-position of the element, component of <code>position</code></dd>
+<dt><code>position_y</code>/<code>pos_y</code>/<code>y</code> - <code>float</code></dt>
+<dd>The y-position of the element, component of <code>position</code></dd>
+<dt><code>offset</code> - <code>tuple[float, float]</code> C</dt>
+<dd>An offset to apply to the element position, useful if the position is controlled by another element</dd>
+<dt><code>offset_x</code> - <code>float</code></dt>
+<dd>The x-offset of the element, component of <code>offset</code></dd>
+<dt><code>offset_y</code> - <code>float</code></dt>
+<dd>The y-offset of the element, component of <code>offset</code></dd>
+<dt><code>anchor</code> - <code>tuple[float, float]</code> C</dt>
+<dd>The anchor point of the element, <code>0</code> means center, <code>-1</code> means left/top and <code>1</code> means right/bottom.</dd>
+<dt><code>anchor_x</code> - <code>float</code></dt>
+<dd>The x-anchor of the element, component of <code>anchor</code></dd>
+<dt><code>anchor_y</code> - <code>float</code></dt>
+<dd>The y-anchor of the element, component of <code>anchor</code></dd>
+<dt><code>z_index</code>/<code>z</code> - <code>float</code></dt>
+<dd>The visual sorting of the element or "distance from the screen", an element with higher z-index will be drawn above others</dd>
+<dd>Children will have the same z-index as their parents from the outside</dd>
+<dt><code>scale</code> - <code>tuple[float, float]</code> C</dt>
+<dd>Scaling factor for the element, is not considered when estimating the size or position of the element</dd>
+<dt><code>scale_x</code> - <code>float</code></dt>
+<dd>The x-scale of the element, component of <code>scale</code></dd>
+<dt><code>scale_y</code> - <code>float</code></dt>
+<dd>The y-scale of the element, component of <code>scale</code></dd>
+<dt><code>rotation</code> - <code>float</code></dt>
+<dd>The rotation of the element in degrees, positive values means clockwise and negative means counter-clockwise</dd>
+<dt><code>pivot</code> - <code>tuple[float, float]</code> C</dt>
+<dd>The pivot point of the element, which is used as the rotation point</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<code>pivot</code> does not work properly for <code>Text</code>, <code>Image</code>, and <code>Sprite</code></div>
+</dd>
+<dt><code>pivot_x</code> - <code>float</code></dt>
+<dd>The x-pivot of the element, component of <code>pivot</code></dd>
+<dt><code>pivot_y</code> - <code>float</code></dt>
+<dd>The y-pivot of the element, component of <code>pivot</code></dd>
+<dt><code>toggle_group</code> - <code>str | None</code></dt>
+<dd>The toggle group of the element, see <a href="./#toggling">Toggling</a></dd>
+<dt><code>toggle_by_default</code> - <code>bool</code></dt>
+<dd>Whether the element should start out toggled on</dd>
+<dt><code>opacity</code> - <code>float</code></dt>
+<dd>The opacity of the element, <code>1</code> means fully opaque and <code>0</code> means fully transparant</dd>
+<dt><code>on_resize</code> - <code>(ResizeEventData) -&gt; None</code> E</dt>
+<dd>Called after the element is given a new size</dd>
+</dl>
+<h3 id="container">Container</h3>
+<dl>
+<dt><code>children</code> - <code>list[BaseElement]</code> R</dt>
+<dd>Elements to add as children if in constructor otherwise a read-only list of current children</dd>
+<dt><code>.add_child(child)</code></dt>
+<dd>Add a new child to the element, removing it from any previous parent</dd>
+<dt><code>.add_children(child_1, child_2, ...)</code></dt>
+<dd>Add several new children to the element</dd>
+<dt><code>.remove_child(child)</code></dt>
+<dd>Removes a child from the element</dd>
+<dt><code>.remove_children(child_1, child_2, ...)</code></dt>
+<dd>Removes several children from the element</dd>
+<dt><code>on_add_child</code> - <code>(ChildEventData) -&gt; None</code> E</dt>
+<dd>Called when a (public) child is added to the container</dd>
+<dt><code>on_remove_child</code> - <code>(ChildEventData) -&gt; None</code> E</dt>
+<dd>Called when a (public) child is removed from the container</dd>
+</dl>
+<h3 id="shape">Shape</h3>
+<dl>
+<dt><code>color</code> - <code>str</code></dt>
+<dd>The fill or stroke color of the shape</dd>
+<dt><code>stroke</code> - <code>float | None</code> S</dt>
+<dd>Draw the edge of the shape rather than the area</dd>
+</dl>
+<h3 id="action">Action</h3>
+<dl>
+<dt><code>action_effect</code> - <code>Effect | None</code></dt>
+<dd>Effect to apply when hovering the element and it is interactable</dd>
+<dt><code>hover_effect</code> - <code>Effect | None</code></dt>
+<dd>Effect to apply when hovering the element</dd>
+</dl>
+<details class="example" open="open">
+<summary>Adding three polygons</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>canvas.new_rectangle(1.6, 0.8, &#39;red&#39;, x=15, y=5, radius=0.1, hover_effect={&#39;color&#39;: &#39;orange|yellow&#39;})
+</code></pre></div></td></tr></table></div>
+</details>
+<dl>
+<dt><code>hover_targets</code> - <code>list[BaseElement]</code></dt>
+<dd>Elements that will be toggled while this element is hovered</dd>
+</dl>
+<h3 id="click">Click</h3>
+<dl>
+<dt><code>on_click</code> - <code>(ClickEventData) -&gt; None</code> E</dt>
+<dd>Called when this element is clicked in interact mode</dd>
+<dt><code>click_targets</code> - <code>list[BaseElement]</code></dt>
+<dd>Elements that will be toggled when this element is clicked</dd>
+<dt><code>interact_click_targets</code> - <code>list[BaseElement]</code></dt>
+<dd>Same as <code>click_targets</code> but only works in interact mode</dd>
+</dl>
+<h3 id="drag">Drag</h3>
+<dl>
+<dt><code>draggable</code> - <code>bool | None</code> S</dt>
+<dd>Whether the element should be draggable, set to <code>None</code> for default behaviour</dd>
+<dt><code>on_drop</code> - <code>(DragEventData) -&gt; None</code> E</dt>
+<dd>Called when this element is dropped after being dragged</dd>
+<dt><code>drag_targets</code> - <code>list[BaseElement]</code></dt>
+<dd>Elements that will be toggled while this element is dragged</dd>
+<dt><code>drag_effect</code> - <code>Effect | None</code></dt>
+<dd>Effect to apply when the element is being dragged</dd>
+<dt><code>drop_zones</code></dt>
+<dd>Target areas in the exercise UI where draggable elements can be dropped. </dd>
+<dt><code>drop_zone_effect</code></dt>
+<dd>Describes the visual or behavioral feedback a drop zone provides when a user drags an item over it. This can include highlighting, cursor changes, or animations to indicate whether a drop is allowed or desirable.</dd>
+<dt><code>drag_zone</code></dt>
+<dd>Refers to the source area or elements from which items can be dragged. </dd>
+<dt><code>drag_zone_effect</code></dt>
+<dd>Describes the user feedback or restrictions applied during the drag operation. This might include the type of drag allowed (e.g. "move", "copy"), visual cues like shadows or opacity, and constraints on which elements can be dragged.</dd>
+<dt><code>drop_event</code></dt>
+<dd>A system or browser event that is triggered when a draggable item is released over a drop zone. This event is captured to determine whether the item was dropped in a valid location and to trigger scoring or feedback logic.</dd>
+</dl>
+<h3 id="keyboard">Keyboard</h3>
+<dl>
+<dt><code>key_list</code> - <code>list[str]</code> S</dt>
+<dd>Keys this element should listen for, see <a href="./#keys">Keys</a></dd>
+<dt><code>on_key_up</code> - <code>(KeyboardEventData) -&gt; None</code> E</dt>
+<dd>Called when a key is released (if in <code>key_list</code> or it is empty)</dd>
+</dl>
+<h3 id="scroll">Scroll</h3>
+<dl>
+<dt><code>widget_color</code> - <code>str</code></dt>
+<dd>The color of the scroll bars</dd>
+<dt><code>widget_size</code> - <code>float</code> S</dt>
+<dd>The size of the scroll bars</dd>
+<dt><code>follow_bottom</code> - <code>bool</code></dt>
+<dd>If set to <code>True</code> then the area will continue scrolling automatically if at the bottom</dd>
+</dl>
+<h3 id="layout">Layout</h3>
+<dl>
+<dt><code>spacing</code> - <code>float</code></dt>
+<dd>Distance between elements</dd>
+<dt><code>align_x</code> - <code>"left" | "right" | "center"</code></dt>
+<dd>The horizontal element align</dd>
+<dt><code>align_y</code> - <code>"top" | "bottom" | "center"</code></dt>
+<dd>The vertical element align</dd>
+</dl>
+<h3 id="style">Style</h3>
+<dl>
+<dt><code>style</code> - <code>Style</code></dt>
+<dd>The style to apply to this element, see <a href="./#styling">Styling</a></dd>
+</dl>
+<h3 id="fittocontent">FitToContent</h3>
+<dl>
+<dt><code>.fit_to_content()</code></dt>
+<dd>Ask element to adjust its size based on the content</dd>
+<dt><code>.fit_to_content(time)</code></dt>
+<dd>Same as <code>.fit_to_content()</code> but at the given animation time</dd>
+</dl>
+<h2 id="coordinates">Coordinates</h2>
+<p>The attributes marked with a <strong>C</strong> is a coordinate attribute.
+This means that it has two component attributes for the <code>x</code> and <code>y</code> values.
+You can modify either of these three attributes (or any aliases) to change (part) of the coordinate.</p>
+<p>The coordinate property has some additional convenience features:</p>
+<ul>
+<li>Vector operations such as addition, subtraction, multiplication and division</li>
+<li>Conversion of scalar values to a pair</li>
+</ul>
+<details class="example" open="open">
+<summary>Using coordinates</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">()</span>
+<span class="n">rect</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">20</span>       <span class="c1"># set size to (20, 20)</span>
+<span class="n">rect</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># add (5, 10) to position</span>
+<span class="n">rect</span><span class="o">.</span><span class="n">anchor</span> <span class="o">-=</span> <span class="mi">1</span>     <span class="c1"># subtract (1, 1) from anchor</span>
+<span class="n">rect</span><span class="o">.</span><span class="n">scale</span> <span class="o">*=</span> <span class="mi">2</span>      <span class="c1"># multily scale by 2</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>You can also access the <code>x</code> and <code>y</code> elements of the coordinates as members, e.g. <code>rect.pivot.x</code>, but you can not assign to them, so it is better to always use <code>rect.pivot_x</code>.</p>
+<h2 id="animation">Animation</h2>
+<p>Many attributes are animated when modified, such as gradually turning transparent when setting <code>opacity</code> to <code>0</code>.
+But it is possible to control this in more detail using the animation features of the UI library.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To get animation to work, go to the Graphics tab in <a href="../Freecode_creator/">Freecode Creator</a> and check "Uses Canvas" and "Has Canvas Animation".</p>
+</div>
+<p>You can specify the values of many attributes with more precise timing using the <code>.time(time)</code> method.
+It returns a virtual copy of the element which represents the element at that time.
+The time should be a number from <code>0.0</code> to <code>1.0</code> which corresponds to a fraction of the time step, where <code>0.0</code> is at the start, <code>0.5</code> is at the middle, and <code>1.0</code> is at the end of the time step.</p>
+<details class="example" open="open">
+<summary>Creating a shaking animation</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># setup_canvas / setup_view</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">()</span>
+
+<span class="c1"># update_canvas / update_view</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.6</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="o">-</span><span class="mi">15</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>You might realize that you do not want an attribute to be animated, in which case you can use <code>.instant</code> which is the same as <code>.time(0)</code>.
+If you want it to happen later in the time step you can first add the old value with a time value, and then the new value with a slightly higher time value e.g. <code>.time(0.499)</code> and then the new value with <code>time(0.5)</code>.
+This will ensure that the value change occurs immediately without any intermediate values.</p>
+<details class="example" open="open">
+<summary>Making boxes suddenly transparent</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># setup_canvas / setup_view</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box_0</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box_1</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box_2</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">()</span>
+
+<span class="c1"># update_canvas / update_view</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box_0</span><span class="o">.</span><span class="n">instant</span><span class="p">()</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">box_1</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">box_2</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.499</span><span class="p">)</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">box_2</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.5</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="step-animation">Step animation</h3>
+<p>It is possible to go to the next time step manually, this can be very useful when making more elaborate animations.
+You do this by calling <code>canvas.split_step()</code>.
+All graphical operations performed after <code>canvas.split_step()</code> will occur in a new step.</p>
+<h3 id="example-falling-rectangle">Example: Falling rectangle</h3>
+<p>We want to have a rectangle that tips over and lands on one side.
+The rectangle should be 2 units wide, 8 units high, and have its pivot offset from the center to its lower right corner.
+We will also offset it 6 units to the right and 9 units down to make it easier to see.
+If we do all this it should be placed like in the image below:
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Falling_rectangle_coordinates.png" width="250px" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The coordinate (0, 0) is in the upper left corner, x grows to the right, and y grows downwards.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The grey dots show all points that have integer coordinates, i.e. (1, 1), (2, 1), and so on.</p>
+</div>
+<details class="example" open="open">
+<summary>Code for defining our rectangle</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">falling_rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">pivot_x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pivot_y</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>We don't want the rectangle to suddenly hit the ground.
+To make the fall look somewhat natural we will divide it up like this:</p>
+<ul>
+<li>The rectangle will stand still for one time step</li>
+<li>The rectangle will rotate 45 degrees the first 70% of the second time step</li>
+<li>The rectangle will rotate 45 degrees more during the remaining 30% of the second time step</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Animation_of_falling_rectangle_explanation_figure.png" width="250px" /></a></p>
+<details class="example" open="open">
+<summary>Code for defining our rectangle's fall</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># No animation in the first step</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">split_step</span><span class="p">()</span>
+<span class="c1"># In the first 70% of the step the rectangle falls 45 degrees</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">falling_rect</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="o">-</span><span class="mi">45</span>
+<span class="c1"># In the remaining 30% the rectangle falls the rest of the way</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">falling_rect</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="o">-</span><span class="mi">90</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>The end result will look like this:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy," src="../../assets/Falling_rectangle.gif" width="250px" /></a></p>
+<p>Freecode that implements this animation: <a href="https://futureskill.com/freecode-creator/602e752d1667cc6d98aee706" target="_blank">Freecode</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to be logged in to see the freecode</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The freecode uses the old graphics style found in <a href="../../legacy/Freecode_graphics/">Freecode graphics</a></p>
+</div>
+<h2 id="effects">Effects</h2>
+<p>It is possible to apply effects on some attributes while certain conditions are met, such as when an element is hovered over with the mouse.
+This is specified using the <code>Effect</code> object and effect attributes, such as <code>hover_effect</code>.</p>
+<p>The <code>Effect</code> object has support for the following attributes:</p>
+<ul>
+<li><code>color</code></li>
+<li><code>opacity</code></li>
+<li><code>rotation</code></li>
+<li><code>scale</code> or <code>scale_x</code>/<code>scale_y</code></li>
+</ul>
+<p>The specified values will be applied while the condition is met, and reverted once it is not.</p>
+<details class="example" open="open">
+<summary>Hover effect on a circle</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">hover_effect</span><span class="o">=</span><span class="n">Effect</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Many times you would want an effect only when an element is interactable. For this we have the <code>action_effect</code> attribute.</p>
+<details class="example" open="open">
+<summary>Making a circle interactable <em>only</em> when clickable</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">action_effect</span><span class="o">=</span><span class="n">Effect</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">),</span> <span class="n">on_click</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="nb">setattr</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Effects of child elements will trigger if the effect of the parent would trigger.</p>
+<h2 id="events">Events</h2>
+<p>There are several events that can be listened to in order to react to element changes or user input.
+The easiest way to do this is to use to <code>on_[event]</code> attributes.
+These attributes takes callbacks, which are functions with a single parameter which will be an <code>EventData</code> object.
+Look at the example for <code>Button</code>, or the last example of the previous section.</p>
+<p>The subsections lists the additional attributes that are available for the different kinds of <code>EventData</code> objects.</p>
+<h3 id="resizeeventdata">ResizeEventData</h3>
+<dl>
+<dt><code>source</code> - <code>BaseElement</code></dt>
+<dd>The source element of the event</dd>
+<dt><code>time</code> - <code>float | None</code></dt>
+<dd>The time of the change, see <a href="./#animation">Animation</a></dd>
+<dt><code>dimensions</code>/<code>dims</code> - <code>Dimensions</code></dt>
+<dd>The dimensions affected by the change</dd>
+</dl>
+<h3 id="childeventdata">ChildEventData</h3>
+<dl>
+<dt><code>source</code> - <code>BaseElement</code></dt>
+<dd>The source element of the event</dd>
+<dt><code>child</code> - <code>BaseElement</code></dt>
+<dd>The child in question</dd>
+</dl>
+<h3 id="clickeventdata">ClickEventData</h3>
+<dl>
+<dt><code>source</code> - <code>BaseElement</code></dt>
+<dd>The source element of the event</dd>
+</dl>
+<h3 id="drageventdata">DragEventData</h3>
+<dl>
+<dt><code>source</code> - <code>BaseElement</code></dt>
+<dd>The source element of the event</dd>
+<dt><code>position</code>/<code>pos</code> - <code>tuple[float, float]</code></dt>
+<dd>The drop position</dd>
+<dt><code>position_x</code>/<code>pos_x</code>/<code>x</code> - <code>float</code></dt>
+<dd>The x-component of the drop position</dd>
+<dt><code>position_y</code>/<code>pos_y</code>/<code>y</code> - <code>float</code></dt>
+<dd>The y-component of the drop position</dd>
+</dl>
+<h3 id="keyboardeventdata">KeyboardEventData</h3>
+<dl>
+<dt><code>source</code> - <code>BaseElement</code></dt>
+<dd>The source element of the event</dd>
+<dt><code>key</code> - <code>str</code></dt>
+<dd>The pressed key, see <a href="./#keys">Keys</a></dd>
+</dl>
+<h3 id="checkboxeventdata">CheckboxEventData</h3>
+<dl>
+<dt><code>source</code> - <code>BaseElement</code></dt>
+<dd>The source element of the event</dd>
+<dt><code>checked</code> - <code>bool</code></dt>
+<dd>The new <code>checked</code> value</dd>
+<dt><code>intermediate</code> - <code>bool</code></dt>
+<dd>The new <code>intermediate</code> value</dd>
+</dl>
+<h2 id="keys">Keys</h2>
+<p>The <code>key</code> value in <code>KeyboardEventData</code> or the <code>key_list</code> attribute can either be a character matching the key (accounting for modifiers (e.g. <span class="keys"><kbd class="key-shift">Shift</kbd></span> or <span class="keys"><kbd class="key-alt">Alt</kbd></span>) and keyboard layout) or a special value corresponding to the key.
+The following table list some convenient constants that can be used:</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key.UP</td>
+<td><span class="keys"><kbd class="key-arrow-up">Up</kbd></span></td>
+</tr>
+<tr>
+<td>Key.DOWN</td>
+<td><span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+</tr>
+<tr>
+<td>Key.LEFT</td>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span></td>
+</tr>
+<tr>
+<td>Key.RIGHT</td>
+<td><span class="keys"><kbd class="key-arrow-right">Right</kbd></span></td>
+</tr>
+<tr>
+<td>Key.SPACE</td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span></td>
+</tr>
+<tr>
+<td>Key.ENTER</td>
+<td><span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<details class="example" open="open">
+<summary>Manually check keyboard value (only works in interact mode)</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Rectangle</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">,</span> <span class="n">on_key_up</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">key</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="toggling">Toggling</h2>
+<p>This section covers the toggling system which can be used to create lightweight interactable UI.
+It is used for tabs and popups, but can be used for other purposes as well.</p>
+<p>Toggling can be triggered by hovering, clicking or dragging using <code>hover_targets</code>, <code>click_targets</code> and <code>drag_targets</code>.
+When an element is added as part of these lists, it will automatically be hidden and only shown once toggled.
+This can be avoided by setting <code>toggle_by_default</code> to <code>True</code> on the element in question.</p>
+<p>It is possible to group together elements in a toggle group by setting <code>toggle_group</code> to the same value for all elements.
+When elements are in a group at most one of the elements can be toggled on at a time.
+The toggling logic is slightly modified for elements within a toggle group, particularly they will not toggled off unless another element is toggled on.</p>
+<p>We support <code>toggle_group=&lt;string id&gt;</code> which will make sure that at most one in the toggle group is visible.</p>
+<p>we also support <code>toggle_by_default=&lt;boolean&gt;</code> which is by default False, but can be set True to show a member of the group from initial state.</p>
+<details class="example" open="open">
+<summary>Example of creating a tooltip</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tooltip_text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">&quot;My tooltip&quot;</span><span class="p">)</span>
+<span class="n">tooltip</span> <span class="o">=</span> <span class="n">Panel</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">tooltip_text</span><span class="o">.</span><span class="n">size</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">tooltip_text</span><span class="p">])</span>
+<span class="n">Circle</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">tooltip</span><span class="p">],</span> <span class="n">hover_targets</span><span class="o">=</span><span class="p">[</span><span class="n">tooltip</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="styling">Styling</h2>
+<p>Some elements have a <code>style</code> attribute which will be used to determine color and opacity.
+This <code>Style</code> object can be replaced with a custom style object to have different styling.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/future-skill/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/futureskillsweden/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search.suggest", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

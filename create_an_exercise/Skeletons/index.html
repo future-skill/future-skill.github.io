@@ -1,0 +1,2540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.futureskill.com/create_an_exercise/Skeletons/">
+      
+      
+        <link rel="prev" href="../Freecode_creator/">
+      
+      
+        <link rel="next" href="../UI/">
+      
+      
+      <link rel="icon" href="../../assets/fs_small_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Skeletons - Future Skill wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Skeletons - Future Skill wiki" >
+      
+        <meta  property="og:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  property="og:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/Skeletons.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://wiki.futureskill.com/create_an_exercise/Skeletons/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Skeletons - Future Skill wiki" >
+      
+        <meta  name="twitter:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  name="twitter:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/Skeletons.png" >
+      
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: #295c88; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#why-and-how-to-use" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Future Skill wiki" class="md-header__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Future Skill wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Skeletons
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/Freecode_editor/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Freecode_creator/" class="md-tabs__link">
+          
+  
+  Create an exercise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../legacy/Freecode_graphics/" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-tabs__link">
+          
+  
+  Future Skill GPT
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Future Skill wiki" class="md-nav__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    Future Skill wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecode_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Coding_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/How_to_get_experience_points/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get experience points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Canvas_element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Types of code challenges
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Types of code challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Tournaments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tournaments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Create an exercise
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create an exercise
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Freecode_creator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-and-how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why and how to use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basicchallenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      BasicChallenge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BasicChallenge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-parallel-solution-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making parallel solution calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interact-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interact mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stagechallenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      StageChallenge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StageChallenge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stagechallenge-required-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interact-mode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interact mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interact mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolbar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gamechallenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      GameChallenge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GameChallenge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#players" class="md-nav__link">
+    <span class="md-ellipsis">
+      Players
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interact-mode_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interact mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interact mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gamechallenge-toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turn management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Create_Sprite_Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Sprite Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built in images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Freecode_graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Gameboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gameboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Future Skill GPT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Future Skill GPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Skill GPT Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Skeletons</h1>
+
+<p>This article goes through how to use the skeleton classes to write implementations.
+This is the preferred way of creating new exercises, challenges, etc.</p>
+<p>The article contains both a broad overview of the material as well as deep dives, it is recommended to start reading the broad sections and come back to the sub-sections as questions arise.</p>
+<h2 id="why-and-how-to-use">Why and how to use</h2>
+<p>The skeletons are base classes that handles things that most implementations will need or things that are required.
+The specialized skeletons also provides a bunch of functionality that otherwise would take a lot of work to implement.</p>
+<p>The provided skeletons form a hierarchy where the children inherit functionality from the parent skeletons:</p>
+<ul>
+<li><code>BasicChallenge</code> - Provides the most common functionality<ul>
+<li><code>StageChallenge</code> - Provides a GUI structure and a couple other features<ul>
+<li><code>GameChallenge</code> - Provides a bunch of features realated to making a turn-based game</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>To use a skeleton the <code>Challenge</code> class should inherit from the skeleton class.
+Each skeleton has a number of required methods that need to be implemented.
+We provide a basic template for each skeleton under respective heading, which are good starting points for creating a challange.</p>
+<h2 id="basicchallenge"><code>BasicChallenge</code></h2>
+<p>This is the base of all the skeletons and provide the essential functionality, which will be used by all other skeletons as well.
+However, keep in mind that some skeletons do implement some of the <code>BasicChallenge</code> methods for you.</p>
+<details class="example">
+<summary>Template for <code>BasicChallange</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the module containing the challenge implementation.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">SolutionException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.skeletons</span><span class="w"> </span><span class="kn">import</span> <span class="n">BasicChallenge</span><span class="p">,</span> <span class="n">LevelInfo</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.ui</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Text</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Challenge</span><span class="p">(</span><span class="n">BasicChallenge</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a challenge implementation using the basic skeleton.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns required level information for the current level.</span>
+<span class="sd">        The &quot;level&quot; parameter is the level index, starting at 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">LevelInfo</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Level </span><span class="si">{</span><span class="n">level</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">max_score</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should do all initial setup, except for graphics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, setting up a variable which can be used later on</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="c1"># Or writing a message in the console</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hi console!&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should create the initial graphics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, creating a square</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_square</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">)</span>
+        <span class="c1"># And putting text inside it</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">my_square</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should call solutions and update the current state.</span>
+<span class="sd">        It is called continuously until &quot;self.finished&quot; is set to &quot;True&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># When calling a solution you need to handle any &quot;SolutionException&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">solution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">solutions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># TODO: call a solution method</span>
+        <span class="k">except</span> <span class="n">SolutionException</span><span class="p">:</span>
+            <span class="c1"># Code put here will run if the solution crashed</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># This is a good place to update the scores</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span>
+
+        <span class="c1"># You will want to set this conditionally if your challenge involves multiple step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should update the graphics based on the current state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, changing the text inside the square</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="required-methods">Required methods</h3>
+<dl>
+<dt><code>setup_level(self, level)</code></dt>
+<dd>Must return a <code>LevelInfo</code> object which includes the information needed for the framework to handle the level.</dd>
+<dd>The <code>level</code> parameter is the index of the current level, starting at 0.</dd>
+<dd>The <code>LevelInfo</code> object has the following attributes:</dd>
+<dd>
+<ul>
+<li><code>name</code> - The name of the level</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>max_score</code> - The maximum possible score for a solution</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>show_canvas</code> - Whether the level uses the canvas, defaults to <code>True</code></li>
+</ul>
+</dd>
+<dt><code>setup_state(self)</code></dt>
+<dd>Setup the challenge state here.</dd>
+<dd>Will be called once at startup, after <code>setup_level</code>.</dd>
+<dt><code>setup_canvas(self)</code></dt>
+<dd>Setup the canvas here.</dd>
+<dd>Will be called once at startup, after <code>setup_state</code>, unless <code>show_canvas</code> is <code>False</code>.</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+This method is implemented by most of the other skeletons, so do not add your own when using those.</div>
+</dd>
+<dt><code>update_state(self)</code></dt>
+<dd>Call solutions and update the challenge state here.</dd>
+<dd>When calling solutions you must catch any <code>SolutionException</code>s that are raised.</dd>
+<dd>Will continuously be called until <code>self.finished</code> is set to <code>True</code>, so remember to do that.</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+Once <code>self.finished</code> is set to <code>True</code> no other method is called, so remember to also update the scores.</div>
+</dd>
+<dt><code>update_canvas(self)</code></dt>
+<dd>Make any changes to the canvas here.</dd>
+<dd>Will be called immediately after <code>update_state</code>, unless <code>show_canvas</code> is <code>False</code>.</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+This method is implemented by most of the other skeletons, so do not add your own when using those.</div>
+</dd>
+</dl>
+<details class="info">
+<summary>Flowchart for <code>BasicChallenge</code></summary>
+<pre class="mermaid"><code>---
+config:
+    look: handDrawn
+---
+graph TB
+    START([START]) --&gt; A[setup_level];
+    A --&gt; B[setup_state];
+    B --&gt; IF_1{show_canvas};
+    IF_1 --&gt; |True| C[setup_canvas];
+    C --&gt; D[update_state];
+    IF_1 --&gt; |False| D;
+    D --&gt; IF_2{self.finished};
+    IF_2 ---&gt; |True| END([END]);
+    IF_2 --&gt; |False| IF_3{show_canvas};
+    IF_3 --&gt; |True| E[update_canvas];
+    E --&gt; D;
+    IF_3 --&gt; |False| D;</code></pre>
+</details>
+<h3 id="features">Features</h3>
+<p>The main feature of this skeleton is reduced boilerplate and some minor conveniences.
+Here is a list of class members and what they are used for:</p>
+<dl>
+<dt><code>finished</code></dt>
+<dd>A boolean that should be set to <code>True</code> when the challenge has ended.</dd>
+<dt><code>scores</code></dt>
+<dd>A list of scores for each solution, indices match the solution indices.</dd>
+<dd>Scores start at 0 and must be updated manually.</dd>
+<dt><code>canvas</code></dt>
+<dd>Represents the canvas itself and is the top of the graphical hierarchy.</dd>
+<dt><code>console</code></dt>
+<dd>Represents the console, and can be used to log messages.</dd>
+<dt><code>context</code></dt>
+<dd>Used to access various features:</dd>
+<dd>
+<dl>
+<dt><code>level</code></dt>
+<dd>The current level</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>canvas</code></dt>
+<dd>An object that is used to interact with the canvas
+It is used to add new graphical elements, more details on them are covered in <a href="../UI/">UI</a>.
+It is best practice to only modify the <code>canvas</code> in dedicated setup and update methods, by default <code>setup/update_canvas/view</code></dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>console</code></dt>
+<dd>An object that can be used to interact with the console.
+It is no longer needed, as the standard <code>print</code> statement can be used instead.</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>solutions</code></dt>
+<dd>
+<dl>
+<dt>A list of the <code>solution</code> objects corresponding to the coders partaking in the challenge/exercise/freecode together for this level.</dt>
+<dt>This list will always be the same length as the number of solutions, but all values will be set to <code>None</code> during <code>setup_canvas/view</code>, the proper values will be found in the <code>update_</code> methods.</dt>
+<dt>The <code>solution</code> objects contain the following:</dt>
+<dd>
+<dl>
+<dt><code>name</code></dt>
+<dd>The name of the solution, this will either be the player name or a placeholder string.</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>index</code></dt>
+<dd>The index of the solution.</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>console</code></dt>
+<dd>An individual console for the solution.
+Use the <code>log</code> and <code>debug</code> methods to print messages in the corresponding player's console.</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>alive</code></dt>
+<dd>A flag indicating if the solution is still running or has crashed/timed out.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt><code>parallel</code></dt>
+<dd>An object that acts as a proxy <code>solution</code> for making parallel <code>solution</code> calls.
+<code>parallel</code> will be explained further in <a href="./#making-parallel-solution-calls">Making parallel <code>solution</code> calls</a>.</dd>
+</dl>
+</dd>
+<dt><code>session</code></dt>
+<dd>Used for interact mode, see <a href="./#interact-mode">Interact mode</a>.</dd>
+<dt><code>settings</code></dt>
+<dd>Used for interact mode, see <a href="./#interact-mode">Interact mode</a>.</dd>
+</dl>
+<h4 id="making-parallel-solution-calls">Making parallel <code>solution</code> calls</h4>
+<p>To call solutions in parallel the <code>context.parallel</code> object should be used instead of the <code>solution</code> objects.</p>
+<p>The results of a parallel call is a dictionary with <code>solution</code> indices as keys and the <code>solution</code> results as value.
+There is no need to catch <code>SolutionException</code> when making parallel calls.
+Only <code>solutions</code> that lived before making the call are included in the dictionary.
+The solution result is either the return value from the player's code, or a <code>SolutionException</code> if the player's code crashed, therefore it is necessary to make an <code>isinstance</code> check on the result if the return value is used.</p>
+<h4 id="interact-mode">Interact mode</h4>
+<p>Interact mode is an advanced feature that is used to make challenges with interactive canvases.
+This skeleton has a couple of conveniences related to interact mode.</p>
+<p>The <code>session</code> class member is used to store the state of the current interact session, which can be used to restart the session in case it timed out or was paused.
+It acts as a dictionary and the values must consist of only basic python types.
+The exact data representation is not guaranteed to be retained, and notably any integer dictionary keys will be converted into strings.</p>
+<p>The <code>settings</code> class member act just like <code>session</code> but is persisted over interact sessions.
+So you can use it to store user settings or whether to show a help popup.</p>
+<p>Both of these support callbacks on changes using <code>.register_callback(id, key, callback)</code> where <code>id</code> should be unique, <code>key</code> is the settings key, and <code>callback</code> should be a function that takes one argument (the new value).
+A callback can be removed using <code>.deregister_callback(id, key)</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some of the other skeletons might use these features in order to persist settings or state.
+Therefore you should expect the possibility of unknown keys and values.
+However, those keys will always be prefixed with two "_" to avoid clashes.</p>
+</div>
+<p>These features use the <code>interact_session_state</code> and <code>interact_setting_state</code> to store the values, so make sure that you are not using those directly as well.</p>
+<dl>
+<dt><code>interact_session_state</code></dt>
+<dd>An object to store the session state of the challenge in interact mode to activate the resume interact after stopping interact mode, either manually or after a timeout. It can be filled by any type including string, array, dictionary, etc., and then you can access it as the same type. The default value is None at first and it will again be set to None if the user restarts the interact or if the challenge is marked as finished. The interact_session_state also will automatically be set to None if the user leaves the page or refreshes the browser tab.</dd>
+</dl>
+<details class="example">
+<summary>Set Sample Value to interact_session_state</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">interact_session_state</span> <span class="o">=</span> <span class="p">[(</span><span class="n">l</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Note: Remember to check the value of interact_session_state in the init function of the challenge class to initial the challenge based on the previous session state stored before and resume the interact mode to that state.</p>
+<dl>
+<dt><code>interact_setting_state</code></dt>
+<dd>An object to store the seUing state like the user setting for the challenge in interact mode. It will be saved in the local storage of the users' browser, and it will retrieve in future interact sessions as well. Same as the interact_session_state, the interact setting state can be used in any type including string, array, dictionary, etc.</dd>
+</dl>
+<details class="example">
+<summary>Set Sample Value to interact_setting_state</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">interact_setting_state</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;show_possible_moves&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Note: Remember to check the value of interact_setting_state in the init function of the challenge class to initialize the challenge based on the previous user setting state stored before.</p>
+<h2 id="stagechallenge"><code>StageChallenge</code></h2>
+<p>This skeleton adds a GUI setup called the stage on top of the basic skeleton, and some related functionality.
+It acts as the base for other GUI focused skeletons, so it is likely you will want to use one of them instead.</p>
+<details class="example">
+<summary>Template for <code>StageChallenge</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the module containing the challenge implementation.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">SolutionException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.skeletons</span><span class="w"> </span><span class="kn">import</span> <span class="n">LevelInfo</span><span class="p">,</span> <span class="n">StageChallenge</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.ui</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Text</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Challenge</span><span class="p">(</span><span class="n">StageChallenge</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a challenge implementation using the stage skeleton.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns required level information for the current level.</span>
+<span class="sd">        The &quot;level&quot; parameter is the level index, starting at 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">LevelInfo</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Level </span><span class="si">{</span><span class="n">level</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">max_score</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should do all initial setup, except for graphics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, setting up a variable which can be used later on</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="c1"># Or writing a message in the console</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hi console!&quot;</span><span class="p">)</span>
+        <span class="c1"># Or writing a messege in the stage log</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_log_entry</span><span class="p">(</span><span class="s2">&quot;Hi log!&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns the main view for the challenge, which can be any graphics element.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># The view will automatically be attached, resized and positioned by the framework</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_view</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+        <span class="c1"># Any elements put inside the view will be centered inside they view</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">my_view</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_view</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should call solutions and update the current state.</span>
+<span class="sd">        It is called continuously until &quot;self.finished&quot; is set to &quot;True&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># When calling a solution you need to handle any &quot;SolutionException&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">solution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">solutions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># TODO: call a solution method</span>
+        <span class="k">except</span> <span class="n">SolutionException</span><span class="p">:</span>
+            <span class="c1"># Code put here will run if the solution crashed</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># This is a good place to update the scores</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span>
+
+        <span class="c1"># You will want to set this conditionally if your challenge involves multiple steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should update the view based on the current state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, changing the text inside the view</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="stagechallenge-required-methods">Required methods</h3>
+<dl>
+<dt><code>setup_level(self, level)</code></dt>
+<dd>See <a href="./#required-methods"><code>BasicChallenge</code> - Required methods</a>.</dd>
+<dt><code>setup_state(self)</code></dt>
+<dd>See <a href="./#required-methods"><code>BasicChallenge</code> - Required methods</a>.</dd>
+<dt><code>setup_view(self)</code></dt>
+<dd>Must return a graphics element which will comprise the main view of the challenge.</dd>
+<dd>It is automatically given a parent, size and position on the canvas.</dd>
+<dd>Will be called once at startup, after <code>setup_state</code>, unless <code>show_canvas</code> is <code>False</code>.</dd>
+<dt><code>update_state(self)</code></dt>
+<dd>See <a href="./#required-methods"><code>BasicChallenge</code> - Required methods</a>.</dd>
+<dt><code>update_view(self)</code></dt>
+<dd>Make any changes to the view here.</dd>
+<dd>Will be called immediately after <code>update_state</code>, unless <code>show_canvas</code> is <code>False</code>.</dd>
+</dl>
+<h3 id="optional-methods">Optional methods</h3>
+<dl>
+<dt><code>setup_info_panel(self)</code></dt>
+<dd>Similar to <code>setup_view</code> but should return an element to put on the left-hand side of the main view.</dd>
+<dd>There is no equivalent to <code>update_view</code>, so any needed updates should be put there.</dd>
+<dt><code>setup_description(self)</code></dt>
+<dd>Should return a text string that will be put in a "Description" tab.
+This text can contain html formatting, including images.</dd>
+<dt><code>setup_settings(self)</code></dt>
+<dd>Used for interact mode, see <a href="./#settings">Interact mode - Settings</a>.</dd>
+<dt><code>setup_center_buttons(self)</code></dt>
+<dd>Used for interact mode, see <a href="./#toolbar">Interact mode - Toolbar</a>.</dd>
+<dt><code>setup_right_buttons(self)</code></dt>
+<dd>Used for interact mode, see <a href="./#toolbar">Interact mode - Toolbar</a>.</dd>
+</dl>
+<details class="info">
+<summary>Flowchart for <code>StageChallenge</code></summary>
+<pre class="mermaid"><code>---
+config:
+    look: handDrawn
+---
+graph TB
+    START([START]) --&gt; A[setup_level];
+    A --&gt; B[setup_state];
+    B --&gt; IF_1{show_canvas};
+    IF_1 --&gt; |True| C[setup_view];
+    C --&gt; SA[setup_info_panel];
+    subgraph NEW
+    SA --&gt; SB[setup_description];
+    SB --&gt; SC[setup_center_buttons];
+    SC --&gt; SD[setup_right_buttons];
+    end
+    SD --&gt; D[update_state];
+    IF_1 --&gt; |False| D;
+    D --&gt; IF_2{self.finished};
+    IF_2 ---&gt; |True| END([END]);
+    IF_2 --&gt; |False| IF_3{show_canvas};
+    IF_3 --&gt; |True| E[update_view];
+    E --&gt; D;
+    IF_3 --&gt; |False| D;</code></pre>
+</details>
+<h3 id="features_1">Features</h3>
+<p>The <code>StageChallenge</code> class has the same features as the <code>BasicChallenge</code> in addition to some new features.</p>
+<p>The main additional feature of this skeleton is the GUI setup with a main view and various optional features.
+Many features are related to interact mode, and are covered in their own subsection.</p>
+<p>Additional features include:</p>
+<ul>
+<li>Info panel on the left-hand side of the main view, see <a href="./#optional-methods">Optional methods</a>.</li>
+<li>A GUI log which can be written to using <code>self.add_log_entry</code>.</li>
+<li>A description tab with support for html formatting, see <a href="./#optional-methods">Optional methods</a>.</li>
+<li>A GUI settings system, see <a href="./#settings">Interact mode - Settings</a>.</li>
+<li>A toolbar at the bottom of the canvas, see <a href="./#toolbar">Interact mode - Toolbar</a>.</li>
+</ul>
+<h4 id="interact-mode_1">Interact mode</h4>
+<p>This skeleton provides several useful features for interact mode, some that work on top of the basic skeleton features.</p>
+<h5 id="settings">Settings</h5>
+<p>This skeleton extends the settings system from the basic skeleton with GUI checkboxes in a new "Settings" tab to the right.</p>
+<p>To add a setting here you need to add a <code>SettingInfo</code> object for it in the list returned by <code>setup_settings</code>.
+The <code>SettingInfo</code> object has the following attributes:</p>
+<ul>
+<li><code>key</code> - The key for the setting (same as used in basic skeleton)</li>
+<li><code>label</code> - Text next to the checkbox</li>
+<li><code>category</code> - Settings category, used for grouping settings</li>
+<li><code>default</code> - The default value (defaults to <code>False</code>)</li>
+</ul>
+<details class="example">
+<summary>Example of setting up and using settings</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">setup_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">SettingInfo</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;my_setting&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;My Setting&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;Example&quot;</span><span class="p">)]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;my_setting&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;?&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h5 id="toolbar">Toolbar</h5>
+<p>When in interact mode a toolbar will appear at the bottom of the stage.
+This toolbar comes with an info prompt as well as the possibility to add buttons in the center and to the right.</p>
+<p>The info prompt can be updated by setting the <code>self.info_prompt</code> attribute (which defaults to empty).</p>
+<p>Buttons can be added by returning a list of buttons in either <code>setup_center_buttons</code> or <code>setup_right_buttons</code>. 
+These buttons will be sized and positioned appropriately, but you will have to attach behaviour yourself.</p>
+<details class="example">
+<summary>Example of setting up buttons and using the info prompt</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">setup_center_buttons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Center&quot;</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;info_prompt&quot;</span><span class="p">,</span> <span class="s2">&quot;Center clicked&quot;</span><span class="p">))]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">setup_right_buttons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Right&quot;</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;info_prompt&quot;</span><span class="p">,</span> <span class="s2">&quot;Right clicked&quot;</span><span class="p">))]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">setup_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">info_prompt</span> <span class="o">=</span> <span class="s2">&quot;Click a button&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="gamechallenge"><code>GameChallenge</code></h2>
+<p>This skeleton adds a bunch of nice features useful when creating games (or other challenges where solutions take turns).
+It makes extensive use of the stage skeleton features, so only implement methods also mentioned here.
+Like the stage skeleton, there are plenty of features specifically for interact mode.</p>
+<details class="example">
+<summary>Template for <code>GameChallenge</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the module containing the challenge implementation.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">SolutionException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.skeletons</span><span class="w"> </span><span class="kn">import</span> <span class="n">LevelInfo</span><span class="p">,</span> <span class="n">GameChallenge</span><span class="p">,</span> <span class="n">GameInfo</span><span class="p">,</span> <span class="n">PlayerInfo</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lib.ui</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Text</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Challenge</span><span class="p">(</span><span class="n">GameChallenge</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a challenge implementation using the game skeleton.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_game</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns required game information for setting up the challenge.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">GameInfo</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My game&quot;</span><span class="p">,</span>
+            <span class="n">summary</span><span class="o">=</span><span class="s2">&quot;My game summary&quot;</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My game description. Which can use &lt;em&gt;html formatting&lt;/em&gt;!&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_players</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns a list with required information for each player.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">PlayerInfo</span><span class="p">(</span>
+            <span class="n">role</span><span class="o">=</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Your solution&quot;</span><span class="p">,</span>
+            <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ui_general_null.webp&quot;</span><span class="p">,</span>
+        <span class="p">)]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns required level information for the current level.</span>
+<span class="sd">        The &quot;level&quot; parameter is the level index, starting at 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">LevelInfo</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Level </span><span class="si">{</span><span class="n">level</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">max_score</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should do all initial setup, except for graphics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, setting up a variable which can be used later on</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="c1"># Or writing a message in the console</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hi console!&quot;</span><span class="p">)</span>
+        <span class="c1"># Or writing a messege in the stage log</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_log_entry</span><span class="p">(</span><span class="s2">&quot;Hi log!&quot;</span><span class="p">)</span>
+        <span class="c1"># Or writing a log message associated with a player (use player index starting at 0)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_player_log_entry</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Hi player!&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns the main view for the challenge, which can be any graphics element.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># The view will automatically be attached, resized and positioned by the framework</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_view</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+        <span class="c1"># Any elements put inside the view will be centered inside they view</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">my_view</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_view</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should call solutions and update the current state.</span>
+<span class="sd">        It is called continuously until &quot;self.finished&quot; is set to &quot;True&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># When calling a solution you need to handle any &quot;SolutionException&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">solution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">solutions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># TODO: call a solution method</span>
+        <span class="k">except</span> <span class="n">SolutionException</span><span class="p">:</span>
+            <span class="c1"># Code put here will run if the solution crashed</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># This is a good place to update the scores</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span>
+
+        <span class="c1"># You will want to set this conditionally if your challenge involves multiple steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is where you should update the view based on the current state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># For example, changing the text inside the view</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_text</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_variable</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="required-methods_1">Required methods</h3>
+<dl>
+<dt><code>setup_game(self)</code></dt>
+<dd>Must return a <code>GameInfo</code> object which includes the information needed for the framework to handle the game.</dd>
+<dd>It has the following attributes (all optional):</dd>
+<dd>
+<ul>
+<li><code>title</code> - The title of the game</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>summary</code> - A short summary of the game</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>description</code> - A longer description of the game, which can include html formatting including images</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>step_mode</code> - See dedicated subsection of the features section.</li>
+</ul>
+</dd>
+<dt><code>setup_players(self)</code></dt>
+<dd>Must return a list of <code>PlayerInfo</code> objects including the information needed for the framework to handle players.</dd>
+<dd>Typically the player list will correspond with the solution list, but there might be reasons to have more or fewer players in a challenge.</dd>
+<dd>The <code>PlayerInfo</code> object has the following attributes:</dd>
+<dd>
+<ul>
+<li><code>role</code> - The role of the player, will be displayed above the name</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>name</code> - The name of the player</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><code>image</code> - The name of the image to use for the player, will be shown in the player list and the log</li>
+</ul>
+</dd>
+<dt><code>setup_level(self, level)</code></dt>
+<dd>See <a href="./#required-methods"><code>BasicChallenge</code> - Required methods</a>.</dd>
+<dt><code>setup_state(self)</code></dt>
+<dd>See <a href="./#required-methods"><code>BasicChallenge</code> - Required methods</a>.</dd>
+<dt><code>setup_view(self)</code></dt>
+<dd>See <a href="./#stagechallenge-required-methods"><code>StageChallenge</code> - Required methods</a>.</dd>
+<dt><code>update_state(self)</code></dt>
+<dd>See <a href="./#required-methods"><code>BasicChallenge</code> - Required methods</a>.</dd>
+<dt><code>update_view(self)</code></dt>
+<dd>See <a href="./#stagechallenge-required-methods"><code>StageChallenge</code> - Required methods</a>.</dd>
+</dl>
+<h3 id="optional-methods_1">Optional methods</h3>
+<dl>
+<dt><code>setup_statistics(self)</code></dt>
+<dd>See <a href="./#statistics">Statistics</a>.</dd>
+<dt><code>setup_settings(self)</code></dt>
+<dd>See <a href="./#optional-methods"><code>StageChallenge</code> - Optional methods</a>.</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+You need to include the settings from <code>super().setup_settings()</code>.</div>
+</dd>
+<dt><code>setup_center_buttons(self)</code></dt>
+<dd>See <a href="./#optional-methods"><code>StageChallenge</code> - Optional methods</a>.</dd>
+<dt><code>step_mode_check(self)</code></dt>
+<dd>See <a href="./#turn-management">Interact mode - Turn management</a>.</dd>
+<dt><code>resign(self)</code></dt>
+<dd>Used for interact mode, see <a href="./#gamechallenge-toolbar">Interact mode - Toolbar</a>.</dd>
+</dl>
+<details class="info">
+<summary>Flowchart for <code>GameChallenge</code></summary>
+<pre class="mermaid"><code>---
+config:
+    look: handDrawn
+---
+graph TB
+    START([START]) --&gt; GA[setup_game];
+    subgraph NEW
+    GA --&gt; GB[setup_players];
+    GB --&gt; GC[setup_statistics];
+    end
+    GC --&gt; A[setup_level];
+    A --&gt; B[setup_state];
+    B --&gt; IF_1{show_canvas};
+    IF_1 --&gt; |True| C[setup_view];
+    C --&gt; SA[setup_info_panel];
+    SA --&gt; SB[setup_description];
+    SB --&gt; SC[setup_center_buttons];
+    SC --&gt; SD[setup_right_buttons];
+    SD --&gt; D[update_state];
+    IF_1 --&gt; |False| D;
+    D --&gt; IF_2{self.finished};
+    IF_2 ---&gt; |True| END([END]);
+    IF_2 --&gt; |False| IF_3{show_canvas};
+    IF_3 --&gt; |True| E[update_view];
+    E --&gt; D;
+    IF_3 --&gt; |False| D;</code></pre>
+</details>
+<h3 id="features_2">Features</h3>
+<p>This skeleton adds a number of GUI features on top of the stage UI from the <code>StageChallenge</code> skeleton, as well as some core features for creating games.
+Most features are detailed in their own subsection.</p>
+<h4 id="players">Players</h4>
+<p>The main addition of this skeleton is the concept of players, which usually correspond to the solutions.
+The information provided in <code>setup_players</code> will be displayed in the new left-hand side information panel, together with a game summary.</p>
+<p>There might be reasons to have a different number of players than solutions, but normally only in interact mode.</p>
+<h4 id="statistics">Statistics</h4>
+<p>The skeleton includes a system for tracking statistics for each player during a game.
+These statistics will be shown in the player panel under the players name.</p>
+<p>To setup a statistic you will include a <code>StatisticInfo</code> object in <code>setup_statistics</code> with the following attributes:</p>
+<ul>
+<li><code>name</code> - The name of the statistic (required), should be a valid python identifier</li>
+<li><code>suffix</code> - A suffix to append in the player panel (defaults to empty)</li>
+<li><code>type</code> - The type of the statistic (defaults to <code>float</code>), use <code>int</code> for integers or <code>str</code> for strings</li>
+<li><code>default</code> - The initial value for the statistic (defaults to 0)</li>
+</ul>
+<p>To get or set a statistic for a player you can use <code>self.players[i].name</code> where <code>i</code> is the player index and <code>name</code> is the statistic.
+For example, setting the "points" statistic for the first player: <code>self.players[0].points = 42</code>.</p>
+<h4 id="interact-mode_2">Interact mode</h4>
+<p>This skeleton adds a complete turn-management system which greatly simplifies interaction for games.</p>
+<h5 id="gamechallenge-toolbar">Toolbar</h5>
+<p>This skeleton utilizes the toolbar introduced with the stage skeleton by adding buttons on the right-hand side.
+You should add any custom buttons to the center of the toolbar.</p>
+<p>The added button are "Resign" (with a confirmation popup) and "Finish turn" (see following sections).
+The <code>resign(self)</code> method can be overridden to implement specific behaviour for resignation.</p>
+<h5 id="turn-management">Turn management</h5>
+<p>A main feature of this skeleton is the turn management system which makes it easier to handle user input and turn logic.
+This consists of a few attributes, methods and GUI elements.</p>
+<p>When using this system there are two things to remember in a user input callback:</p>
+<ol>
+<li>Make sure that <code>self.turn_complete</code> has the correct value (should be <code>True</code> if the turn can be finished)</li>
+<li>Make sure to end the callback by calling <code>self.finish_input()</code>.</li>
+</ol>
+<p>This ensures that the "Finish turn" button is enabled when it should be and that the auto-complete turn feature will work correctly.</p>
+<p>This skeleton comes with a pre-made setting called "Auto-finish turn" which will automatically finish the turn once it is complete, otherwise the user needs to press the "Finish turn" button manually.</p>
+<p>When the turn is finished (manually or automatically) the system will perform a number of "steps" according to the <code>step_mode</code> (see <code>GameInfo</code>).
+Each step consists of a call to <code>update_state</code> and <code>update_view</code> (if <code>show_canvas</code> is <code>True</code>).
+The following step modes exists:</p>
+<dl>
+<dt><code>StepMode.ROUND</code></dt>
+<dd>Will step exactly once.</dd>
+<dd>Use if your update method always goes through all solutions.</dd>
+<dt><code>StepMode.PLAYER</code></dt>
+<dd>Will step once for each player (the default).</dd>
+<dd>Use if your update method handles just one solution each time.</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<code>StepMode.PLAYER</code> matches number of players and not solutions, in case the count is not the same.</div>
+</dd>
+<dt><code>StepMode.CUSTOM</code></dt>
+<dd>Will use the method <code>step_mode_check(self)</code> to check how many times to step.</dd>
+<dd>After each step the method is called, and if <code>True</code> is returned another step is performed.</dd>
+<dd>Use if the number of steps may vary (e.g. being able to miss a turn).</dd>
+<dd>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+Each time at least one step is performed.</div>
+</dd>
+</dl>
+<h3 id="examples">Examples</h3>
+<p>For a complete example of a Tournament Freecode which uses the GameChallenge, check out one of these (you have to be logged in to view the implementations):</p>
+<ul>
+<li><a href="https://futureskill.com/freecode-creator/60ace4a1b705932a147b0686" target="_blank">Reversi</a></li>
+<li><a href="https://futureskill.com/freecode-creator/6668377f8e7fd9a591996e33" target="_blank">Widescreen</a> - how to remove parts of a GameChallenge</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/future-skill/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/futureskillsweden/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search.suggest", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

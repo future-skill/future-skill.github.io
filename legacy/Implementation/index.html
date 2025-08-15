@@ -1,0 +1,2873 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.futureskill.com/legacy/Implementation/">
+      
+      
+        <link rel="prev" href="../Freecode_graphics/">
+      
+      
+        <link rel="next" href="../Gameboard/">
+      
+      
+      <link rel="icon" href="../../assets/fs_small_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Implementation - Future Skill wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Implementation - Future Skill wiki" >
+      
+        <meta  property="og:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  property="og:image"  content="https://wiki.futureskill.com/assets/images/social/legacy/Implementation.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://wiki.futureskill.com/legacy/Implementation/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Implementation - Future Skill wiki" >
+      
+        <meta  name="twitter:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  name="twitter:image"  content="https://wiki.futureskill.com/assets/images/social/legacy/Implementation.png" >
+      
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: #295c88; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-challenge-class" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Future Skill wiki" class="md-header__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Future Skill wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Implementation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/Freecode_editor/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../create_an_exercise/Freecode_creator/" class="md-tabs__link">
+          
+  
+  Create an exercise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Freecode_graphics/" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-tabs__link">
+          
+  
+  Future Skill GPT
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Future Skill wiki" class="md-nav__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    Future Skill wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecode_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Coding_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/How_to_get_experience_points/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get experience points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Canvas_element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Types of code challenges
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Types of code challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Tournaments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tournaments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create an exercise
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create an exercise
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Freecode_creator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Skeletons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Create_Sprite_Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Sprite Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_exercise/Images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built in images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Freecode_graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-challenge-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Challenge class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Challenge class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-context-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      The context object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The context object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      level: int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_interact_mode-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_interact_mode: bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      canvas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="canvas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#width-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      width: float
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      height: float
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console" class="md-nav__link">
+    <span class="md-ellipsis">
+      console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solutions-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      solutions: list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#living_solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      living_solutions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-solution-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      The solution objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The solution objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      name: str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      index: int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alive-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      alive: bool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-in-the-challenge-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to do in the Challenge constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-in-the-step-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to do in the step method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-parallel-solution-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making parallel solution calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-api-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      The API methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-challenge-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Challenge attributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Challenge attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finished-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      finished: bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level_name-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      level_name: str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_score-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      max_score: int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scores-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      scores: [int]
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="scores: [int]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#score-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      The configurations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-str_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      name (str)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_canvas-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      show_canvas (bool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_score-int_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      max_score (int)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and printing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging and printing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print-from-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Print from the solution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-from-the-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Print from the implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example implementations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example implementations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-challenge-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Challenge example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gameboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gameboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Future Skill GPT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Future Skill GPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Skill GPT Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Implementation</h1>
+
+<p>This article goes through most of the information that one needs to write an implementation for executor version 3.
+It contains sections about API details, sections about best practices, and some example code tests and challenges to get a complete picture.
+It does not cover the challenge editor and its options, neither does it cover the canvas API.</p>
+<p>Read more general information about the freecode creator here: <a href="../../create_an_exercise/Freecode_creator/">Freecode creator</a></p>
+<p>Read more information about the graphical canvas here: <a href="../Freecode_graphics/">Freecode graphics</a></p>
+<p>Read more information about the different challenge here: <a href="../../create_an_exercise/Skeletons/">Skeletons</a></p>
+<h2 id="the-challenge-class">The Challenge class</h2>
+<p>The Challenge class is initialized with a context object and once initialization is done the step function will be called continuously until the challenge is completed.</p>
+<h3 id="the-context-object">The context object</h3>
+<p>The context object given in the Challenge constructor contains data for the current run and has some additional useful functionality.
+This section goes through them in detail.</p>
+<h4 id="level-int">level: int</h4>
+<p>The current challenge level.</p>
+<h4 id="is_interact_mode-bool">is_interact_mode: bool</h4>
+<p>Returns True when the canvas is running in interact mode</p>
+<h4 id="canvas">canvas</h4>
+<p>An object that is used to interact with the canvas.
+It is used to add new graphical elements, more details on them are covered by another document.
+It is best practice to only modify the canvas in dedicated setup and update methods (by default <code>_setup_canvas</code> and <code>_update_canvas</code>).</p>
+<h5 id="width-float">width: float</h5>
+<p>Returns the total width of the canvas in coordinate units.</p>
+<h5 id="height-float">height: float</h5>
+<p>Returns the total height of the canvas in coordinate units.</p>
+<h4 id="console">console</h4>
+<p>An object that is used to interact with the <code>console</code>.
+It has two methods: <code>log</code> and <code>debug</code>.
+The <code>log</code> method acts similar to print and prints the arguments to the <code>console</code> for all players.
+The <code>debug</code> method acts identically except it only prints when inside the challenge editor.</p>
+<p>Some example of how to use the console <a href="./#logging-and-printing">can be found here</a>.</p>
+<h4 id="solutions-list">solutions: list</h4>
+<p>The list of solutions partaking in the challenge together for this level.
+There are more details on the solution objects later in this document.
+This list will always be the same length as the number of solutions.
+However, they will all be set to None when generating the initial state of the canvas (this affects the Challenge constructor, not the step method).</p>
+<h4 id="parallel">parallel</h4>
+<p>An object that acts as a proxy solution for making parallel solution calls.
+It has the candidate methods specified in the API specification, but not the solution attributes.
+More details about calling solutions in parallel is available in a later section.</p>
+<h4 id="living_solutions">living_solutions</h4>
+<p>A method that generates index-solution pairs for each living solution (solutions that have not crashed or timed out).
+This is the recommended way to iterate through solutions in the step method.</p>
+<h3 id="the-solution-objects">The solution objects</h3>
+<p>The solution objects contain information about the solutions partaking in the challenge level and is a way to call candidate methods on the solutions.
+The solutions objects have the candidate methods specified in the API specification which is used to call the solution and get a result.
+Calling a solution may result in a <code>SolutionException</code> (imported from <code>lib.exceptions</code>) which must be caught (the solution is no longer alive at that point).
+Note that the challenge must not call a candidate method on a crashed solution.
+The solution objects also have the following attributes.</p>
+<h4 id="name-str">name: str</h4>
+<p>The name of the solution.
+This will either be the player name or a placeholder name.</p>
+<h4 id="index-int">index: int</h4>
+<p>The index of the solution.
+This should be used to identify a solution.</p>
+<h4 id="console_1">console</h4>
+<p>An individual console for the solution.
+The interface is identical to the global console except that it limits the output to the console of the specific solution.</p>
+<h4 id="alive-bool">alive: bool</h4>
+<p>A flag indicating if the solution is still running or has crashed/timed out.</p>
+<h3 id="what-to-do-in-the-challenge-constructor">What to do in the Challenge constructor</h3>
+<p>The challenge constructor should do the following things (preferably in this order):</p>
+<ul>
+<li>
+<p>Store the context and select the appropriate level configuration.</p>
+</li>
+<li>
+<p>Initialise the required challenge attributes.</p>
+</li>
+<li>
+<p>Initialise any additional variables used for the run.</p>
+</li>
+<li>
+<p>Setup the canvas.</p>
+</li>
+</ul>
+<p>The constructor should not:</p>
+<ul>
+<li>Call any solution methods (neither individual, nor in sequence or in parallel).</li>
+</ul>
+<p>Note that the step method is not guaranteed to be called before the solutions call the API methods on the challenge, so any preparations needed for the API methods must be done in the constructor.</p>
+<h3 id="what-to-do-in-the-step-method">What to do in the step method</h3>
+<p>The step method should do the following things:</p>
+<ul>
+<li>
+<p>Call any solution methods (either individual, in sequence, or in   parallel).</p>
+</li>
+<li>
+<p>Update any variables, etc.</p>
+</li>
+<li>
+<p>Update the scores.</p>
+</li>
+<li>
+<p>Update the canvas.</p>
+</li>
+<li>
+<p>If appropriate, mark the challenge as finished.</p>
+</li>
+</ul>
+<p>It is important that the step method catches any <code>SolutionExceptions</code> raised when calling the solutions. The examples include best practices for handling solution calls (especially note how the Code test example handles multiple calls on the same solution).</p>
+<h3 id="making-parallel-solution-calls">Making parallel solution calls</h3>
+<p>Calling the solutions in parallel is preferable if the challenge supports it (i.e. the actions of one solution does not affect any other solution until all solutions have acted).
+To call solutions in parallel the <code>context.parallel</code> object should be used instead of the solution objects themselves.</p>
+<p>The results of a parallel call is a dictionary with solution indices as keys and the solution result as value.
+There is no need to catch <code>SolutionException</code> when making parallel calls.
+Only solutions that lived before making the call are included in the dictionary.
+The solution result is either a the return value from the solution or a <code>SolutionException</code> if the solution crashed, therefore it is necessary to make an isinstance check on the result (unless the return value is not needed).</p>
+<p>The differences between sequential and parallel solution calls are highlighted in the <a href="./#challenge-example">Challenge</a> and <a href="./#parallel-challenge-example">Parallel challenge</a> examples.</p>
+<h3 id="the-api-methods">The API methods</h3>
+<p>The challenge should have methods matching the API methods in the API specification.
+These methods should take a solution object as its second argument.
+This solution object corresponds to the solution that called this API method.</p>
+<p>Sometimes an API method has additional restrictions on its arguments.
+If this is the case then they should be thoroughly documented in the challenge/test description.
+In the API method a specific check should be put in place where a <code>SolutionException</code> (imported from <code>lib.exceptions</code>) with an appropriate message should be raised.
+This will terminate that solution, taking it out from the challenge from then on.</p>
+<h3 id="the-challenge-attributes">The Challenge attributes</h3>
+<p>There are a couple of required attributes for a challenge, these must be set in the constructor as they are used continuously throughout the challenge run.
+They are listed here, together with the required type and a short summary of how it is used.</p>
+<h4 id="finished-bool">finished: bool</h4>
+<p>Indicates whether the challenge run is completed or not, once it is set to <code>True</code> the step method won't be called any more and the run will end.
+Note that the run will also end if all solutions have crashed.</p>
+<h4 id="level_name-str">level_name: str</h4>
+<p>The name of the level.
+For a code test it should be descriptive and echo what is being tested.
+For challenges it is not as important to be descriptive, but it doesn't hurt.
+Usually taken from the configuration.</p>
+<h4 id="max_score-int">max_score: int</h4>
+<p>The total possible score for the level.
+For a code test this should usually be 10.
+For challenges this value might not make sense, but it is currently still required.
+Usually taken from the configuration.</p>
+<h4 id="scores-int">scores: [int]</h4>
+<p>A list of scores corresponding to each solution.
+Should be updated in each call to the step method.</p>
+<h5 id="score-strategy">Score strategy</h5>
+<p>How to score a tournament: tournaments should use a 70/30/0 scoring system for three participants.
+This is to avoid the issue that otherwise the ELO doesn't change if the scores are very close.</p>
+<h3 id="the-configurations">The configurations</h3>
+<p>The challenge usually has a <code>_configuration</code> list containing a dictionary for each level.
+This dictionary can be used to store the level configuration (constants, initial values, flags, etc) and usually contain the following items.</p>
+<h4 id="name-str_1">name (str)</h4>
+<p>The level name (used to set <code>level_name</code>).</p>
+<h4 id="show_canvas-bool">show_canvas (bool)</h4>
+<p>A flag indicating if the canvas should be rendered or not.
+The canvas should always be rendered for public levels, and preferably also for hidden levels.
+The flag is often False for performance levels in code tests due to the large input size.</p>
+<h4 id="max_score-int_1">max_score (int)</h4>
+<p>The maximum score for the level (used to set <code>max_score</code>).</p>
+<h2 id="logging-and-printing">Logging and printing</h2>
+<h3 id="print-from-the-solution">Print from the solution</h3>
+<p>To print from the solution to the console just use the regular print statement used by your language.
+In python3 it would be <code>print('hello world')</code>.</p>
+<h3 id="print-from-the-implementation">Print from the implementation</h3>
+<p>To print from the implementation just use the regular print statement for Python3.</p>
+<h2 id="example-implementations">Example implementations</h2>
+<p>The example implementations are functionally very simple and are only intended to demonstrate some different concepts that can be used when writing an implementation.</p>
+<h3 id="exercise-example">Exercise example</h3>
+<p>In this implementation the candidate should compute the sum and difference of two numbers.
+The candidate methods are <code>sum() -&gt; int</code> and <code>difference() -&gt; int</code>.
+The API methods are <code>get_a() -&gt; int</code> and <code>get_b() -&gt; int</code>.</p>
+<details class="example" open="open">
+<summary>Exercise example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;&quot;&quot;
+This is the module containing the challenge implementation.
+&quot;&quot;&quot;
+from lib.exceptions import SolutionException
+
+class Challenge:
+    &quot;&quot;&quot;
+    A new challenge object is created when a challenge level is run.
+
+    :var finished: Whether the level run is finished or not.
+    :vartype finished: bool
+    :var level_name: The name of the current level.
+    :vartype level_name: str
+    :var max_score: The highest possible score for the level.
+    :vartype max_score: int
+    :var scores: The scores for all solutions.
+    :vartype scores: [int]
+    &quot;&quot;&quot;
+
+    def __init__(self, context):
+        &quot;&quot;&quot;
+        :param contex: An object containing relevant information for this run.
+            Read the provided challenge creation documentation for more details.
+        &quot;&quot;&quot;
+        self._context = context
+
+        # At the end of this template there is a list of level configurations.
+        # Here we check the level value and look up the current configuration.
+        if not 0 &lt;= self._context.level &lt;= len(self._configurations):
+            raise Exception(f&#39;There is no level {self._context.level}&#39;)
+        self._config = self._configurations[self._context.level]
+
+        # These attibutes are used by the challenge runner (do not remove).
+        self.finished = False
+        self.level_name = self._config[&#39;name&#39;]
+        self.max_score = self._config[&#39;max_score&#39;]
+        self.scores = [0] * len(self._context.solutions)
+
+        # Setup initial values, should assume failure.
+        self._sum_answer = None
+        self._sum_correct = False
+        self._diff_answer = None
+        self._diff_correct = False
+
+        # Setup the canvas.
+        self._show_canvas = self._config[&#39;show_canvas&#39;]
+        if self._show_canvas:
+            self._setup_canvas()
+
+    def step(self):
+        &quot;&quot;&quot;
+        Executes a single step of the challenge.
+        This includes calling solutions, updating the scores, and updating the canvas.
+
+        This method is continously called until either &quot;finished&quot; is set to &quot;True&quot;
+        or all solutions have crashed.
+        &quot;&quot;&quot;
+        # Use this method to gracefully handle crashed solutions.
+        for solution in self._context.living_solutions():
+            try:
+                # Do not call the solution methods more than once.
+                self._sum_answer = solution.sum()
+                if self._sum_answer == self._config[&#39;sum&#39;]:
+                    self._sum_correct = True
+                    self.scores[solution.index] += 4
+                # Fully handle each task in turn, in case of crashes.
+                self._diff_answer = solution.difference()
+                if self._diff_answer == self._config[&#39;diff&#39;]:
+                    self._diff_correct = True
+                    self.scores[solution.index] += 6
+            except SolutionException:
+                # A SolutionException is the only exception that should be caughthen
+                # calling a soluti and it must be caught when calling a solution.
+                pass
+
+        # Update the canvas.
+        if self._show_canvas:
+            self._update_canvas()
+
+        # A code test usually only has one step.
+        self.finished = True
+
+    def get_a(self, solution):
+        &quot;&quot;&quot;
+        :param solution: The solution that called this api method.
+
+        :rtype: int
+        &quot;&quot;&quot;
+        return self._config[&#39;a&#39;]
+
+    def get_b(self, solution):
+        &quot;&quot;&quot;
+        :param solution: The solution that called this api method.
+
+        :rtype: int
+        &quot;&quot;&quot;
+        return self._config[&#39;b&#39;]
+
+    def _setup_canvas(self):
+        &quot;&quot;&quot;
+        Performs canvas setup before a solution is run.
+        Read the provided documentation for details on how to use the canvas.
+        &quot;&quot;&quot;
+        canvas = self._context.canvas
+        # Show input data
+        canvas.new_text(f&#39;Input: {self._config[&quot;a&quot;]} and {self._config[&quot;b&quot;]}&#39;, 20, &#39;black&#39;,tx= y=20) 
+        # Show task titles and expected answers.
+        canvas.new_text(&#39;Task 1: sum&#39;, 20, &#39;black&#39;, x=20, y=60)
+        canvas.new_text(&#39;Task 2: difference&#39;, 20, &#39;black&#39;, x=200, y=60)
+        canvas.new_text(f&#39;Expected: {self._config[&quot;sum&quot;]}&#39;, 16, &#39;black&#39;, x=20, y=90)
+        canvas.new_text(f&#39;Expected: {self._config[&quot;diff&quot;]}&#39;, 16, &#39;black&#39;, x=200, y=90)
+        # Add sections for candidate answers, to later be updated.
+        self._sum_label = canvas.new_text(&#39;Actual: ___&#39;, 16, &#39;black&#39;, x=20, y=120)
+        self._diff_label = canvas.new_text(&#39;Actual: ___&#39;, 16, &#39;black&#39;, x=200, y=120)
+
+    def _update_canvas(self):
+        &quot;&quot;&quot;
+        Updates the canvas for each challenge step.
+        Read the provided documentation for details on how to use the canvas.
+        &quot;&quot;&quot;
+        canvas = self._context.canvas
+        # Update the canvas with candidate answers.
+        if self._sum_answer is None:
+            self._sum_label.set_text(&#39;Actual: N/A&#39;)
+        else:
+            self._sum_label.set_text(f&#39;Actual: {self._sum_answer}&#39;)
+        if self._diff_answer is None:
+            self._diff_label.set_text(&#39;Actual: N/A&#39;)
+        else:
+            self._diff_label.set_text(f&#39;Actual: {self._diff_answer}&#39;)
+        # Add correct/incorrect labels.
+        if self._sum_correct:
+            canvas.new_text(&#39;Correct&#39;, 16, &#39;green&#39;, x=20, y=150)
+        else:
+            canvas.new_text(&#39;Incorrect&#39;, 16, &#39;red&#39;, x=20, y=150)
+        if self._diff_correct:
+            canvas.new_text(&#39;Correct&#39;, 16, &#39;green&#39;, x=200, y=150)
+        else:
+            canvas.new_text(&#39;Incorrect&#39;, 16, &#39;red&#39;, x=200, y=150)
+
+    _configurations = [
+        {
+            # Level 1 (Public)
+            &#39;name&#39;: &#39;Level 1&#39;,
+            &#39;show_canvas&#39;: True,
+            &#39;max_score&#39;: 10,
+            &#39;a&#39;: 7,
+            &#39;b&#39;: 3,
+            &#39;sum&#39;: 10,
+            &#39;diff&#39;: 4,
+        },
+        {
+            # Level 2 (Public)
+            &#39;name&#39;: &#39;Level 2&#39;,
+            &#39;show_canvas&#39;: True,
+            &#39;max_score&#39;: 10,
+            &#39;a&#39;: 16,
+            &#39;b&#39;: 24,
+            &#39;sum&#39;: 40,
+            &#39;diff&#39;: 8,
+        },
+    ]
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="challenge-example">Challenge example</h3>
+<p>In this challenge all players get to guess on a number.
+The number should be just above the mean of all the guesses to get maximum points, if it is on or below they get no points.
+This continues for a number of rounds.</p>
+<p>The candidate methods are <code>guess_mean() -&gt; int</code>.
+The API methods are <code>last_mean() -&gt; int</code>.</p>
+<details class="example" open="open">
+<summary>Challenge example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;&quot;&quot;
+This is the module containing the challenge implementation.
+&quot;&quot;&quot;
+from lib.exceptions import SolutionException
+from statistics import mean
+
+class Challenge:
+    &quot;&quot;&quot;
+    A new challenge object is created when a challenge level is run.
+
+    :var finished: Whether the level run is finished or not.
+    :vartype finished: bool
+    :var level_name: The name of the current level.
+    :vartype level_name: str
+    :var max_score: The highest possible score for the level.
+    :vartype max_score: int
+    :var scores: The scores for all solutions.
+    :vartype scores: [int]
+    &quot;&quot;&quot;
+
+    def __init__(self, context):
+        &quot;&quot;&quot;
+        :param contex: An object containing relevant information for this run.
+            Read the provided challenge creation documentation for more details.
+        &quot;&quot;&quot;
+        self._context = context
+
+        # At the end of this template there is a list of level configurations.
+        # Here we check the level value and look up the current configuration.
+        if not 0 &lt;= self._context.level &lt;= len(self._configurations):
+            raise Exception(f&#39;There is no level {self._context.level}&#39;)
+        self._config = self._configurations[self._context.level]
+
+        # These attibutes are used by the challenge runner (do not remove).
+        self.finished = False
+        self.level_name = self._config[&#39;name&#39;]
+        self.max_score = self._config[&#39;max_score&#39;]
+        self.scores = [0] * len(self._context.solutions)
+
+        # Setup variable used for the game.
+        self._guesses = {}
+        self._gains = {}
+        self._last_mean = None
+        self._rounds = self._config[&#39;rounds&#39;]
+        self._current_round = 0
+
+        # Setup the canvas.
+        self._show_canvas = self._config[&#39;show_canvas&#39;]
+        if self._show_canvas:
+            self._setup_canvas()
+
+    def step(self):
+        &quot;&quot;&quot;
+        Executes a single step of the challenge.
+        This includes calling solutions, updating the scores, and updating the canvas.
+
+        This method is continously called until either &quot;finished&quot; is set to &quot;True&quot;
+        or all solutions have crashed.
+        &quot;&quot;&quot;
+        # Setup the new round.
+        self._guesses = {}
+        self._gains = {}
+        self._current_round += 1
+        self._context.console.debug(f&#39;Starting round {self._current_round}&#39;)
+        # Go through all solutions that still are running.
+        for solution in self._context.living_solutions():
+            try:
+                # Collect the guesses from each solution.
+                self._guesses[solution.index] = solution.guess_mean()
+                self._context.console.debug(f&#39;Solution {solution.index} guessed {self._gues[solution.index]}&#39;)`  
+            except SolutionException:
+                # A SolutionException is the only exception that should be caught whe
+                # calling a solution, and it must be caught when calling a solution.
+                pass
+
+        # Calculate new points (if any results where obtained).
+        if self._guesses:
+            # Calculate the mean.
+            self._last_mean = round(mean(self._guesses.values()))
+            self._context.console.debug(f&#39;Mean is {self._last_mean}&#39;)
+            # Award points.
+            for index, guess in self._guesses.items():
+                if self._last_mean &lt; guess &lt; self._last_mean + 100:
+                    self._gains[index] = 100 - (guess - self._last_mean)
+                    self.scores[index] += self._gains[index]
+            self._context.console.debug(f&#39;New scores are {self.scores}&#39;)
+        else:
+            self._last_mean = None
+
+        # Update the canvas.
+        if self._show_canvas:
+            self._update_canvas()
+
+        # Limit the number of steps to the specified number of rounds.
+        if self._current_round &gt;= self._rounds:
+            self.finished = True
+
+    def last_mean(self, solution):
+        &quot;&quot;&quot;
+        :param solution: The solution that called this api method.
+
+        :rtype: int
+        &quot;&quot;&quot;
+        solution.console.debug(f&#39;Solution {solution.index} called &quot;last_mean&quot;&#39;)
+        # Disallow calling &#39;last_mean&#39; until after the first round.
+        if self._last_mean is None:
+            raise SolutionException(&#39;&quot;last_mean&quot; may only be called after the first round&#39;
+        return self._last_mean
+
+    def _setup_canvas(self):
+        &quot;&quot;&quot;
+        Performs canvas setup before a solution is run.
+        Read the provided documentation for details on how to use the canvas.
+        &quot;&quot;&quot;
+        canvas = self._context.canvas
+        # Create the player table.
+        canvas.new_text(&#39;Player&#39;, 14, &#39;black&#39;, x=10, y=10)
+        canvas.new_text(&#39;Guess&#39;, 14, &#39;black&#39;, x=200, y=10)
+        canvas.new_text(&#39;Gain&#39;, 14, &#39;black&#39;, x=275, y=10)
+        canvas.new_text(&#39;Score&#39;, 14, &#39;black&#39;, x=350, y=10)
+        self._guess_labels = []
+        self._gain_labels = []
+        self._score_labels = []
+        for index, solution in enumerate(self._context.solutions):
+            # Need to check if solution exists, otherwise use placeholder name.
+            name = solution.name if solution else f&#39;Player {index}&#39;
+            canvas.new_text(name, 12, &#39;black&#39;, x=10, y=20*index+30)
+            label = canvas.new_text(&#39;N/A&#39;, 12, &#39;black&#39;, x=200, y=20*index+30)
+            self._guess_labels.append(label)
+            label = canvas.new_text(0, 12, &#39;black&#39;, x=275, y=20*index+30)
+            self._gain_labels.append(label)
+            label = canvas.new_text(0, 12, &#39;black&#39;, x=350, y=20*index+30)
+            self._score_labels.append(label)
+        # Create entry for the mean.
+        canvas.new_text(&#39;Mean&#39;, 14, &#39;black&#39;, x=10, y=180)
+        self._mean_label = canvas.new_text(&#39;N/A&#39;, 14, &#39;black&#39;, x=200, y=180)
+
+    def _update_canvas(self):
+        &quot;&quot;&quot;
+        Updates the canvas for each challenge step.
+        Read the provided documentation for details on how to use the canvas.
+        &quot;&quot;&quot;
+        canvas = self._context.canvas
+        # Update player table.
+        for index in range(len(self._context.solutions)):
+            self._guess_labels[index].set_text(self._guesses.get(index, &#39;N/A&#39;))
+            self._gain_labels[index].set_text(self._gains.get(index, 0))
+            self._score_labels[index].set_text(self.scores[index])
+        # Update the mean.
+        self._mean_label.set_text(&#39;N/A&#39; if self._last_mean is None else self._last_mean)
+
+    _configurations = [
+        {
+            # Level 1 (Public)
+            &#39;name&#39;: &#39;Level 1&#39;,
+            &#39;show_canvas&#39;: True,
+            &#39;max_score&#39;: 10,
+            &#39;rounds&#39;: 5,
+        },
+        {
+            # Level 2 (Public)
+            &#39;name&#39;: &#39;Level 2&#39;,
+            &#39;show_canvas&#39;: True,
+            &#39;max_score&#39;: 10,
+            &#39;rounds&#39;: 10,
+        },
+    ]
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="parallel-challenge-example">Parallel Challenge example</h3>
+<p>This is the same challenge as the previous example, but it calls the solutions in parallel.</p>
+<details class="example" open="open">
+<summary>Parallel Challenge example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;&quot;&quot;
+This is the module containing the challenge implementation.
+&quot;&quot;&quot;
+from lib.exceptions import SolutionException
+from statistics import mean
+
+class Challenge:
+    &quot;&quot;&quot;
+    A new challenge object is created when a challenge level is run.
+
+    :var finished: Whether the level run is finished or not.
+    :vartype finished: bool
+    :var level_name: The name of the current level.
+    :vartype level_name: str
+    :var max_score: The highest possible score for the level.
+    :vartype max_score: int
+    :var scores: The scores for all solutions.
+    :vartype scores: [int]
+    &quot;&quot;&quot;
+
+    def __init__(self, context):
+        &quot;&quot;&quot;
+        :param contex: An object containing relevant information for this run.
+            Read the provided challenge creation documentation for more details.
+        &quot;&quot;&quot;
+        self._context = context
+
+        # At the end of this template there is a list of level configurations.
+        # Here we check the level value and look up the current configuration.
+        if not 0 &lt;= self._context.level &lt;= len(self._configurations):
+            raise Exception(f&#39;There is no level {self._context.level}&#39;)
+        self._config = self._configurations[self._context.level]
+
+        # These attibutes are used by the challenge runner (do not remove).
+        self.finished = False
+        self.level_name = self._config[&#39;name&#39;]
+        self.max_score = self._config[&#39;max_score&#39;]
+        self.scores = [0] * len(self._context.solutions)
+
+        # Setup variable used for the game.
+        self._guesses = {}
+        self._gains = {}
+        self._last_mean = None
+        self._rounds = self._config[&#39;rounds&#39;]
+        self._current_round = 0
+
+        # Setup the canvas.
+        self._show_canvas = self._config[&#39;show_canvas&#39;]
+        if self._show_canvas:
+            self._setup_canvas()
+
+    def step(self):
+        &quot;&quot;&quot;
+        Executes a single step of the challenge.
+        This includes calling solutions, updating the scores, and updating the canvas.
+
+        This method is continously called until either &quot;finished&quot; is set to &quot;True&quot; 
+        or all solutions have crashed.
+        &quot;&quot;&quot;
+        # Setup the new round.
+        self._guesses = {}
+        self._gains = {}
+        self._current_round += 1
+        self._context.console.debug(f&#39;Starting round {self._current_round}&#39;)
+        # Go through all solutions that still are running, in parallel.
+        for index, result in self._context.parallel.guess_mean().items():
+            # Skip solutions that caused an exception.
+            if isinstance(result, SolutionException):
+                continue
+            # Collect the guess.
+            self._guesses[index] = result
+            self._context.console.debug(f&#39;Solution {index} guessed {result}&#39;)
+
+        # Calculate new points (if any results where obtained).
+        if self._guesses:
+            # Calculate the mean.
+            self._last_mean = round(mean(self._guesses.values()))
+            self._context.console.debug(f&#39;Mean is {self._last_mean}&#39;)
+            # Award points.
+            for index, guess in self._guesses.items():
+                if self._last_mean &lt; guess &lt; self._last_mean + 100:
+                    self._gains[index] = 100 - (guess - self._last_mean)
+                    self.scores[index] += self._gains[index]
+            self._context.console.debug(f&#39;New scores are {self.scores}&#39;)
+        else:
+            self._last_mean = None
+
+        # Update the canvas.
+        if self._show_canvas:
+            self._update_canvas()
+
+        # Limit the number of steps to the specified number of rounds.
+        if self._current_round &gt;= self._rounds:
+            self.finished = True
+
+    def last_mean(self, solution):
+        &quot;&quot;&quot;
+        :param solution: The solution that called this api method.
+
+        :rtype: int
+        &quot;&quot;&quot;
+        solution.console.debug(f&#39;Solution {solution.index} called &quot;last_mean&quot;&#39;)
+        # Disallow calling &#39;last_mean&#39; until after the first round.
+        if self._last_mean is None:
+            raise SolutionException(&#39;&quot;last_mean&quot; may only be called after the first round&#39;)
+        return self._last_mean
+
+    def _setup_canvas(self):
+        &quot;&quot;&quot;
+        Performs canvas setup before a solution is run.
+        Read the provided documentation for details on how to use the canvas.
+        &quot;&quot;&quot;
+        canvas = self._context.canvas
+        # Create the player table.
+        canvas.new_text(&#39;Player&#39;, 14, &#39;black&#39;, x=10, y=10)
+        canvas.new_text(&#39;Guess&#39;, 14, &#39;black&#39;, x=200, y=10)
+        canvas.new_text(&#39;Gain&#39;, 14, &#39;black&#39;, x=275, y=10)
+        canvas.new_text(&#39;Score&#39;, 14, &#39;black&#39;, x=350, y=10)
+        self._guess_labels = []
+        self._gain_labels = []
+        self._score_labels = []
+        for index, solution in enumerate(self._context.solutions):
+            # Need to check if solution exists, otherwise use placeholder name.
+            name = solution.name if solution else f&#39;Player {index}&#39;
+            canvas.new_text(name, 12, &#39;black&#39;, x=10, y=20*index+30)
+            label = canvas.new_text(&#39;N/A&#39;, 12, &#39;black&#39;, x=200, y=20*index+30)
+            self._guess_labels.append(label)
+            label = canvas.new_text(0, 12, &#39;black&#39;, x=275, y=20*index+30)
+            self._gain_labels.append(label)
+            label = canvas.new_text(0, 12, &#39;black&#39;, x=350, y=20*index+30)
+            self._score_labels.append(label)
+        # Create entry for the mean.
+        canvas.new_text(&#39;Mean&#39;, 14, &#39;black&#39;, x=10, y=180)
+        self._mean_label = canvas.new_text(&#39;N/A&#39;, 14, &#39;black&#39;, x=200, y=180)
+
+    def _update_canvas(self):
+        &quot;&quot;&quot;
+        Updates the canvas for each challenge step.
+        Read the provided documentation for details on how to use the canvas.
+        &quot;&quot;&quot;
+        canvas = self._context.canvas
+        # Update player table.
+        for index in range(len(self._context.solutions)):
+            self._guess_labels[index].set_text(self._guesses.get(index, &#39;N/A&#39;))
+            self._gain_labels[index].set_text(self._gains.get(index, 0))
+            self._score_labels[index].set_text(self.scores[index])
+        # Update the mean.
+        self._mean_label.set_text(&#39;N/A&#39; if self._last_mean is None else self._last_mean)
+
+    _configurations = [
+        {
+            # Level 1 (Public)
+            &#39;name&#39;: &#39;Level 1&#39;,
+            &#39;show_canvas&#39;: True,
+            &#39;max_score&#39;: 10,
+            &#39;rounds&#39;: 5,
+        },
+        {
+            # Level 2 (Public)
+            &#39;name&#39;: &#39;Level 2&#39;,
+            &#39;show_canvas&#39;: True,
+            &#39;max_score&#39;: 10,
+            &#39;rounds&#39;: 10,
+        },
+    ]
+</code></pre></div></td></tr></table></div>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/future-skill/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/futureskillsweden/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search.suggest", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
