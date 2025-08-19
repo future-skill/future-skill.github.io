@@ -16,10 +16,11 @@ To create exercises quick and more efficient Future Skill GPT can be used. It is
 ## How to Use the Custom GPT for Creating Exercises
 
 In the GPT Exercise, the output is divided into four main parts:
-   • Task → Information for the Description tab
-   • Solution API → Code for the Solution tab (function skeletons)
-   • Implementation → Code for the Implementation tab (core mechanics)
-   • Flow → Theoretical background for the Flow 
+
+- Task → Information for the Description tab
+- Solution API → Code for the Solution tab (function skeletons)
+- Implementation → Code for the Implementation tab (core mechanics)
+- Flow → Theoretical background for the Flow 
 
 **Important:**
 
@@ -35,8 +36,8 @@ Because the output will be too large to display properly all at once. Instead, c
 : Generates the description of the task for each level.
 : Includes examples (input/output) and explanations.
 : GPT will ask:
-	• How many levels?
-	• Should levels be progressive (easy to hard) or independent (separate tasks)?
+	- How many levels?
+	- Should levels be progressive (easy to hard) or independent (separate tasks)?
 
 `create solution API`
 : Creates the function skeletons users will fill in.
