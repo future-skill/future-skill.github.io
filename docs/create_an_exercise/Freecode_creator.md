@@ -53,6 +53,82 @@ The solution methods are the methods that the user that takes the Freecode fills
 Clicking the button brings up the dialog to add a method to the solution.
 After the method is added the method with the given signature is added automatically to the solution.
 
+While adding solution api using Future Skill Gpt use the instructions below:
+
+**Solution API**
+- A Solution API is a Python function template created for the user to input their solution for a specific task at a specific level.
+- A Solution API is a template and must not contain any actual solution or logic
+- The function must always end with the following lines:
+
+``` py
+# Write your code here
+return []
+```
+- Each level can have only one Solution API.
+- This rule applies to all levels and all tasks.
+- Do not include sample data, example inputs/outputs, or logic in the function body.
+
+**Function Name**
+
+The function name must include the word "level", followed by the level number, and a descriptive phrase of what the function does. For example: If you're creating a function for level 1 that adds names to a table, the function name should be:
+
+``` py
+def level_1_add_names(self, arg_1, arg_2):
+    # Write your code here
+    return [] 
+```
+
+**Argument Type**
+
+Arguments passed to the Solution API can only be one of the following types:
+- int
+- bool
+- double
+- string
+- bytes
+- list
+- map
+
+
+**Return Type**
+
+The return value must also be one of the following types:
+- int
+- bool
+- double
+- string
+- bytes
+- list
+- map
+
+**Solution API Format**
+
+``` py
+def level_<number>_<function_description>(self, arg_1, arg_2):
+    """
+    :type arg_1: type
+    :type arg_2: type
+
+    :rtype: type
+    """
+ 
+    # Write your code here
+    return []  
+```
+
+**List Handling**
+- if argument type or return type is a list show the type of the values in the list as follows:
+  
+  list[<value_type>]
+- The value_type must be one of the following types:
+  - int
+  - bool
+  - double
+  - string
+  - bytes
+  - list
+  - map
+  
 
 ### Regenerate Skeletons
 
@@ -277,6 +353,33 @@ The Challenge methods are the signatures for the API tab the member will see and
 
 This is the descriptions that a user can see in the editor when participating in a challenge or taking an exercise.
 This description should contain details about what to do, how it can be done, and how the result will be scored.
+
+Use the description structure below :
+
+- Provide a general description of the challenge or exercise (should not have theoretical knowledge about the topic).
+- Use semi-formal but simple, clear language.
+- A light joke or two is okay, but the tone should stay informative — not humorous overall.
+- Provide the information in both English and Swedish, directly one after the other if needed:
+  - English text must be wrapped with [english] ... [/english].
+  - Swedish text must be wrapped with [swedish] ... [/swedish].
+- A challenge or an exercise has levels. Use the structure below for levels:
+  - Each difficulty level must start with [level<level_number>] and end with [/level<level_number>].
+  - Give each level a descriptive name that acts like a title for that level’s task.
+  - Each level must include the following:
+    - A part of the challenge or exercise description that user must solve in that level
+    - An example showing both input and output.
+    - An explanation of the example
+    - An API Helper Function explanation (if needed)
+    - Do not mention or include anything about the Solution API.
+    - Write all the information both in English and Swedish, directly after each other:
+      - English text must be wrapped with [english] ... [/english].
+      - Swedish text must be wrapped with [swedish] ... [/swedish].
+   - Each level may include an implementation APIs
+     - Introduce the implementation API as part of the task (e.g., "You can use the following function to...").
+- Make sure the task is easy to follow, logically structured, and visually clear where needed.
+- All content must be bilingual if it needed by a user otherwise default is English:
+  - Use [english] ... [/english] for English text.
+  - Use [swedish] ... [/swedish] for Swedish text.
 
 You can use special tags to manage what text is displayed.
 To write text which only is visible when Level 1 is selected in an exercise, write:

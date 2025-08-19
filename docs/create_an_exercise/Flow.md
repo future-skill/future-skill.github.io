@@ -9,7 +9,27 @@ width:
 ---
 
 A flow is an overlay that is displayed before the user attempts an exercise level.
-This flow should typically contain an overview description of the level with some images, quizzes, and/or interactive canvas.
+The flow should typically contain an overview description of the level with some images, quizzes, and/or interactive canvas.
+
+Use the flow structure below to build flow levels:
+
+- Starts with some historical or general knowledge about the topic
+- Have a clear description of the topic
+- Description should be like a lesson with as much as possible information. It should not be brief.
+- Always have programming language-specific content (details are explained in section below (Other Tags)) if needed
+- An example and explanation should be for each programming language if needed
+- Should not have solution code or such for the given topic
+- Include at least 2 quiz questions based on the theory provided in the level
+- Use the Quiz Format below (see section "Quiz" and "Tags" below)
+- After the last quiz have the lines below:
+???+ example "After Last Quiz"
+    ```
+    [continue]
+    [coding][english]Let's code now!!![/english][swedish]Nu kodar vi![/swedish][/coding]
+    ```
+- Keep the flow easy to read, logically structured, and visually clear
+- Avoid overly technical language unless needed
+- Structure all levels consistently
 
 ## Tags
 
