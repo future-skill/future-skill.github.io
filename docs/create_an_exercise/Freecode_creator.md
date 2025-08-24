@@ -359,6 +359,7 @@ Use the description structure below :
 - Provide a general description of the challenge or exercise (should not have theoretical knowledge about the topic).
 - Use semi-formal but simple, clear language.
 - A light joke or two is okay, but the tone should stay informative — not humorous overall.
+- See the Tags section below for instructions on how to use tags when building the topic description.
 - Provide the information in both English and Swedish, directly one after the other if needed:
   - English text must be wrapped with [english] ... [/english].
   - Swedish text must be wrapped with [swedish] ... [/swedish].
@@ -380,6 +381,9 @@ Use the description structure below :
 - All content must be bilingual if it needed by a user otherwise default is English:
   - Use [english] ... [/english] for English text.
   - Use [swedish] ... [/swedish] for Swedish text.
+- Always use the tags described below when it is needed.
+
+#### Tags
 
 You can use special tags to manage what text is displayed.
 To write text which only is visible when Level 1 is selected in an exercise, write:
