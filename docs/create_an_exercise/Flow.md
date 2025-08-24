@@ -16,6 +16,7 @@ Use the flow structure below to build flow levels:
 - Starts with some historical or general knowledge about the topic
 - Have a clear description of the topic
 - Description should be like a lesson with as much as possible information. It should not be brief.
+- See the Tags section below for instructions on how to use tags when building the topic description.
 - Always have programming language-specific content (details are explained in section below (Other Tags)) if needed
 - An example and explanation should be for each programming language if needed
 - Should not have solution code or such for the given topic
