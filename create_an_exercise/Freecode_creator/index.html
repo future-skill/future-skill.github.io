@@ -1,0 +1,2036 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.futureskill.com/create_an_exercise/Freecode_creator/">
+      
+      
+        <link rel="prev" href="../../basics/Freecodes/">
+      
+      
+        <link rel="next" href="../Skeletons/">
+      
+      
+      <link rel="icon" href="../../assets/fs_small_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Freecode creator - Future Skill wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Freecode creator - Future Skill wiki" >
+      
+        <meta  property="og:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  property="og:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/Freecode_creator.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://wiki.futureskill.com/create_an_exercise/Freecode_creator/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Freecode creator - Future Skill wiki" >
+      
+        <meta  name="twitter:description"  content="Documentation for writing new exercises, challenges, tournaments, or freecodes for futureskill.com" >
+      
+        <meta  name="twitter:image"  content="https://wiki.futureskill.com/assets/images/social/create_an_exercise/Freecode_creator.png" >
+      
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: #295c88; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-implementation-tab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Future Skill wiki" class="md-header__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Future Skill wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Freecode creator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/Freecode_editor/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Create an exercise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../legacy/Freecode_graphics/" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-tabs__link">
+          
+  
+  Future Skill GPT
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Future Skill wiki" class="md-nav__button md-logo" aria-label="Future Skill wiki" data-md-component="logo">
+      
+  <img src="../../assets/fs_small_logo_white.png" alt="logo">
+
+    </a>
+    Future Skill wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/future-skill/future-skill.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    future-skill.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecode_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Coding_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/How_to_get_experience_points/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get experience points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Canvas_element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Types of code challenges
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Types of code challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Tournaments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tournaments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/Freecodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Create an exercise
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create an exercise
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Freecode creator
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-implementation-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Implementation Tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Solution Tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-api-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      The API Tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The API Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-implementation-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Implementation API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-solution-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Solution API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenerate-skeletons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regenerate Skeletons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset Solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-api-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create API Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-graphics-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Graphics Tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Graphics Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canvas-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background Color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#landing-page-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Landing Page Image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Meta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-performance-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good performance scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-preview-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Preview Tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Skeletons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skeletons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Create_Sprite_Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Sprite Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built in images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Freecode_graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freecode graphics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/Gameboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gameboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Future Skill GPT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Future Skill GPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future_skill_gpt/Future_skill_gpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Skill GPT Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Freecode creator</h1>
+
+<p>You can design and publish your own <a href="../../basics/Challenges/">Challenges</a>, <a href="../../basics/Exercises/">Exercises</a>, and <a href="../../basics/Freecodes/">Freecodes</a> </p>
+<p>The Creator is very similar to the Freecode Editor which you can read more about here: <a href="../../basics/Freecode_editor/">Freecode editor</a> on Future Skill using the Freecode Creator. Just sign in, click Create, and select Freecode to get started.</p>
+<h2 id="the-implementation-tab">The Implementation Tab</h2>
+<p>This is where you as the author design your Freecode:</p>
+<ul>
+<li>Write your creator code: call solution methods,    generate graphics, define scoring.</li>
+<li>It acts as the “engine” behind the Freecode.</li>
+<li>For detailed logic patterns, visit the <a href="../Skeletons/">Skeletons</a> page (link).</li>
+</ul>
+<h2 id="the-solution-tab">The Solution Tab</h2>
+<p>The solution tab contains a default solution that is used when running the code in the creator.
+This is not visible for the Members when opening the Freecode. Here you as the author can create a solution to your own Freecode to try it.
+The member will see the methods with just the default return values (See API Tab).
+This solution is also the default solution used in contests when there are no other contestants to compete against.</p>
+<h2 id="the-api-tab">The API Tab</h2>
+<p>Manage two types of APIs:</p>
+<ul>
+<li>Implementation APIs: provide supporting methods for users.</li>
+<li>Solution APIs: define the stubs users must implement.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="API tab" loading="lazy" src="../../assets/Api-tab.png" /></a></p>
+<h3 id="add-implementation-api">Add Implementation API</h3>
+<p>The implementation methods are the methods that you as a creator provide to the taker of your Freecode.
+This gives the taker the ability to call your API to get information that you make available to them.
+Brings up the dialog to add a method to the implementation.
+After the method is added the method with the given signature is added automatically to the implementation.</p>
+<h3 id="add-solution-api">Add Solution API</h3>
+<p>The solution methods are the methods that the user that takes the Freecode fills in to create their solution.
+Clicking the button brings up the dialog to add a method to the solution.
+After the method is added the method with the given signature is added automatically to the solution.</p>
+<p>While adding solution api using Future Skill Gpt use the instructions below:</p>
+<p><strong>Solution API</strong>
+- A Solution API is a Python function template created for the user to input their solution for a specific task at a specific level.
+- A Solution API is a template and must not contain any actual solution or logic
+- The function must always end with the following lines:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Write your code here</span>
+<span class="k">return</span> <span class="p">[]</span>
+</code></pre></div></td></tr></table></div>
+- Each level can have only one Solution API.
+- This rule applies to all levels and all tasks.
+- Do not include sample data, example inputs/outputs, or logic in the function body.</p>
+<p><strong>Function Name</strong></p>
+<p>The function name must include the word "level", followed by the level number, and a descriptive phrase of what the function does. For example: If you're creating a function for level 1 that adds names to a table, the function name should be:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">level_1_add_names</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">):</span>
+    <span class="c1"># Write your code here</span>
+    <span class="k">return</span> <span class="p">[]</span> 
+</code></pre></div></td></tr></table></div>
+<p><strong>Argument Type</strong></p>
+<p>Arguments passed to the Solution API can only be one of the following types:
+- int
+- bool
+- double
+- string
+- bytes
+- list
+- map</p>
+<p><strong>Return Type</strong></p>
+<p>The return value must also be one of the following types:
+- int
+- bool
+- double
+- string
+- bytes
+- list
+- map</p>
+<p><strong>Solution API Format</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">level_</span><span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">function_description</span><span class="o">&gt;</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :type arg_1: type</span>
+<span class="sd">    :type arg_2: type</span>
+
+<span class="sd">    :rtype: type</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Write your code here</span>
+    <span class="k">return</span> <span class="p">[]</span>  
+</code></pre></div></td></tr></table></div>
+<p><strong>List Handling</strong>
+- if argument type or return type is a list show the type of the values in the list as follows:</p>
+<p>list[<value_type>]
+- The value_type must be one of the following types:
+  - int
+  - bool
+  - double
+  - string
+  - bytes
+  - list
+  - map</p>
+<h3 id="regenerate-skeletons">Regenerate Skeletons</h3>
+<p>Regenerates the skeletons for all the different languages.
+These can be viewed under the Preview tab.
+This is what the user who takes the Freecodes starts from.
+The python skeleton is equivalent to what you see in the solution tab after you press "Reset Solution"</p>
+<h3 id="reset-implementation">Reset Implementation</h3>
+<p>Resets the implementation.
+This will remove any code written by you in the implementation tab and give you the empty skeleton code with the implementation methods from the API tab.</p>
+<h3 id="reset-solution">Reset Solution</h3>
+<p>Resets the solution.
+This will remove any code written by you in the solution tab and gives you the empty methods from the solution API.
+This can be good to use if you have added and removed Solution APIs and want to make sure you are writing for the latest functions.</p>
+<h2 id="create-api-method">Create API Method</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create API methods" loading="lazy" src="../../assets/Create-api-methods.png" /></a></p>
+<p>All method names must be space-separated list of words containing lowercase letters and can't start with a number.
+Specific language formatting is applied automatically.
+Default return values for different return types in solution methods: </p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Default return value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td><code>-2</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>-2.0</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><code>'Foo'</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td><code>b'foo'</code></td>
+</tr>
+<tr>
+<td><code>list</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>map</code></td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<p>For implementation methods you get raise NotImplementedError('"APImethod" not implemented') as default regardless of the return type.</p>
+<h2 id="the-graphics-tab">The Graphics Tab</h2>
+<p>Configure canvas, animations, images, and resolution:</p>
+<ul>
+<li>Enable/disable canvas and animations.</li>
+<li>Upload PNGs or sprite sheets.</li>
+<li>Set canvas resolution, background color, and thumbnails.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy" src="../../assets/Graphics_tab.png" /></a></p>
+<h3 id="canvas-animation">Canvas Animation</h3>
+<dl>
+<dt><strong>Uses Canvas:</strong></dt>
+<dd>Check this if the canvas will be used.</dd>
+<dt><strong>Has Canvas Animation:</strong></dt>
+<dd>Check this to enable canvas animations.
+This will additionally add the option <strong>Canvas step time (ms)</strong>, which will determine how many milliseconds will pass between each canvas animation step.</dd>
+<dt><strong>Supports Interact:</strong></dt>
+<dd>Check this to enable interactive mode.
+This will additionally add one check box for each level to determine what levels will be interactable.</dd>
+<dt><strong>Interact using Human Adapter:</strong></dt>
+<dd>Lorem ipsum</dd>
+<dt><strong>Interact using separate step time:</strong></dt>
+<dd>Check this to set a different step time in the interactive mode.
+This will additionally add the option <strong>Interact step time (ms)</strong>, which will determine how many milliseconds will pass between each canvas animation step in the interactive mode.</dd>
+</dl>
+<p>If the canvas should be used, if it should be animated, and if the implementation supports human input.
+If the canvas is animated then there is also a setting for how long each animation step should be.</p>
+<h3 id="images">Images</h3>
+<p>Here you can upload images to be used as graphical elements in the canvas.
+The possible usages are individual bitmaps or as sprite sheets.</p>
+<p>Images should typically be PNG image files with transparent backgrounds for the best result.
+There are many built in images that can be accessed without any need to upload them, see <a href="../Images/">Built in images</a> for a full list.</p>
+<p>Sprite sheets needs a separate image atlas that define where each image in the sheet is placed, this atlas has to be in json format compatible with pixi.js.
+You can read more about this on the <a href="../Create_Sprite_Sheet/">Create Prite Sheet</a> page.</p>
+<h3 id="background-color">Background Color</h3>
+<p>The canvas background color is the color that will be displayed as a background behind any graphical elements that are added in the implementation.</p>
+<p><strong>Default background colors:</strong></p>
+<ul>
+<li>Light mode: #F2F5F7</li>
+<li>Dark mode:</li>
+</ul>
+<h3 id="resolution">Resolution</h3>
+<p>The resolution decided the dimensions of the canvas element, and what coordinates should be used to display elements in the implementation.
+10x20 will have the same dimensions as 100x200, but in order to display graphics precise locations in a 10x20 canvas you might have to use more decimal points than if the canvas is 100x200.
+Additionally, some graphics elements will display differently at different resolutions.</p>
+<h3 id="landing-page-image">Landing Page Image</h3>
+<p>The default landing page image used by challanges and exercises.
+This image will be used as both background and thumbnail for the implementation.</p>
+<h2 id="settings-tab">Settings Tab</h2>
+<p>Configure Freecode metadata:</p>
+<ul>
+<li>Select challenge type, difficulty, tournaments.</li>
+<li>Set public/hidden levels, performance thresholds.</li>
+<li>Enable community sharing, official tag, and version control.</li>
+<li>A mismatch between the total number of levels and the number of levels in the implementation <code>_configurations</code> variable can lead to an error.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy" src="../../assets/Settings_tab.png" /></a></p>
+<h3 id="test-meta">Test Meta</h3>
+<dl>
+<dt><strong>Is Tournament:</strong></dt>
+<dd>This setting is only visible if when the type of Freecode is set to Challenge.
+When checked this setting turns the Challenge into a Tournament.
+For an explanation of the difference between Challenge and Tournament see: <a href="../../basics/Coding_Community/">Coding Community</a></dd>
+<dt><strong>Number of players:</strong></dt>
+<dd>This setting is only visible if "Is Tournament" is checked.
+This setting will determine the number of solution that will compete against each other in every run.</dd>
+<dt><strong>Is Freecode:</strong></dt>
+<dd>This setting is only visible when the type of Freecode is set to Exercise.
+When checked this setting turns the Exercise into a Freecode.
+For an explanation of the difference between Exercise and Freecode see: <a href="../../basics/Coding_Community/">Coding Community</a></dd>
+<dt><strong>Difficulty:</strong></dt>
+<dd>This is the displayed difficulty for the Freecode in the Freecode browser.</dd>
+</dl>
+<h3 id="level-settings">Level Settings</h3>
+<dl>
+<dt><strong>Number of public levels:</strong></dt>
+<dd>These are the levels that the members can see when taking your Freecode.</dd>
+<dt><strong>Number of hidden levels:</strong></dt>
+<dd>This is only used for the "Code test" and "Challenge" type of Freecode.
+  These levels are hidden and can't be seen by the member.
+  These are the levels that are used for the scoring of the Freecode.
+  So normally extra edge cases are used in these levels to see that the members solution can handle all the edges that you are a part of the Freecode.</dd>
+<dt><strong>Exercise:</strong></dt>
+<dd>For exercises there are only public levels, however only 1 is available at the time.
+  This means the member must complete one levels before being able to continue to the next one.
+  There is no hidden scoring here.</dd>
+<dt><strong>Code test and challenges:</strong></dt>
+<dd>The public levels are what is visible to the member when taking the Freecode.
+  These are the levels that they can try their solutions against and see if they pass.
+  These levels are not used in scoring the Freecode.
+  That is handled in the hidden and performance levels.</dd>
+<dt><strong>Performance levels:</strong></dt>
+<dd>This is only used for the Code test type of Freecode.
+  On top of the normal correctness check of the solution an additional check of how much times was used is added.
+  You as the author must specify this time limit in milliseconds for each of the programming languages available on Future Skill.
+  For performance levels using much larger input data is recommended.
+  The time limit if set per language.</dd>
+</dl>
+<h3 id="good-performance-scores">Good performance scores</h3>
+<p>Only available for code tests with Performance levels.</p>
+<h3 id="community">Community</h3>
+<dl>
+<dt><strong>Public Implementation:</strong></dt>
+<dd>When this is checked your Freecode will be available to other community members to copy and use as a starting point for their own Freecodes.
+  Only checking this will not allow them to see your solution.
+  So it cant be used for cheating.</dd>
+<dt><strong>Public Solution:</strong></dt>
+<dd>When you make your solution available members will be able to see and copy your solution.
+  So this can lead to "cheating", especially in the case of Exercises.</dd>
+<dt><strong>Use official tag:</strong></dt>
+<dd>When this is checked your Freecode will have the official tag.</dd>
+<dt><strong>Is Flow:</strong></dt>
+<dd>When this is checked your Freecode will have a flow, see more on the <a href="../Flow/">Flow</a> page.</dd>
+</dl>
+<h3 id="versioning">Versioning</h3>
+<p>Manage versions of the implementation.
+Using this it is only possible to move forwards in versions with 1 live version and 1 work in progress version.
+It is still possible to open old versions and export them to test them out or to import as the current version.</p>
+<h2 id="the-preview-tab">The Preview Tab</h2>
+<p>The preview tabs show you the code the user from use as a starting point in the available languages.</p>
+<p>You can also see the API methods available to the user with the languages specific formatting.
+The solution methods are the method signatures the user taking the Freecode will see and are the same methods that are in the skeletons above.
+The Challenge methods are the signatures for the API tab the member will see and use when taking the Freecode.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/Preview_tab.png" /></a></p>
+<h2 id="descriptions">Descriptions</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Description" loading="lazy" src="../../assets/Description_tab.png" /></a></p>
+<h3 id="description">Description</h3>
+<p>This is the descriptions that a user can see in the editor when participating in a challenge or taking an exercise.
+This description should contain details about what to do, how it can be done, and how the result will be scored.</p>
+<p>Use the description structure below :</p>
+<ul>
+<li>Provide a general description of the challenge or exercise (should not have theoretical knowledge about the topic).</li>
+<li>Use semi-formal but simple, clear language.</li>
+<li>A light joke or two is okay, but the tone should stay informative — not humorous overall.</li>
+<li>See the Tags section below for instructions on how to use tags when building the topic description.</li>
+<li>Provide the information in both English and Swedish, directly one after the other if needed:</li>
+<li>English text must be wrapped with [english] ... [/english].</li>
+<li>Swedish text must be wrapped with [swedish] ... [/swedish].</li>
+<li>A challenge or an exercise has levels. Use the structure below for levels:</li>
+<li>Each difficulty level must start with [level<level_number>] and end with [/level<level_number>].</li>
+<li>Give each level a descriptive name that acts like a title for that level’s task.</li>
+<li>Each level must include the following:<ul>
+<li>A part of the challenge or exercise description that user must solve in that level</li>
+<li>An example showing both input and output.</li>
+<li>An explanation of the example</li>
+<li>An API Helper Function explanation (if needed)</li>
+<li>Do not mention or include anything about the Solution API.</li>
+<li>Write all the information both in English and Swedish, directly after each other:</li>
+<li>English text must be wrapped with [english] ... [/english].</li>
+<li>Swedish text must be wrapped with [swedish] ... [/swedish].</li>
+</ul>
+</li>
+<li>Each level may include an implementation APIs<ul>
+<li>Introduce the implementation API as part of the task (e.g., "You can use the following function to...").</li>
+</ul>
+</li>
+<li>Make sure the task is easy to follow, logically structured, and visually clear where needed.</li>
+<li>All content must be bilingual if it needed by a user otherwise default is English:</li>
+<li>Use [english] ... [/english] for English text.</li>
+<li>Use [swedish] ... [/swedish] for Swedish text.</li>
+<li>Always use the tags described below when it is needed.</li>
+</ul>
+<h4 id="tags">Tags</h4>
+<p>You can use special tags to manage what text is displayed.
+To write text which only is visible when Level 1 is selected in an exercise, write:</p>
+<details class="example" open="open">
+<summary>Using level tags</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[level1]
+This text is for level 1
+[/level1]
+</code></pre></div></td></tr></table></div>
+</details>
+<p>You can also use <code>[level2]</code>, <code>[level3]</code> and so forth.</p>
+<p>To write text only visible when certain languages are selected you can change the value in the tags to one of c, c_sharp, cpp, go, java, javascript, php, python, ruby, scala, typescript, rust, kotlin.</p>
+<details class="example" open="open">
+<summary>Using language tags</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[python]
+This text is only visible if you are using python
+[/python]
+Your language tag is: [c]c[/c][c_sharp]c_sharp,[/c_sharp][cpp]cpp[/cpp][go]go[/go][java]java[/java][javascript]javascript[/javascript][php]php[/php][python]python[/python][ruby]ruby[/ruby][scala]scala[/scala][typescript]typescript[/typescript][rust]rust[/rust][kotlin]kotlin[/kotlin]
+</code></pre></div></td></tr></table></div>
+</details>
+<p>You can also do tags that are visible for multiple levels and/or languages by separating the tags with |</p>
+<details class="example" open="open">
+<summary>Combining tags</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[c|cpp]Your language is either C or C++[/c|cpp]
+[level1|level2]
+This text is visible for both the first and second level!
+[/level1|level2]
+</code></pre></div></td></tr></table></div>
+</details>
+<p>If you want a default value there is also a switch options.</p>
+<details class="example" open="open">
+<summary>Using a switch tag</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Here is a logical equals operator: [switch]
+[python]&quot;is&quot; or &quot;==&quot; depending on what you are comparing[/python]
+[javascript|typescript]===[/javascript|typescript]
+[default]==[/default]
+[/switch]
+</code></pre></div></td></tr></table></div>
+Depending on which language the user is using it will be rendered as:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">JavaScript</label><label for="__tabbed_1_3">TypeScript</label><label for="__tabbed_1_4">Some other language</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Here is a logical equals operator: "is" or "==" depending on what you are comparing</p>
+</div>
+<div class="tabbed-block">
+<p>Here is a logical equals operator: ===</p>
+</div>
+<div class="tabbed-block">
+<p>Here is a logical equals operator: ===</p>
+</div>
+<div class="tabbed-block">
+<p>Here is a logical equals operator: ==</p>
+</div>
+</div>
+</div>
+</details>
+<p>Finally there is also a translation dict that can replace multiple instances of the same text based on the contents.
+The text to replace must be prepended with a <code>*</code>.
+Each word or phrase to replace needs its own translation definition.
+If there is no match or default text the from text will be replaced with an empty string.</p>
+<details class="example" open="open">
+<summary>Using a translate tag</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>[translate]
+[from]hello[/from]
+[python]HELLO!!!![/python]
+[c|cpp]_h_e_l_l_o_[/c|cpp]
+[default]h e l l o . . .[/default]
+[/translate]
+</code></pre></div></td></tr></table></div>
+If we have the translation table above and write <code>*hello</code> in our flow, it will be rendered as something different depending on which language you are using.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python</label><label for="__tabbed_2_2">C</label><label for="__tabbed_2_3">C++</label><label for="__tabbed_2_4">Some other language</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>HELLO!!!!</p>
+</div>
+<div class="tabbed-block">
+<p>_h_e_l_l_o_</p>
+</div>
+<div class="tabbed-block">
+<p>_h_e_l_l_o_</p>
+</div>
+<div class="tabbed-block">
+<p>h e l l o . . .</p>
+</div>
+</div>
+</div>
+</details>
+<h3 id="summary">Summary</h3>
+<p>This is the public description used externally to entice participants and to give a brief overview of what the challenge or exercise contains and/or should teach/test.</p>
+<h3 id="flow">Flow</h3>
+<p>This is where you edit the flow, see <a href="../Flow/">Flow</a> for more information.</p>
+<h2 id="run-code">Run Code</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" loading="lazy" src="../../assets/Run_code.png" /></a></p>
+<p>The "Run Code" button will let you run your solution like you are a member taking the Freecode.
+You will see the output in the canvas and console just like if you were taking the Freecode as a member.
+If you check the "Save On Run" checkbox you will also save every time you run the code.</p>
+<p>If you are creating a challenge or Code test you will see the text "run hidden levels" next to the "Run Code" button.
+If you check this you will also see the result for the hidden levels.
+This option is not available to members taking the Freecode.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/future-skill/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/futureskillsweden/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search.suggest", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
